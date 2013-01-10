@@ -1,29 +1,13 @@
 <?php
 /**
-* This file is part of U.S. English phpBB Localization.
-* Copyright (C) 2010 phpBB.fr
 *
-* This program is free software; you can redistribute it and/or modify
-* it under the terms of the GNU General Public License as published by
-* the Free Software Foundation; version 2 of the License.
+* search_synonyms [English]
 *
-* This program is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-* GNU General Public License for more details.
+* @package language
+* @version $Id$
+* @copyright (c) 2005 phpBB Group
+* @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
-* You should have received a copy of the GNU General Public License along
-* with this program; if not, write to the Free Software Foundation, Inc.,
-* 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-*
-* search_synonyms [U.S. English]
-*
-* @package   language
-* @author    Maël Soucaze <maelsoucaze@phpbb.fr> (Maël Soucaze) http://www.phpbb.fr/
-* @author    Seven ALive <N/A> (Robert Baker) http://sevenupdate.com/
-* @copyright 2005 phpBB Group
-* @license   http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License
-* @version   $Id: search_synonyms.php 10280 2009-11-19 13:22:55Z bantu $
 */
 
 if (!defined('IN_PHPBB'))
@@ -42,17 +26,17 @@ $synonyms = array(
 	'anemia'			=> 'anaemia',
 	'anemic'			=> 'anaemic',
 	'anesthesia'		=> 'anaesthesia',
-	'apologise'			=> 'apologize',
+	'apologize'			=> 'apologise',
 	'archean'			=> 'archaean',
 	'archeology'		=> 'archaeology',
 	'archeozoic'		=> 'archaeozoic',
-	'armour'				=> 'armor',
+	'armor'				=> 'armour',
 	'artic'				=> 'arctic',
-	'attachement'		=> 'attachment',
+	'attachment'		=> 'attachement',
 	'attendence'		=> 'attendance',
 
 	'barbecue'	=> 'barbeque',
-	'behaviour'	=> 'behavior',
+	'behavior'	=> 'behaviour',
 	'biassed'	=> 'biased',
 	'biol'		=> 'biology',
 	'buletin'	=> 'bulletin',
@@ -64,7 +48,7 @@ $synonyms = array(
 	'cenozoic'	=> 'caenozoic',
 	'center'	=> 'centre',
 	'check'		=> 'cheque',
-	'colour'		=> 'color',
+	'color'		=> 'colour',
 	'comission'	=> 'commission',
 	'comittee'	=> 'committee',
 	'commitee'	=> 'committee',
@@ -85,10 +69,10 @@ $synonyms = array(
 	'exhuberant'	=> 'exuberant',
 	'existance'		=> 'existence',
 
-	'favourite'		=> 'favorite',
+	'favorite'		=> 'favourite',
 	'fetus'			=> 'foetus',
 	'ficticious'	=> 'fictitious',
-	'flavour'		=> 'flavor',
+	'flavor'		=> 'flavour',
 	'flourescent'	=> 'fluorescent',
 	'foriegn'		=> 'foreign',
 	'fourty'		=> 'forty',
@@ -100,13 +84,13 @@ $synonyms = array(
 	'guerilla'		=> 'guerrilla',
 	'gynecology'	=> 'gynaecology',
 
-	'harbour'		=> 'harbor',
+	'harbor'		=> 'harbour',
 	'heighth'		=> 'height',
 	'hemaglobin'	=> 'haemaglobin',
 	'hematin'		=> 'haematin',
 	'hematite'		=> 'haematite',
 	'hematology'	=> 'haematology',
-	'honour'			=> 'honor',
+	'honor'			=> 'honour',
 
 	'innoculate'	=> 'inoculate',
 	'installment'	=> 'instalment',
@@ -117,10 +101,10 @@ $synonyms = array(
 	'judgment'	=> 'judgement',
 
 	'labeled'	=> 'labelled',
-	'labour'		=> 'labor',
-	'labourer'	=> 'laborer',
-	'labourers'	=> 'laborers',
-	'labouring'	=> 'laboring',
+	'labor'		=> 'labour',
+	'laborer'	=> 'labourer',
+	'laborers'	=> 'labourers',
+	'laboring'	=> 'labouring',
 	'licence'	=> 'license',
 	'liesure'	=> 'leisure',
 	'liquify'	=> 'liquefy',
@@ -140,8 +124,8 @@ $synonyms = array(
 	'offense'	=> 'offence',
 	'ommision'	=> 'omission',
 	'ommission'	=> 'omission',
-	'optimise'	=> 'optimize',
-	'organise'	=> 'organize',
+	'optimize'	=> 'optimise',
+	'organize'	=> 'organise',
 
 	'pajamas'			=> 'pyjamas',
 	'paleography'		=> 'palaeography',
@@ -172,18 +156,18 @@ $synonyms = array(
 	'resistence'	=> 'resistance',
 	'restaraunt'	=> 'restaurant',
 
-	'saviour'			=> 'savior',
+	'savior'			=> 'saviour',
 	'sep'				=> 'september',
 	'seperate'			=> 'separate',
 	'sept'				=> 'september',
 	'sieze'				=> 'seize',
-	'summarise'			=> 'summarize',
-	'summerise'			=> 'summarize',
+	'summarize'			=> 'summarise',
+	'summerize'			=> 'summarise',
 	'superceed'			=> 'supercede',
 	'superintendant'	=> 'superintendent',
 	'supersede'			=> 'supercede',
 	'suprise'			=> 'surprise',
-	'surprise'			=> 'surprize',
+	'surprize'			=> 'surprise',
 	'synchronise'		=> 'synchronize',
 
 	'temperary'		=> 'temporary',
@@ -195,8 +179,8 @@ $synonyms = array(
 
 	'useable'	=> 'usable',
 
-	'valour'	=> 'valor',
-	'vigour'	=> 'vigor',
+	'valor'	=> 'valour',
+	'vigor'	=> 'vigour',
 	'vol'	=> 'volume',
 
 	'whack'		=> 'wack',

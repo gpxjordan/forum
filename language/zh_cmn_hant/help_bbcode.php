@@ -1,12 +1,12 @@
 <?php
-/** 
+/**
 *
 * help_bbcode [正體中文]
 *
 * @package language
-* @version $Id: help_bbcode.php 9623 2009-06-18 18:12:28Z nickvergessen $
+* @version $Id$
 * @copyright (c) 2001 - 2007 phpBB TW Group (心靈捕手)
-* @license http://opensource.org/licenses/gpl-license.php GNU Public License 
+* @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
 */
 
@@ -48,7 +48,7 @@ $help = array(
 	),
 	array(
 		0 => '如何改變文字的顏色和大小',
-		1 => '下列標籤可以用來改變文字的顏色和大小。需要注意的是，顯示效果取決於瀏覽者使用的瀏覽器和作業系統：<ul><li>改變文字的顏色使用標籤 <strong>[color=][/color]</strong>。您可以指定其他的可被識別的顏色（例如 red、blue、yellow、...等。）或者是 3 組十六進位數，例如 #FFFFFF、#000000。例如，要建立一段紅色的文字，您可以使用：<br /><br /><strong>[color=red]</strong>Hello!<strong>[/color]</strong><br /><br />或者<br /><br /><strong>[color=#FF0000]</strong>Hello!<strong>[/color]</strong><br /><br />都會輸出 <span style="color:red">Hello!</span></li><li>同樣的，改變文字的大小使用標籤 <strong>[size=][/size]</strong>。這個標籤取決於會員所選擇的界面模板，不過建議的格式是顯示文字百分比大小的數字值，從 20 開始（這會小到您看不見）直到 200（這就非常大了）。例如：<br /><br /><strong>[size=30]</strong>SMALL<strong>[/size]</strong><br /><br />將輸出 <span style="font-size:30%;">SMALL</span><br /><br />但是，<br /><br /><strong>[size=200]</strong>HUGE!<strong>[/size]</strong><br /><br />將顯示 <span style="font-size:200%;">HUGE!</span></li></ul>'
+		1 => '下列標籤可以用來改變文字的顏色和大小。需要注意的是，顯示效果取決於瀏覽者使用的瀏覽器和作業系統：<ul><li>改變文字的顏色使用標籤 <strong>[color=][/color]</strong>。您可以指定其他的可被識別的顏色（例如 red、blue、yellow、…等。）或者是 3 組十六進位數，例如 #FFFFFF、#000000。例如，要建立一段紅色的文字，您可以使用：<br /><br /><strong>[color=red]</strong>Hello!<strong>[/color]</strong><br /><br />或者<br /><br /><strong>[color=#FF0000]</strong>Hello!<strong>[/color]</strong><br /><br />都會輸出 <span style="color:red">Hello!</span></li><li>同樣的，改變文字的大小使用標籤 <strong>[size=][/size]</strong>。這個標籤取決於會員所選擇的界面模板，不過建議的格式是顯示文字百分比大小的數字值，從 20 開始（這會小到您看不見）直到 200（這就非常大了）。例如：<br /><br /><strong>[size=30]</strong>SMALL<strong>[/size]</strong><br /><br />將輸出 <span style="font-size:30%;">SMALL</span><br /><br />但是，<br /><br /><strong>[size=200]</strong>HUGE!<strong>[/size]</strong><br /><br />將顯示 <span style="font-size:200%;">HUGE!</span></li></ul>'
 	),
 	array(
 		0 => '我可以組合使用不同標籤嗎？',
@@ -89,7 +89,7 @@ $help = array(
 	),
 	array(
 		0 => '連結到另一個網址',
-		1 => 'phpBB BBCode 可以透過好幾種方式建立超連結。<ul><li>首先可以使用 <strong>[url=][/url]</strong> 標籤，無論什麼類型，在等號後加入的內容都將成為一個連結。例如指向 phpBB.com 的連結，您可以使用：<br /><br /><strong>[url=http://www.phpbb.com/]</strong>Visit phpBB!<strong>[/url]</strong><br /><br /> 這將生成連結：<a href="http://www.phpbb.com/" target="_blank">Visit phpBB!</a> 您會注意到連結開啟新的視窗，這樣以便於會員繼續瀏覽原來的討論區。</li><li>如果您希望連結的文字本身顯示這個連結，您可以使用：<br /><br /><strong>[url]</strong>http://www.phpbb.com/<strong>[/url]</strong><br /><br />這將生成連結：<a href="http://www.phpbb.com/" target="_blank">http://www.phpbb.com/</a></li><li>另外，phpBB 允許一些自動連結檢測，這將任何語法正確的連結轉變為可以點選的連結。例如輸入 www.phpbb.com 到內容中，將在瀏覽文章時自動轉換為 <a href="http://www.phpbb.com/" target="_blank">www.phpbb.com</a> 輸出。</li><li>對於 Email 位址也是一樣的，您可以使用標籤指定，例如：<br /><br /><strong>[email]</strong>no.one@domain.adr<strong>[/email]</strong><br /><br />輸出 <a href="mailto:no.one@domain.adr">no.one@domain.adr</a> 或者您也可以只輸入 no.one@domain.adr，這將在瀏覽文章時自動被轉換為 Email 連結.</li></ul>對於所有的 BBCode，您可以在最外面使用連結標籤包圍，例如：<strong>[img][/img]</strong> (see next entry)、<strong>[b][/b]</strong>、...等。對於格式化標籤，這取決於是否按順序正確的關閉每個標籤，例如:<br /><br /><strong>[url=http://www.google.com/][img]</strong>http://www.google.com/intl/en_ALL/images/logo.gif<strong>[/url][/img]</strong><br /><br />是 <u>不正確</u> 的，這將導致您的文章顯示不正常，所以要格外注意。'
+		1 => 'phpBB BBCode 可以透過好幾種方式建立超連結。<ul><li>首先可以使用 <strong>[url=][/url]</strong> 標籤，無論什麼類型，在等號後加入的內容都將成為一個連結。例如指向 phpBB.com 的連結，您可以使用：<br /><br /><strong>[url=http://www.phpbb.com/]</strong>Visit phpBB!<strong>[/url]</strong><br /><br /> 這將生成連結：<a href="http://www.phpbb.com/" target="_blank">Visit phpBB!</a> 您會注意到連結開啟新的視窗，這樣以便於會員繼續瀏覽原來的討論區。</li><li>如果您希望連結的文字本身顯示這個連結，您可以使用：<br /><br /><strong>[url]</strong>http://www.phpbb.com/<strong>[/url]</strong><br /><br />這將生成連結：<a href="http://www.phpbb.com/" target="_blank">http://www.phpbb.com/</a></li><li>另外，phpBB 允許一些自動連結檢測，這將任何語法正確的連結轉變為可以點選的連結。例如輸入 www.phpbb.com 到內容中，將在瀏覽文章時自動轉換為 <a href="http://www.phpbb.com/" target="_blank">www.phpbb.com</a> 輸出。</li><li>對於 email 位址也是一樣的，您可以使用標籤指定，例如：<br /><br /><strong>[email]</strong>no.one@domain.adr<strong>[/email]</strong><br /><br />輸出 <a href="mailto:no.one@domain.adr">no.one@domain.adr</a> 或者您也可以只輸入 no.one@domain.adr，這將在瀏覽文章時自動被轉換為 Email 連結.</li></ul>對於所有的 BBCode，您可以在最外面使用連結標籤包圍，例如：<strong>[img][/img]</strong> (see next entry)、<strong>[b][/b]</strong>、…等。對於格式化標籤，這取決於是否按順序正確的關閉每個標籤，例如:<br /><br /><strong>[url=http://www.google.com/][img]</strong>http://www.google.com/intl/en_ALL/images/logo.gif<strong>[/url][/img]</strong><br /><br />是 <u>不正確</u> 的，這將導致您的文章顯示不正常，所以要格外注意。'
 	),
 	array(
 		0 => '--',

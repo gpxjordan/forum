@@ -213,7 +213,7 @@ class acp_board
 						'allow_sig_flash'		=> array('lang' => 'ALLOW_SIG_FLASH',		'validate' => 'bool',	'type' => 'radio:yes_no', 'explain' => false),
 						'allow_sig_smilies'		=> array('lang' => 'ALLOW_SIG_SMILIES',		'validate' => 'bool',	'type' => 'radio:yes_no', 'explain' => false),
 						'allow_sig_links'		=> array('lang' => 'ALLOW_SIG_LINKS',		'validate' => 'bool',	'type' => 'radio:yes_no', 'explain' => true),
-						'allow_sig_nofollow'	    => array('lang' => 'ALLOW_SIG_NOFOLLOW',	    'validate' => 'bool',	'type' => 'radio:yes_no', 'explain' => true),
+						'allow_sig_nofollow'	=> array('lang' => 'ALLOW_SIG_NOFOLLOW',	'validate' => 'bool',	'type' => 'radio:yes_no', 'explain' => true),
 
 						'legend2'				=> 'GENERAL_SETTINGS',
 						'max_sig_chars'			=> array('lang' => 'MAX_SIG_LENGTH',		'validate' => 'int:0',	'type' => 'text:5:4', 'explain' => true),
@@ -222,7 +222,7 @@ class acp_board
 						'max_sig_smilies'		=> array('lang' => 'MAX_SIG_SMILIES',		'validate' => 'int:0',	'type' => 'text:5:4', 'explain' => true),
 						'max_sig_img_width'		=> array('lang' => 'MAX_SIG_IMG_WIDTH',		'validate' => 'int:0',	'type' => 'text:5:4', 'explain' => true, 'append' => ' ' . $user->lang['PIXEL']),
 						'max_sig_img_height'	=> array('lang' => 'MAX_SIG_IMG_HEIGHT',	'validate' => 'int:0',	'type' => 'text:5:4', 'explain' => true, 'append' => ' ' . $user->lang['PIXEL']),
-						'max_sig_post_count_limit'  => array('lang' => 'MAX_SIG_POSTS_LIMIT',	'validate' => 'int:0',	'type' => 'text:5:4', 'explain' => true),    
+						'max_sig_post_count_limit'	=> array('lang' => 'MAX_SIG_POSTS_LIMIT',	'validate' => 'int:0',	'type' => 'text:5:4', 'explain' => true),
 
 						'legend3'					=> 'ACP_SUBMIT_CHANGES',
 					)
@@ -778,14 +778,16 @@ class acp_board
 		global $user, $config;
 
 		$act_ary = array(
-		  'ACC_DISABLE' => USER_ACTIVATION_DISABLE,
-		  'ACC_NONE' => USER_ACTIVATION_NONE,
+			'ACC_DISABLE' => USER_ACTIVATION_DISABLE,
+			'ACC_NONE' => USER_ACTIVATION_NONE,
 		);
+
 		if ($config['email_enable'])
 		{
 			$act_ary['ACC_USER'] = USER_ACTIVATION_SELF;
 			$act_ary['ACC_ADMIN'] = USER_ACTIVATION_ADMIN;
 		}
+
 		$act_options = '';
 
 		foreach ($act_ary as $key => $value)

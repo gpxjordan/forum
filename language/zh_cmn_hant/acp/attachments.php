@@ -4,7 +4,7 @@
 * acp_attachments [正體中文]
 *
 * @package language
-* @version $Id: attachments.php 8946 2008-09-26 18:32:05Z toonarmy $
+* @version $Id$
 * @copyright (c) 2001 - 2007 phpBB TW Group (心靈捕手)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -38,7 +38,7 @@ if (empty($lang) || !is_array($lang))
 $lang = array_merge($lang, array(
 	'ACP_ATTACHMENT_SETTINGS_EXPLAIN'	=> '在這裡，您可以執行關於附加檔案以及相關特殊類別的主要設定。',
 	'ACP_EXTENSION_GROUPS_EXPLAIN'		=> '在這裡，您可以新增、刪除、修改、或停用副檔名群組。更進一步選項，包括設定特殊類別、變更下載機制、和定義展示在附加檔案前面的副檔名群組上傳圖示。',
-	'ACP_MANAGE_EXTENSIONS_EXPLAIN'		=> '在這裡，您可以管理您所允許的副檔名。要啟用某個副檔名，請到副檔名群組管理面板。我們強烈建議您，不要允許 Scripting 副檔名 (例如 <code>php</code>、<code>php3</code>、<code>php4</code>、<code>phtml</code>、<code>pl</code>、<code>cgi</code>、<code>py</code>、<code>rb</code>、<code>asp</code>、<code>aspx</code>、...等等)。',
+	'ACP_MANAGE_EXTENSIONS_EXPLAIN'		=> '在這裡，您可以管理您所允許的副檔名。要啟用某個副檔名，請到副檔名群組管理面板。我們強烈建議您，不要允許 Scripting 副檔名 (例如 <code>php</code>、<code>php3</code>、<code>php4</code>、<code>phtml</code>、<code>pl</code>、<code>cgi</code>、<code>py</code>、<code>rb</code>、<code>asp</code>、<code>aspx</code>、…等等)。',
 	'ACP_ORPHAN_ATTACHMENTS_EXPLAIN'	=> '在這裡，您可以看見存在附加檔案上傳資料夾中，但是沒有發表在文章中的檔案。這很可能因為會員新增了附加檔案，但是最後並沒送出文章。您可以刪除這些檔案，或者將其新增到存在的文章中。新增附加檔案到文章中需要一個有效的文章 ID，您必須自己決定這個 ID。這個功能可以將已經上傳的附加檔案分配到您所指定的文章中。',
 	'ADD_EXTENSION'						=> '新增副檔名',
 	'ADD_EXTENSION_GROUP'				=> '新增副檔名群組',
@@ -57,7 +57,7 @@ $lang = array_merge($lang, array(
 	'ATTACH_EXT_GROUPS_URL'				=> '副檔名群組',
 	'ATTACH_ID'							=> 'ID',
 	'ATTACH_MAX_FILESIZE'				=> '檔案大小的最大值',
-	'ATTACH_MAX_FILESIZE_EXPLAIN'		=> '每個附加檔案其檔案大小的最大值，設定 0 表示沒有限制。',
+	'ATTACH_MAX_FILESIZE_EXPLAIN'		=> '每個附加檔案其檔案大小的最大值。如果設定 0，那麼可以上傳的檔案大小，將只受限於您的 PHP 設定。',
 	'ATTACH_MAX_PM_FILESIZE'			=> '在私人訊息中檔案大小的最大值',
 	'ATTACH_MAX_PM_FILESIZE_EXPLAIN'	=> '可以使用在私人訊息中的附加檔案，其每個檔案之最大容量，設定 0 表示沒有限制。',
 	'ATTACH_ORPHAN_URL'					=> '幽靈檔案',
@@ -85,7 +85,7 @@ $lang = array_merge($lang, array(
 	'DISPLAY_INLINED_EXPLAIN'		=> '如果設定為否，圖檔將顯示為一個連結。',
 	'DISPLAY_ORDER'					=> '附加檔案顯示順序',
 	'DISPLAY_ORDER_EXPLAIN'			=> '按時間顯示附加檔案順序。',
-	
+
 	'EDIT_EXTENSION_GROUP'			=> '編輯副檔名群組',
 	'EXCLUDE_ENTERED_IP'			=> '使用這個選項以排除輸入的 IP/主機。',
 	'EXCLUDE_FROM_ALLOWED_IP'		=> '從允許的 IP/主機中排除 IP',
@@ -96,6 +96,16 @@ $lang = array_merge($lang, array(
 	'EXTENSION_GROUPS'				=> '副檔名群組',
 	'EXTENSION_GROUP_DELETED'		=> '副檔名群組刪除完成。',
 	'EXTENSION_GROUP_EXIST'			=> '副檔名群組 %s 已經存在',
+
+	'EXT_GROUP_ARCHIVES'			=> '壓縮檔',
+	'EXT_GROUP_DOCUMENTS'			=> '文件檔',
+	'EXT_GROUP_DOWNLOADABLE_FILES'	=> '可下載的檔案',
+	'EXT_GROUP_FLASH_FILES'			=> 'Flash 檔案',
+	'EXT_GROUP_IMAGES'				=> '圖片檔',
+	'EXT_GROUP_PLAIN_TEXT'			=> '純文字檔',
+	'EXT_GROUP_QUICKTIME_MEDIA'		=> 'Quicktime 多媒體檔',
+	'EXT_GROUP_REAL_MEDIA'			=> 'Real Media 多媒體檔',
+	'EXT_GROUP_WINDOWS_MEDIA'		=> 'Windows Media 多媒體檔',
 
 	'GO_TO_EXTENSIONS'		=> '前往副檔名管理界面',
 	'GROUP_NAME'			=> '群組名稱',
@@ -153,7 +163,7 @@ $lang = array_merge($lang, array(
 	'SUCCESS_EXTENSION_GROUP_EDIT'	=> '副檔名群組更新完成',
 
 	'UPLOADING_FILES'				=> '上傳檔案中',
-	'UPLOADING_FILE_TO'				=> '上傳「%1$s」檔案到文章 ID %2$d...',
+	'UPLOADING_FILE_TO'				=> '上傳「%1$s」檔案到文章 ID %2$d…',
 	'UPLOAD_DENIED_FORUM'			=> '您沒有上傳檔案到「%s」版面的權限',
 	'UPLOAD_DIR'					=> '上傳資料夾',
 	'UPLOAD_DIR_EXPLAIN'			=> '附加檔案的儲存路徑。請注意！假如您更改了已經上傳檔案的目錄，那麼您必須將檔案複製到新的位置。',

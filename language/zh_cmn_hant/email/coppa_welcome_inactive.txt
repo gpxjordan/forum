@@ -16,7 +16,7 @@ Subject: 歡迎光臨「{SITENAME}」
 允許參與「{SITENAME}」 - {U_BOARD} 的同意書
 
 會員名稱：{USERNAME}
-E-mail：{EMAIL_ADDRESS}
+e-mail：{EMAIL_ADDRESS}
 
 我已看過保護兒童的條文並且允許「{SITENAME}」 儲存這些資訊。
 我瞭解這些資訊可能在任何時候因被輸入密碼而更改。

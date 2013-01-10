@@ -1,29 +1,13 @@
 <?php
 /**
-* This file is part of U.S. English phpBB Localization.
-* Copyright (C) 2010 phpBB.fr
 *
-* This program is free software; you can redistribute it and/or modify
-* it under the terms of the GNU General Public License as published by
-* the Free Software Foundation; version 2 of the License.
+* acp_email [English]
 *
-* This program is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-* GNU General Public License for more details.
+* @package language
+* @version $Id$
+* @copyright (c) 2005 phpBB Group
+* @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
-* You should have received a copy of the GNU General Public License along
-* with this program; if not, write to the Free Software Foundation, Inc.,
-* 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-*
-* acp_email [U.S. English]
-*
-* @package   language
-* @author    Maël Soucaze <maelsoucaze@phpbb.fr> (Maël Soucaze) http://www.phpbb.fr/
-* @author    Seven ALive <N/A> (Robert Baker) http://sevenupdate.com/
-* @copyright 2005 phpBB Group
-* @license   http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License
-* @version   $Id: email.php 8479 2008-03-29 00:22:48Z naderman $
 */
 
 /**
@@ -68,7 +52,7 @@ $lang = array_merge($lang, array(
 	'SEND_TO_GROUP'			=> 'Send to group',
 	'SEND_TO_USERS'			=> 'Send to users',
 	'SEND_TO_USERS_EXPLAIN'	=> 'Entering names here will override any group selected above. Enter each username on a new line.',
-	
+
 	'MAIL_BANNED'			=> 'Mail banned users',
 	'MAIL_BANNED_EXPLAIN'	=> 'When sending a mass e-mail to a group you can select here whether banned users will also receive the e-mail.',
 	'MAIL_HIGH_PRIORITY'	=> 'High',
@@ -77,7 +61,7 @@ $lang = array_merge($lang, array(
 	'MAIL_PRIORITY'			=> 'Mail priority',
 	'MASS_MESSAGE'			=> 'Your message',
 	'MASS_MESSAGE_EXPLAIN'	=> 'Please note that you may enter only plain text. All markup will be removed before sending.',
-	
+
 	'NO_EMAIL_MESSAGE'		=> 'You must enter a message.',
 	'NO_EMAIL_SUBJECT'		=> 'You must specify a subject for your message.',
 ));

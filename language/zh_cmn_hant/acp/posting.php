@@ -4,7 +4,7 @@
 * acp_posting [正體中文]
 *
 * @package language
-* @version $Id: posting.php 10517 2010-02-21 11:35:45Z Kellanved $
+* @version $Id$
 * @copyright (c) 2001 - 2007 phpBB TW Group (心靈捕手)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -40,7 +40,8 @@ if (empty($lang) || !is_array($lang))
 $lang = array_merge($lang, array(
 	'ACP_BBCODES_EXPLAIN'		=> 'BBCode 是一種特殊的 HTML 簡易使用方式，它可以提供有效的控制各種頁面效果的顯示。在這裡，您可以增加/移除/編輯自行定義 BBCode。',
 	'ADD_BBCODE'				=> '增加 BBCode',
-	'BBCODE_DANGER'				=> '您嘗試新增的 BBCode 似乎是使用 {TEXT} 標記在 HTML 語法。這很有可能發生 XSS 安全問題。試試使用更多限制的 {SIMPLETEXT} 或 {INTTEXT} 型式取代。如果您瞭解潛在的風險，以及認為絕對無法避免使用 {TEXT} 的話，那麼繼續執行它。',
+
+	'BBCODE_DANGER'				=> '您嘗試新增的 BBCode 似乎是使用 {TEXT} 標記在 HTML 語法。這很有可能發生 XSS 安全問題。試試使用更多限制的 {SIMPLETEXT} 或 {INTTEXT} 型式取代。如果您瞭解潛在的風險，以及認為使用 {TEXT} 絕對無法避免的話，那麼繼續執行它。',
 	'BBCODE_DANGER_PROCEED'		=> '繼續執行', //'I understand the risk',
 
 	'BBCODE_ADDED'				=> 'BBCode 增加成功。',
@@ -75,13 +76,13 @@ $lang = array_merge($lang, array(
 	'TOO_MANY_BBCODES'		=> '您不能建立更多的 BBCodes。請先移除一個或更多個 BBCode 後再試試。',
 
 	'tokens'	=>	array(
-		'TEXT'			=> '任何文字，包括外國文字、數字、...等。您不該在 HTML 標籤中使用這個標誌符號，試試使用 IDENTIFIER、INTTEXT 或 SIMPLETEXT。',
+		'TEXT'			=> '任何文字，包括外國文字、數字、…等。您不該在 HTML 標籤中使用這個標誌符號，試試使用 IDENTIFIER、INTTEXT 或 SIMPLETEXT。',
 		'SIMPLETEXT'	=> '包含拉丁文字母表 (A-Z)、數字、空格、逗點、小數點、減號、加號、連字號以及底線等字元。',
 		'INTTEXT'		=> '萬國碼字母字元、數字、空格、逗點、小數點、減號、加號、連字號以及底線等字元。',
 		'IDENTIFIER'	=> '包含拉丁文字母表 (A-Z)、數字、連字號以及底線等字元。',
 		'NUMBER'		=> '任何數字序列',
 		'EMAIL'			=> '有效的 e-mail 位址',
-		'URL'			=> '使用任何通訊協議的有效的 URL (如 http、ftp、...等，但不能使用 javascript 功能)。如果沒有提供，將將自動以「http://」當作字符串的開頭。',
+		'URL'			=> '使用任何通訊協議的有效的 URL (如 http、ftp、…等，但不能使用 Javascript 功能)。如果沒有提供，將將自動以「http://」當作字符串的開頭。',
 		'LOCAL_URL'		=> '本地的 URL。URL 必須和主題頁相關，並且不能包含伺服器名稱或通訊協議。',
 		'COLOR'			=> 'HTML 顏色，可以是 3 組十六進位數格式，例如：<samp>#FF1234</samp>，或者是 <a href="http://www.w3.org/TR/CSS21/syndata.html#value-def-color">CSS 顏色關鍵字</a>，例如：<samp>fuchsia</samp> 或 <samp>InactiveBorder</samp>。'
 	)
@@ -169,6 +170,7 @@ $lang = array_merge($lang, array(
 	'SMILIES_EDIT'				=> '編輯表情符號',
 	'SMILIE_NO_CODE'			=> '表情符號「%s」被忽略，因為沒有輸入代碼。',
 	'SMILIE_NO_EMOTION'			=> '表情符號「%s」被忽略，因為沒有輸入表情。',
+	'SMILIE_NO_FILE'			=> '表情符號「%s」被忽略，因為缺少這個檔案。',
 	'SMILIES_NONE_EDITED'		=> '沒有表情符號被更新。',
 	'SMILIES_ONE_EDITED'		=> '表情符號更新成功。',
 	'SMILIES_EDITED'			=> '表情更新成功。',
@@ -200,10 +202,12 @@ $lang = array_merge($lang, array(
 
 	'REPLACEMENT'	=> '替代字詞',
 
- 	'BLOCK_WORD'	=> '封鎖單字',
-	'BLOCK'		=> '封鎖',
-	'BLOCK_CODE'	=> 'blacklisted_site',
-	'SEND_CONFIRM'	=> '立刻送出表單',
+	// START ABBS
+	'BLOCK_WORD'	=> '封鎖字詞',
+	'BLOCK'			=> '封鎖',
+	'BLOCK_CODE'	=> '列入網站黑名單',
+	'SEND_CONFIRM'	=> '立即送出表單',
+	// END ABBS
 
 	'UPDATE_WORD'	=> '更新過濾字詞',
 
@@ -237,13 +241,13 @@ $lang = array_merge($lang, array(
 
 // Disallow Usernames
 $lang = array_merge($lang, array(
-	'ACP_DISALLOW_EXPLAIN'	=> '在這裡，您可以管理禁止使用的會員名稱。其中包含可以使用萬用字元 *。請注意！這對已經註冊的會員名稱是無效的，您必須先刪除它以後才能禁用之。',
+	'ACP_DISALLOW_EXPLAIN'	=> '在這裡，您可以管理禁止使用的會員名稱。其中包含可以使用萬用字元 *。',
 	'ADD_DISALLOW_EXPLAIN'	=> '您可以使用萬用字元 * 來禁用某個會員名稱。',
 	'ADD_DISALLOW_TITLE'	=> '增加禁用的會員名稱',
 
 	'DELETE_DISALLOW_EXPLAIN'	=> '您可以透過點選列表中的會員名稱，再點選送出，來移除一個禁用的會員名稱',
 	'DELETE_DISALLOW_TITLE'		=> '移除一個禁用的會員名稱',
-	'DISALLOWED_ALREADY'		=> '您輸入的會員名稱無法被禁用。它或許已經存在禁用會員名稱列表中、或許存在字詞過濾列表中、或者此會員名稱已經被使用。',
+	'DISALLOWED_ALREADY'		=> '您輸入的會員名稱已經被禁用。',
 	'DISALLOWED_DELETED'		=> '禁用的會員名稱移除成功。',
 	'DISALLOW_SUCCESSFUL'		=> '禁用的會員名稱增加成功。',
 

@@ -2,7 +2,7 @@
 /**
 *
 * @package phpBB3
-* @version $Id: cron.php 8479 2008-03-29 00:22:48Z naderman $
+* @version $Id$
 * @copyright (c) 2005 phpBB Group
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -80,7 +80,7 @@ switch ($cron_type)
 		include_once($phpbb_root_path . 'includes/functions_messenger.' . $phpEx);
 		$queue = new queue();
 
-			$queue->process();
+		$queue->process();
 
 	break;
 
@@ -91,7 +91,7 @@ switch ($cron_type)
 			break;
 		}
 
-			$cache->tidy();
+		$cache->tidy();
 
 	break;
 
@@ -116,7 +116,7 @@ switch ($cron_type)
 			break;
 		}
 
-			$search->tidy();
+		$search->tidy();
 
 	break;
 
@@ -129,7 +129,7 @@ switch ($cron_type)
 
 		include_once($phpbb_root_path . 'includes/functions_admin.' . $phpEx);
 
-			tidy_warnings();
+		tidy_warnings();
 
 	break;
 
@@ -142,7 +142,7 @@ switch ($cron_type)
 
 		include_once($phpbb_root_path . 'includes/functions_admin.' . $phpEx);
 
-			tidy_database();
+		tidy_database();
 
 	break;
 
@@ -153,7 +153,7 @@ switch ($cron_type)
 			break;
 		}
 
-			$user->session_gc();
+		$user->session_gc();
 
 	break;
 
@@ -179,13 +179,13 @@ switch ($cron_type)
 			include_once($phpbb_root_path . 'includes/functions_admin.' . $phpEx);
 
 			if ($row['prune_days'])
-				{
-					auto_prune($row['forum_id'], 'posted', $row['forum_flags'], $row['prune_days'], $row['prune_freq']);
+			{
+				auto_prune($row['forum_id'], 'posted', $row['forum_flags'], $row['prune_days'], $row['prune_freq']);
 			}
 
 			if ($row['prune_viewed'])
-				{
-					auto_prune($row['forum_id'], 'viewed', $row['forum_flags'], $row['prune_viewed'], $row['prune_freq']);
+			{
+				auto_prune($row['forum_id'], 'viewed', $row['forum_flags'], $row['prune_viewed'], $row['prune_freq']);
 			}
 		}
 
@@ -193,8 +193,8 @@ switch ($cron_type)
 }
 
 // Unloading cache and closing db after having done the dirty work.
-	unlock_cron();
-	garbage_collection();
+unlock_cron();
+garbage_collection();
 
 exit;
 

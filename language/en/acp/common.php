@@ -1,29 +1,13 @@
 <?php
 /**
-* This file is part of U.S. English phpBB Localization.
-* Copyright (C) 2010 phpBB.fr
 *
-* This program is free software; you can redistribute it and/or modify
-* it under the terms of the GNU General Public License as published by
-* the Free Software Foundation; version 2 of the License.
+* acp_common [English]
 *
-* This program is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-* GNU General Public License for more details.
+* @package language
+* @version $Id$
+* @copyright (c) 2005 phpBB Group
+* @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
-* You should have received a copy of the GNU General Public License along
-* with this program; if not, write to the Free Software Foundation, Inc.,
-* 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-*
-* acp_common [U.S. English]
-*
-* @package   language
-* @author    Maël Soucaze <maelsoucaze@phpbb.fr> (Maël Soucaze) http://www.phpbb.fr/
-* @author    Seven ALive <N/A> (Robert Baker) http://sevenupdate.com/
-* @copyright 2005 phpBB Group
-* @license   http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License
-* @version   $Id: common.php 10458 2010-01-26 15:26:07Z jelly_doughnut $
 */
 
 /**
@@ -225,12 +209,12 @@ $lang = array_merge($lang, array(
 	'ADMIN_INDEX'			=> 'Admin index',
 	'ADMIN_PANEL'			=> 'Administration Control Panel',
 
-	'ADM_LOGOUT'         => 'ACP&nbsp;Logout',
-	'ADM_LOGGED_OUT'      => 'Successfully logged out from Administration Control Panel',
+	'ADM_LOGOUT'			=> 'ACP&nbsp;Logout',
+	'ADM_LOGGED_OUT'		=> 'Successfully logged out from Administration Control Panel',
 
 	'BACK'					=> 'Back',
 
-	'COLOUR_SWATCH'			=> 'Web-safe color swatch',
+	'COLOUR_SWATCH'			=> 'Web-safe colour swatch',
 	'CONFIG_UPDATED'		=> 'Configuration updated successfully.',
 
 	'DEACTIVATE'				=> 'Deactivate',
@@ -271,7 +255,7 @@ $lang = array_merge($lang, array(
 	'MOVE_UP'				=> 'Move up',
 
 	'NOTIFY'				=> 'Notification',
-	'NO_ADMIN'				=> 'You are not authorized to administer this board.',
+	'NO_ADMIN'				=> 'You are not authorised to administer this board.',
 	'NO_EMAILS_DEFINED'		=> 'No valid e-mail addresses found.',
 	'NO_PASSWORD_SUPPLIED'	=> 'You need to enter your password to access the Administration Control Panel.',
 
@@ -286,7 +270,7 @@ $lang = array_merge($lang, array(
 	'PROCEED_TO_ACP'					=> '%sProceed to the ACP%s',
 
 	'REMIND'							=> 'Remind',
-	'RESYNC'							=> 'Resynchronize',
+	'RESYNC'							=> 'Resynchronise',
 	'RETURN_TO'							=> 'Return to…',
 
 	'SELECT_ANONYMOUS'		=> 'Select anonymous user',
@@ -308,7 +292,7 @@ $lang = array_merge($lang, array(
 
 // PHP info
 $lang = array_merge($lang, array(
-	'ACP_PHP_INFO_EXPLAIN'	=> 'This page lists information on the version of PHP installed on this server. It includes details of loaded modules, available variables and default settings. This information may be useful when diagnosing problems. Please be aware that some hosting companies will limit what information is displayed here for security reasons. You are advized to not give out any details on this page except when asked by <a href="http://www.phpbb.com/about/team/">official team members</a> on the support forums.',
+	'ACP_PHP_INFO_EXPLAIN'	=> 'This page lists information on the version of PHP installed on this server. It includes details of loaded modules, available variables and default settings. This information may be useful when diagnosing problems. Please be aware that some hosting companies will limit what information is displayed here for security reasons. You are advised to not give out any details on this page except when asked by <a href="http://www.phpbb.com/about/team/">official team members</a> on the support forums.',
 
 	'NO_PHPINFO_AVAILABLE'	=> 'Information about your PHP configuration is unable to be determined. Phpinfo() has been disabled for security reasons.',
 ));
@@ -381,33 +365,33 @@ $lang = array_merge($lang, array(
 	'RESET_DATE_CONFIRM'			=> 'Are you sure you wish to reset the board’s start date?',
 	'RESET_ONLINE'					=> 'Reset most users ever online',
 	'RESET_ONLINE_CONFIRM'			=> 'Are you sure you wish to reset the most users ever online counter?',
-	'RESYNC_POSTCOUNTS'				=> 'Resynchronize post counts',
+	'RESYNC_POSTCOUNTS'				=> 'Resynchronise post counts',
 	'RESYNC_POSTCOUNTS_EXPLAIN'		=> 'Only existing posts will be taken into consideration. Pruned posts will not be counted.',
-	'RESYNC_POSTCOUNTS_CONFIRM'		=> 'Are you sure you wish to resynchronize post counts?',
-	'RESYNC_POST_MARKING'			=> 'Resynchronize dotted topics',
-	'RESYNC_POST_MARKING_CONFIRM'	=> 'Are you sure you wish to resynchronize dotted topics?',
+	'RESYNC_POSTCOUNTS_CONFIRM'		=> 'Are you sure you wish to resynchronise post counts?',
+	'RESYNC_POST_MARKING'			=> 'Resynchronise dotted topics',
+	'RESYNC_POST_MARKING_CONFIRM'	=> 'Are you sure you wish to resynchronise dotted topics?',
 	'RESYNC_POST_MARKING_EXPLAIN'	=> 'First unmarks all topics and then correctly marks topics that have seen any activity during the past six months.',
-	'RESYNC_STATS'					=> 'Resynchronize statistics',
-	'RESYNC_STATS_CONFIRM'			=> 'Are you sure you wish to resynchronize statistics?',
+	'RESYNC_STATS'					=> 'Resynchronise statistics',
+	'RESYNC_STATS_CONFIRM'			=> 'Are you sure you wish to resynchronise statistics?',
 	'RESYNC_STATS_EXPLAIN'			=> 'Recalculates the total number of posts, topics, users and files.',
 	'RUN'							=> 'Run now',
 
 	'STATISTIC'					=> 'Statistic',
-	'STATISTIC_RESYNC_OPTIONS'	=> 'Resynchronize or reset statistics',
+	'STATISTIC_RESYNC_OPTIONS'	=> 'Resynchronise or reset statistics',
 
 	'TOPICS_PER_DAY'	=> 'Topics per day',
 
 	'UPLOAD_DIR_SIZE'	=> 'Size of posted attachments',
 	'USERS_PER_DAY'		=> 'Users per day',
 
-	'VALUE'					=> 'Value',
+	'VALUE'						=> 'Value',
 	'VERSIONCHECK_FAIL'			=> 'Failed to obtain latest version information.',
 	'VERSIONCHECK_FORCE_UPDATE'	=> 'Re-Check version',
-	'VIEW_ADMIN_LOG'		=> 'View administrator log',
-	'VIEW_INACTIVE_USERS'	=> 'View inactive users',
+	'VIEW_ADMIN_LOG'			=> 'View administrator log',
+	'VIEW_INACTIVE_USERS'		=> 'View inactive users',
 
 	'WELCOME_PHPBB'			=> 'Welcome to phpBB',
-	'WRITABLE_CONFIG'      => 'Your config file (config.php) is currently world-writable. We strongly encourage you to change the permissions to 640 or at least to 644 (for example: <a href="http://en.wikipedia.org/wiki/Chmod" rel="external">chmod</a> 640 config.php).',
+	'WRITABLE_CONFIG'		=> 'Your config file (config.php) is currently world-writable. We strongly encourage you to change the permissions to 640 or at least to 644 (for example: <a href="http://en.wikipedia.org/wiki/Chmod" rel="external">chmod</a> 640 config.php).',
 ));
 
 // Inactive Users
@@ -553,7 +537,7 @@ $lang = array_merge($lang, array(
 
 	'LOG_TOPIC_APPROVED'		=> '<strong>Approved topic</strong><br />» %s',
 	'LOG_TOPIC_DISAPPROVED'		=> '<strong>Disapproved topic “%1$s” with the following reason</strong><br />%2$s',
-	'LOG_TOPIC_RESYNC'			=> '<strong>Resynchronized topic counters</strong><br />» %s',
+	'LOG_TOPIC_RESYNC'			=> '<strong>Resynchronised topic counters</strong><br />» %s',
 	'LOG_TOPIC_TYPE_CHANGED'	=> '<strong>Changed topic type</strong><br />» %s',
 	'LOG_UNLOCK'				=> '<strong>Unlocked topic</strong><br />» %s',
 	'LOG_UNLOCK_POST'			=> '<strong>Unlocked post</strong><br />» %s',
@@ -586,7 +570,7 @@ $lang = array_merge($lang, array(
 	'LOG_FORUM_EDIT'						=> '<strong>Edited forum details</strong><br />» %s',
 	'LOG_FORUM_MOVE_DOWN'					=> '<strong>Moved forum</strong> %1$s <strong>below</strong> %2$s',
 	'LOG_FORUM_MOVE_UP'						=> '<strong>Moved forum</strong> %1$s <strong>above</strong> %2$s',
-	'LOG_FORUM_SYNC'						=> '<strong>Re-synchronized forum</strong><br />» %s',
+	'LOG_FORUM_SYNC'						=> '<strong>Re-synchronised forum</strong><br />» %s',
 
 	'LOG_GENERAL_ERROR'	=> '<strong>A general error occured</strong>: %1$s <br />» %2$s',
 
@@ -610,8 +594,8 @@ $lang = array_merge($lang, array(
 	'LOG_IMAGESET_EDIT_DETAILS'		=> '<strong>Edited imageset details</strong><br />» %s',
 	'LOG_IMAGESET_EDIT'				=> '<strong>Edited imageset</strong><br />» %s',
 	'LOG_IMAGESET_EXPORT'			=> '<strong>Exported imageset</strong><br />» %s',
-	'LOG_IMAGESET_LANG_MISSING'		=> '<strong>Imageset misses “%2$s” localization</strong><br />» %1$s',
-	'LOG_IMAGESET_LANG_REFRESHED'	=> '<strong>Refreshed “%2$s” localization of imageset</strong><br />» %1$s',
+	'LOG_IMAGESET_LANG_MISSING'		=> '<strong>Imageset misses “%2$s” localisation</strong><br />» %1$s',
+	'LOG_IMAGESET_LANG_REFRESHED'	=> '<strong>Refreshed “%2$s” localisation of imageset</strong><br />» %1$s',
 	'LOG_IMAGESET_REFRESHED'		=> '<strong>Refreshed imageset</strong><br />» %s',
 
 	'LOG_INACTIVE_ACTIVATE'	=> '<strong>Activated inactive users</strong><br />» %s',
@@ -685,9 +669,9 @@ $lang = array_merge($lang, array(
 	'LOG_REFERER_INVALID'		=> '<strong>Referer validation failed</strong><br />»Referer was “<em>%1$s</em>”. The request was rejected and the session killed.',
 	'LOG_RESET_DATE'			=> '<strong>Board start date reset</strong>',
 	'LOG_RESET_ONLINE'			=> '<strong>Most users online reset</strong>',
-	'LOG_RESYNC_POSTCOUNTS'		=> '<strong>User post counts resynchronized</strong>',
-	'LOG_RESYNC_POST_MARKING'	=> '<strong>Dotted topics resynchronized</strong>',
-	'LOG_RESYNC_STATS'			=> '<strong>Post, topic and user statistics resynchronized</strong>',
+	'LOG_RESYNC_POSTCOUNTS'		=> '<strong>User post counts resynchronised</strong>',
+	'LOG_RESYNC_POST_MARKING'	=> '<strong>Dotted topics resynchronised</strong>',
+	'LOG_RESYNC_STATS'			=> '<strong>Post, topic and user statistics resynchronised</strong>',
 
 	'LOG_SEARCH_INDEX_CREATED'	=> '<strong>Created search index for</strong><br />» %s',
 	'LOG_SEARCH_INDEX_REMOVED'	=> '<strong>Removed search index for</strong><br />» %s',
@@ -763,6 +747,15 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_ADD'			=> '<strong>Added word censor</strong><br />» %s',
 	'LOG_WORD_DELETE'		=> '<strong>Deleted word censor</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Edited word censor</strong><br />» %s',
+// MOD : MSSTI RSS Feeds (V1.2.1) - Start
+	'ACP_RSS'					=> 'RSS management',
+	'ACP_RSS_FEEDS'				=> 'RSS',
+	'LOG_CONFIG_RSS_FEEDS'		=> '<strong>Configured RSS feeds</strong>',
+// MOD : MSSTI RSS Feeds (V1.2.1) - End
+));
+
+$lang = array_merge($lang, array(
+	'LOG_ANNOUNCEMENT_UPDATED'			=> '<strong>Announcement(s) updated</strong>',
 ));
 
 ?>

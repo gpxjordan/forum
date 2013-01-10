@@ -1,29 +1,13 @@
 <?php
 /**
-* This file is part of U.S. English phpBB Localization.
-* Copyright (C) 2010 phpBB.fr
 *
-* This program is free software; you can redistribute it and/or modify
-* it under the terms of the GNU General Public License as published by
-* the Free Software Foundation; version 2 of the License.
+* install [English]
 *
-* This program is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-* GNU General Public License for more details.
+* @package language
+* @version $Id$
+* @copyright (c) 2005 phpBB Group
+* @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
-* You should have received a copy of the GNU General Public License along
-* with this program; if not, write to the Free Software Foundation, Inc.,
-* 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-*
-* install [U.S. English]
-*
-* @package   language
-* @author    Maël Soucaze <maelsoucaze@phpbb.fr> (Maël Soucaze) http://www.phpbb.fr/
-* @author    Seven ALive <N/A> (Robert Baker) http://sevenupdate.com/
-* @copyright 2005 phpBB Group
-* @license   http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License
-* @version   $Id: install.php 10489 2010-02-11 00:02:51Z naderman $
 */
 
 /**
@@ -304,7 +288,7 @@ $lang = array_merge($lang, array(
 	'NO_LOCATION'				=> 'Cannot determine location. If you know Imagemagick is installed, you may specify the location later within your administration control panel',
 	'NO_TABLES_FOUND'			=> 'No tables found.',
 
-	'OVERVIEW_BODY'            => 'Welcome to phpBB3!<br /><br />phpBB™ is the most widely used open source bulletin board solution in the world. phpBB3 is the latest installment in a package line started in 2000. Like its predecessors, phpBB3 is feature-rich, user-friendly, and fully supported by the phpBB Team. phpBB3 greatly improves on what made phpBB2 popular, and adds commonly requested features that were not present in previous versions. We hope it exceeds your expectations.<br /><br />This installation system will guide you through installing phpBB3, updating to the latest version of phpBB3 from past releases, as well as converting to phpBB3 from a different discussion board system (including phpBB2). For more information, we encourage you to read <a href="../docs/INSTALL.html">the installation guide</a>.<br /><br />To read the phpBB3 license or learn about obtaining support and our stance on it, please select the respective options from the side menu. To continue, please select the appropriate tab above.',
+	'OVERVIEW_BODY'				=> 'Welcome to phpBB3!<br /><br />phpBB™ is the most widely used open source bulletin board solution in the world. phpBB3 is the latest installment in a package line started in 2000. Like its predecessors, phpBB3 is feature-rich, user-friendly, and fully supported by the phpBB Team. phpBB3 greatly improves on what made phpBB2 popular, and adds commonly requested features that were not present in previous versions. We hope it exceeds your expectations.<br /><br />This installation system will guide you through installing phpBB3, updating to the latest version of phpBB3 from past releases, as well as converting to phpBB3 from a different discussion board system (including phpBB2). For more information, we encourage you to read <a href="../docs/INSTALL.html">the installation guide</a>.<br /><br />To read the phpBB3 license or learn about obtaining support and our stance on it, please select the respective options from the side menu. To continue, please select the appropriate tab above.',
 
 	'PCRE_UTF_SUPPORT'				=> 'PCRE UTF-8 support',
 	'PCRE_UTF_SUPPORT_EXPLAIN'		=> 'phpBB will <strong>not</strong> run if your PHP installation is not compiled with UTF-8 support in the PCRE extension.',
@@ -362,11 +346,11 @@ $lang = array_merge($lang, array(
 	'SUB_SUPPORT'				=> 'Support',
 	'SUCCESSFUL_CONNECT'		=> 'Successful connection',
 	'SUPPORT_BODY'				=> 'Full support will be provided for the current stable release of phpBB3, free of charge. This includes:</p><ul><li>installation</li><li>configuration</li><li>technical questions</li><li>problems relating to potential bugs in the software</li><li>updating from Release Candidate (RC) versions to the latest stable version</li><li>converting from phpBB 2.0.x to phpBB3</li><li>converting from other discussion board software to phpBB3 (please see the <a href="http://www.phpbb.com/community/viewforum.php?f=65">Convertors Forum</a>)</li></ul><p>We encourage users still running beta versions of phpBB3 to replace their installation with a fresh copy of the latest version.</p><h2>MODs / Styles</h2><p>For issues relating to MODs, please post in the appropriate <a href="http://www.phpbb.com/community/viewforum.php?f=81">Modifications Forum</a>.<br />For issues relating to styles, templates and imagesets, please post in the appropriate <a href="http://www.phpbb.com/community/viewforum.php?f=80">Styles Forum</a>.<br /><br />If your question relates to a specific package, please post directly in the topic dedicated to the package.</p><h2>Obtaining Support</h2><p><a href="http://www.phpbb.com/community/viewtopic.php?f=14&amp;t=571070">The phpBB Welcome Package</a><br /><a href="http://www.phpbb.com/support/">Support Section</a><br /><a href="http://www.phpbb.com/support/documentation/3.0/quickstart/">Quick Start Guide</a><br /><br />To ensure you stay up to date with the latest news and releases, why not <a href="http://www.phpbb.com/support/">subscribe to our mailing list</a>?<br /><br />',
-	'SYNC_FORUMS'				=> 'Starting to synchronize forums',
-	'SYNC_POST_COUNT'			=> 'Synchronizing post_counts',
-	'SYNC_POST_COUNT_ID'		=> 'Synchronizing post_counts from <var>entry</var> %1$s to %2$s.',
-	'SYNC_TOPICS'				=> 'Starting to synchronize topics',
-	'SYNC_TOPIC_ID'				=> 'Synchronizing topics from <var>topic_id</var> %1$s to %2$s.',
+	'SYNC_FORUMS'				=> 'Starting to synchronise forums',
+	'SYNC_POST_COUNT'			=> 'Synchronising post_counts',
+	'SYNC_POST_COUNT_ID'		=> 'Synchronising post_counts from <var>entry</var> %1$s to %2$s.',
+	'SYNC_TOPICS'				=> 'Starting to synchronise topics',
+	'SYNC_TOPIC_ID'				=> 'Synchronising topics from <var>topic_id</var> %1$s to %2$s.',
 
 	'TABLES_MISSING'			=> 'Could not find these tables<br />» <strong>%s</strong>.',
 	'TABLE_PREFIX'				=> 'Prefix for tables in database',
@@ -425,7 +409,7 @@ $lang = array_merge($lang, array(
 	'DONE'								=> 'Done',
 	'DOWNLOAD'							=> 'Download',
 	'DOWNLOAD_AS'						=> 'Download as',
-	'DOWNLOAD_UPDATE_METHOD_BUTTON'      => 'Download modified files archive (recommended)',
+	'DOWNLOAD_UPDATE_METHOD_BUTTON'		=> 'Download modified files archive (recommended)',
 	'DOWNLOAD_CONFLICTS'				=> 'Download conflicts for this file',
 	'DOWNLOAD_CONFLICTS_EXPLAIN'		=> 'Search for &lt;&lt;&lt; to spot conflicts',
 	'DOWNLOAD_UPDATE_METHOD'			=> 'Download modified files archive',
@@ -480,7 +464,7 @@ $lang = array_merge($lang, array(
 
 	'NEW_FILE'						=> 'End of Conflict',
 	'NEW_USERNAME'					=> 'New username',
-	'NO_AUTH_UPDATE'				=> 'Not authorized to update',
+	'NO_AUTH_UPDATE'				=> 'Not authorised to update',
 	'NO_ERRORS'						=> 'No errors',
 	'NO_UPDATE_FILES'				=> 'Not updating the following files',
 	'NO_UPDATE_FILES_EXPLAIN'		=> 'The following files are new or modified but the directory they normally reside in could not be found on your installation. If this list contains files to other directories than language/ or styles/ than you may have modified your directory structure and the update may be incomplete.',
@@ -528,7 +512,7 @@ $lang = array_merge($lang, array(
 	'STATUS_UP_TO_DATE'			=> 'Already updated file',
 
 	'TOGGLE_DISPLAY'			=> 'View/Hide file list',
-	'TRY_DOWNLOAD_METHOD'      => 'You may want to try the download modified files method.<br />This method always works and is also the recommended update path.',
+	'TRY_DOWNLOAD_METHOD'		=> 'You may want to try the download modified files method.<br />This method always works and is also the recommended update path.',
 	'TRY_DOWNLOAD_METHOD_BUTTON'=> 'Try this method now',
 
 	'UPDATE_COMPLETED'				=> 'Update completed',
@@ -585,15 +569,15 @@ $lang = array_merge($lang, array(
 	'USER_ACTIVE'					=> 'Active user',
 	'USER_INACTIVE'					=> 'Inactive user',
 
-	'VERSION_CHECK'				=> 'Version check',
+	'VERSION_CHECK'					=> 'Version check',
 	'VERSION_CHECK_EXPLAIN'			=> 'Checks to see if your phpBB installation is up to date.',
 	'VERSION_NOT_UP_TO_DATE'		=> 'Your phpBB installation is not up to date. Please continue the update process.',
 	'VERSION_NOT_UP_TO_DATE_ACP'	=> 'Your phpBB installation is not up to date.<br />Below is a link to the release announcement, which contains more information as well as instructions on updating.',
 	'VERSION_NOT_UP_TO_DATE_TITLE'	=> 'Your phpBB installation is not up to date.',
 	'VERSION_UP_TO_DATE'			=> 'Your phpBB installation is up to date. Although there are no updates available at this time, you may continue in order to perform a file validity check.',
 	'VERSION_UP_TO_DATE_ACP'		=> 'Your phpBB installation is up to date. There are no updates available at this time.',
-	'VIEWING_FILE_CONTENTS'		=> 'Viewing file contents',
-	'VIEWING_FILE_DIFF'			=> 'Viewing file differences',
+	'VIEWING_FILE_CONTENTS'			=> 'Viewing file contents',
+	'VIEWING_FILE_DIFF'				=> 'Viewing file differences',
 
 	'WRONG_INFO_FILE_FORMAT'	=> 'Wrong info file format',
 ));

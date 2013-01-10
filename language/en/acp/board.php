@@ -1,29 +1,13 @@
 <?php
 /**
-* This file is part of U.S. English phpBB Localization.
-* Copyright (C) 2010 phpBB.fr
 *
-* This program is free software; you can redistribute it and/or modify
-* it under the terms of the GNU General Public License as published by
-* the Free Software Foundation; version 2 of the License.
+* acp_board [English]
 *
-* This program is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-* GNU General Public License for more details.
+* @package language
+* @version $Id$
+* @copyright (c) 2005 phpBB Group
+* @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
-* You should have received a copy of the GNU General Public License along
-* with this program; if not, write to the Free Software Foundation, Inc.,
-* 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-*
-* acp_board [U.S. English]
-*
-* @package   language
-* @author    Maël Soucaze <maelsoucaze@phpbb.fr> (Maël Soucaze) http://www.phpbb.fr/
-* @author    Seven ALive <N/A> (Robert Baker) http://sevenupdate.com/
-* @copyright 2005 phpBB Group
-* @license   http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License
-* @version   $Id: board.php 10556 2010-02-28 21:01:16Z Marshalrusty $
 */
 
 /**
@@ -78,7 +62,7 @@ $lang = array_merge($lang, array(
 
 	'ALLOW_ATTACHMENTS'			=> 'Allow attachments',
 	'ALLOW_BIRTHDAYS'			=> 'Allow birthdays',
-	'ALLOW_BIRTHDAYS_EXPLAIN'	=> 'Allow birthdays to be entered and age be displayed in profiles. Please note the birthday list within the board index is controlled by a separate load setting.',
+	'ALLOW_BIRTHDAYS_EXPLAIN'	=> 'Allow birthdays to be entered and age being displayed in profiles. Please note the birthday list within the board index is controlled by a separate load setting.',
 	'ALLOW_BOOKMARKS'			=> 'Allow bookmarking topics',
 	'ALLOW_BOOKMARKS_EXPLAIN'	=> 'User is able to store personal bookmarks.',
 	'ALLOW_BBCODE'				=> 'Allow BBCode',
@@ -107,7 +91,7 @@ $lang = array_merge($lang, array(
 
 // Avatar Settings
 $lang = array_merge($lang, array(
-	'ACP_AVATAR_SETTINGS_EXPLAIN'	=> 'Avatars are generally small, unique images users can associate with themselves. Depending on the style they are usually displayed below the username when viewing topics. Here you can determine how users can define their avatars. Please note that in order to upload avatars you need to have created the directory you name below and ensure it can be written to by the web server. Please also note that file size limits are only imposed on uploaded avatars, they do not apply to remotely linked images.',
+	'ACP_AVATAR_SETTINGS_EXPLAIN'	=> 'Avatars are generally small, unique images a user can associate with themselves. Depending on the style they are usually displayed below the username when viewing topics. Here you can determine how users can define their avatars. Please note that in order to upload avatars you need to have created the directory you name below and ensure it can be written to by the web server. Please also note that file size limits are only imposed on uploaded avatars, they do not apply to remotely linked images.',
 
 	'ALLOW_AVATARS'					=> 'Enable avatars',
 	'ALLOW_AVATARS_EXPLAIN'			=> 'Allow general usage of avatars;<br />If you disable avatars in general or avatars of a certain mode, the disabled avatars will no longer be shown on the board, but users will still be able to download their own avatars in the User Control Panel.',
@@ -139,7 +123,7 @@ $lang = array_merge($lang, array(
 	'ALLOW_FORWARD_PM'			=> 'Allow forwarding of private messages',
 	'ALLOW_IMG_PM'				=> 'Allow use of <code>[IMG]</code> BBCode tag',
 	'ALLOW_MASS_PM'				=> 'Allow sending of private messages to multiple users and groups',
-	'ALLOW_MASS_PM_EXPLAIN'      => 'Sending to groups can be adjusted per group within the group settings page.',
+	'ALLOW_MASS_PM_EXPLAIN'		=> 'Sending to groups can be adjusted per group within the group settings page.',
 	'ALLOW_PRINT_PM'			=> 'Allow print view in private messaging',
 	'ALLOW_QUOTE_PM'			=> 'Allow quotes in private messages',
 	'ALLOW_SIG_PM'				=> 'Allow signature in private messages',
@@ -153,9 +137,9 @@ $lang = array_merge($lang, array(
 	'FULL_FOLDER_ACTION_EXPLAIN'=> 'Default action to take if a user’s folder is full assuming the user’s folder action, if set at all, is not applicable. The only exception is for the “Sent messages” folder where the default action is always to delete old messages.',
 	'HOLD_NEW_MESSAGES'			=> 'Hold new messages',
 	'PM_EDIT_TIME'				=> 'Limit editing time',
-	'PM_EDIT_TIME_EXPLAIN'		=> 'Limits the time available to edit a private message not already delivered. Setting the value to 0 disables this behavior.',
-	'PM_MAX_RECIPIENTS'         => 'Maximum number of allowed recipients',
-	'PM_MAX_RECIPIENTS_EXPLAIN'   => 'The maximum number of allowed recipients in a private message. If 0 is entered, an unlimited number is allowed. This setting can be adjusted for every group within the group settings page.',
+	'PM_EDIT_TIME_EXPLAIN'		=> 'Limits the time available to edit a private message not already delivered. Setting the value to 0 disables this behaviour.',
+	'PM_MAX_RECIPIENTS'			=> 'Maximum number of allowed recipients',
+	'PM_MAX_RECIPIENTS_EXPLAIN'	=> 'The maximum number of allowed recipients in a private message. If 0 is entered, an unlimited number is allowed. This setting can be adjusted for every group within the group settings page.',
 ));
 
 // Post Settings
@@ -171,11 +155,11 @@ $lang = array_merge($lang, array(
 	'CHAR_LIMIT'					=> 'Maximum characters per post/message',
 	'CHAR_LIMIT_EXPLAIN'			=> 'The number of characters allowed within a post/private message. Set to 0 for unlimited characters.',
 	'DELETE_TIME'					=> 'Limit deleting time',
-	'DELETE_TIME_EXPLAIN'			=> 'Limits the time available to delete a new post. Setting the value to 0 disables this behavior.',
+	'DELETE_TIME_EXPLAIN'			=> 'Limits the time available to delete a new post. Setting the value to 0 disables this behaviour.',
 	'DISPLAY_LAST_EDITED'			=> 'Display last edited time information',
 	'DISPLAY_LAST_EDITED_EXPLAIN'	=> 'Choose if the last edited by information to be displayed on posts.',
 	'EDIT_TIME'						=> 'Limit editing time',
-	'EDIT_TIME_EXPLAIN'				=> 'Limits the time available to edit a new post. Setting the value to 0 disables this behavior.',
+	'EDIT_TIME_EXPLAIN'				=> 'Limits the time available to edit a new post. Setting the value to 0 disables this behaviour.',
 	'FLOOD_INTERVAL'				=> 'Flood interval',
 	'FLOOD_INTERVAL_EXPLAIN'		=> 'Number of seconds a user must wait between posting new messages. To enable users to ignore this alter their permissions.',
 	'HOT_THRESHOLD'					=> 'Popular topic threshold',
@@ -225,11 +209,6 @@ $lang = array_merge($lang, array(
 
 	'ACC_ACTIVATION'				=> 'Account activation',
 	'ACC_ACTIVATION_EXPLAIN'		=> 'This determines whether users have immediate access to the board or if confirmation is required. You can also completely disable new registrations. “Board-wide e-mail” must be enabled in order to use user or admin activation.',
-	'NEW_MEMBER_POST_LIMIT'			=> 'New member post limit',
-	'NEW_MEMBER_POST_LIMIT_EXPLAIN'	=> 'New members are within the <em>Newly Registered Users</em> group until they reach this number of posts. You can use this group to keep them from using the PM system or to review their posts. <strong>A value of 0 disables this feature.</strong>',
-	'NEW_MEMBER_GROUP_DEFAULT'		=> 'Set Newly Registered Users group to default',
-	'NEW_MEMBER_GROUP_DEFAULT_EXPLAIN'	=> 'If set to yes and a new member post limit is specified newly registered users will be not only put into the <em>Newly Registered Users</em> group, but this group also being their default one. This may come in handy if you want to assign a group default rank and/or avatar the user then inherits.',
-
 	'NEW_MEMBER_POST_LIMIT'			=> 'New member post limit',
 	'NEW_MEMBER_POST_LIMIT_EXPLAIN'	=> 'New members are within the <em>Newly Registered Users</em> group until they reach this number of posts. You can use this group to keep them from using the PM system or to review their posts. <strong>A value of 0 disables this feature.</strong>',
 	'NEW_MEMBER_GROUP_DEFAULT'		=> 'Set Newly Registered Users group to default',
@@ -383,7 +362,7 @@ $lang = array_merge($lang, array(
 	'YES_ANON_READ_MARKING'			=> 'Enable topic marking for guests',
 	'YES_ANON_READ_MARKING_EXPLAIN'	=> 'Stores read/unread status information for guests. If disabled, posts are always marked read for guests.',
 	'YES_BIRTHDAYS'					=> 'Enable birthday listing',
-	'YES_BIRTHDAYS_EXPLAIN'         => 'If disabled the birthday listing is no longer displayed. To let this setting take effect the birthday feature needs to be enabled too.',
+	'YES_BIRTHDAYS_EXPLAIN'			=> 'If disabled the birthday listing is no longer displayed. To let this setting take effect the birthday feature needs to be enabled too.',
 	'YES_JUMPBOX'					=> 'Enable display of jumpbox',
 	'YES_MODERATORS'				=> 'Enable display of moderators',
 	'YES_ONLINE'					=> 'Enable online user listings',
@@ -435,7 +414,7 @@ $lang = array_merge($lang, array(
 	'ENABLE_GZIP'				=> 'Enable GZip compression',
 	'ENABLE_GZIP_EXPLAIN'		=> 'Generated content will be compressed prior to sending it to the user. This can reduce network traffic but will also increase CPU usage on both server and client side. Requires zlib PHP extension to be loaded.',
 	'FORCE_SERVER_VARS'			=> 'Force server URL settings',
-	'FORCE_SERVER_VARS_EXPLAIN'	=> 'If set to yes the server settings defined here will be used in favor of the automatically determined values.',
+	'FORCE_SERVER_VARS_EXPLAIN'	=> 'If set to yes the server settings defined here will be used in favour of the automatically determined values.',
 	'ICONS_PATH'				=> 'Post icons storage path',
 	'ICONS_PATH_EXPLAIN'		=> 'Path under your phpBB root directory, e.g. <samp>images/icons</samp>.',
 	'PATH_SETTINGS'				=> 'Path settings',
@@ -468,13 +447,13 @@ $lang = array_merge($lang, array(
 	'BROWSER_VALID'					=> 'Validate browser',
 	'BROWSER_VALID_EXPLAIN'			=> 'Enables browser validation for each session improving security.',
 	'CHECK_DNSBL'					=> 'Check IP against DNS Blackhole List',
-	'CHECK_DNSBL_EXPLAIN'         => 'If enabled the user’s IP address is checked against the following DNSBL services on registration and posting: <a href="http://spamcop.net">spamcop.net</a> and <a href="http://www.spamhaus.org">www.spamhaus.org</a>. This lookup may take a while, depending on the server’s configuration. If slowdowns are experienced or too many false positives reported it is recommended to disable this check.',
+	'CHECK_DNSBL_EXPLAIN'			=> 'If enabled the user’s IP address is checked against the following DNSBL services on registration and posting: <a href="http://spamcop.net">spamcop.net</a> and <a href="http://www.spamhaus.org">www.spamhaus.org</a>. This lookup may take a while, depending on the server’s configuration. If slowdowns are experienced or too many false positives reported it is recommended to disable this check.',
 	'CLASS_B'						=> 'A.B',
 	'CLASS_C'						=> 'A.B.C',
 	'EMAIL_CHECK_MX'				=> 'Check e-mail domain for valid MX record',
 	'EMAIL_CHECK_MX_EXPLAIN'		=> 'If enabled, the e-mail domain provided on registration and profile changes is checked for a valid MX record.',
 	'FORCE_PASS_CHANGE'				=> 'Force password change',
-	'FORCE_PASS_CHANGE_EXPLAIN'		=> 'Require user to change their password after a set number of days. Setting this value to 0 disables this behavior.',
+	'FORCE_PASS_CHANGE_EXPLAIN'		=> 'Require user to change their password after a set number of days. Setting this value to 0 disables this behaviour.',
 	'FORM_TIME_MAX'					=> 'Maximum time to submit forms',
 	'FORM_TIME_MAX_EXPLAIN'			=> 'The time a user has to submit a form. Use -1 to disable. Note that a form might become invalid if the session expires, regardless of this setting.',
 	'FORM_SID_GUESTS'				=> 'Tie forms to guest sessions',
@@ -492,19 +471,19 @@ $lang = array_merge($lang, array(
 	'MAX_LOGIN_ATTEMPTS'			=> 'Maximum number of login attempts per username',
 	'MAX_LOGIN_ATTEMPTS_EXPLAIN'	=> 'The number of login attempts allowed for a single account before the anti-spambot task is triggered. Enter 0 to prevent the anti-spambot task from being triggered for distinct user accounts.',
 	'NO_IP_VALIDATION'				=> 'None',
-	'NO_REF_VALIDATION'            => 'None',
+	'NO_REF_VALIDATION'				=> 'None',
 	'PASSWORD_TYPE'					=> 'Password complexity',
 	'PASSWORD_TYPE_EXPLAIN'			=> 'Determines how complex a password needs to be when set or altered, subsequent options include the previous ones.',
 	'PASS_TYPE_ALPHA'				=> 'Must contain letters and numbers',
 	'PASS_TYPE_ANY'					=> 'No requirements',
 	'PASS_TYPE_CASE'				=> 'Must be mixed case',
 	'PASS_TYPE_SYMBOL'				=> 'Must contain symbols',
-	'REF_HOST'                  => 'Only validate host',
-	'REF_PATH'                  => 'Also validate path',
-	'REFERER_VALID'               => 'Validate Referer',
-	'REFERER_VALID_EXPLAIN'         => 'If enabled, the referer of POST requests will be checked against the host/script path settings. This may cause issues with boards using several domains and or external logins.',
+	'REF_HOST'						=> 'Only validate host',
+	'REF_PATH'						=> 'Also validate path',
+	'REFERER_VALID'					=> 'Validate Referer',
+	'REFERER_VALID_EXPLAIN'			=> 'If enabled, the referer of POST requests will be checked against the host/script path settings. This may cause issues with boards using several domains and or external logins.',
 	'TPL_ALLOW_PHP'					=> 'Allow php in templates',
-	'TPL_ALLOW_PHP_EXPLAIN'			=> 'If this option is enabled, <code>PHP</code> and <code>INCLUDEPHP</code> statements will be recognized and parsed in templates.',
+	'TPL_ALLOW_PHP_EXPLAIN'			=> 'If this option is enabled, <code>PHP</code> and <code>INCLUDEPHP</code> statements will be recognised and parsed in templates.',
 ));
 
 // Email Settings
@@ -522,7 +501,7 @@ $lang = array_merge($lang, array(
 	'EMAIL_FUNCTION_NAME'			=> 'E-mail function name',
 	'EMAIL_FUNCTION_NAME_EXPLAIN'	=> 'The e-mail function used to send mails through PHP.',
 	'EMAIL_PACKAGE_SIZE'			=> 'E-mail package size',
-	'EMAIL_PACKAGE_SIZE_EXPLAIN'   => 'This is the number of maximum e-mails sent out in one package. This setting is applied to the internal message queue; set this value to 0 if you have problems with non-delivered notification e-mails.',
+	'EMAIL_PACKAGE_SIZE_EXPLAIN'	=> 'This is the number of maximum e-mails sent out in one package. This setting is applied to the internal message queue; set this value to 0 if you have problems with non-delivered notification e-mails.',
 	'EMAIL_SIG'						=> 'E-mail signature',
 	'EMAIL_SIG_EXPLAIN'				=> 'This text will be attached to all e-mails the board sends.',
 	'ENABLE_EMAIL'					=> 'Enable board-wide e-mails',
@@ -564,8 +543,8 @@ $lang = array_merge($lang, array(
 	'JAB_SETTINGS_CHANGED'		=> 'Jabber settings changed successfully.',
 	'JAB_USE_SSL'				=> 'Use SSL to connect',
 	'JAB_USE_SSL_EXPLAIN'		=> 'If enabled a secure connection is tried to be established. The Jabber port will be modified to 5223 if port 5222 is specified.',
-	'JAB_USERNAME'            => 'Jabber username or JID',
-	'JAB_USERNAME_EXPLAIN'      => 'Specify a registered username or a valid JID. The username will not be checked for validity. If you only specify a username, then your JID will be the username and the server you specified above. Else, specify a valid JID, for example user@jabber.org.',
+	'JAB_USERNAME'				=> 'Jabber username or JID',
+	'JAB_USERNAME_EXPLAIN'		=> 'Specify a registered username or a valid JID. The username will not be checked for validity. If you only specify a username, then your JID will be the username and the server you specified above. Else, specify a valid JID, for example user@jabber.org.',
 ));
 
 ?>

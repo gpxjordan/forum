@@ -1,29 +1,13 @@
 <?php
 /**
-* This file is part of U.S. English phpBB Localization.
-* Copyright (C) 2010 phpBB.fr
 *
-* This program is free software; you can redistribute it and/or modify
-* it under the terms of the GNU General Public License as published by
-* the Free Software Foundation; version 2 of the License.
+* acp_groups [English]
 *
-* This program is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-* GNU General Public License for more details.
+* @package language
+* @version $Id$
+* @copyright (c) 2005 phpBB Group
+* @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
-* You should have received a copy of the GNU General Public License along
-* with this program; if not, write to the Free Software Foundation, Inc.,
-* 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-*
-* acp_groups [U.S. English]
-*
-* @package   language
-* @author    Maël Soucaze <maelsoucaze@phpbb.fr> (Maël Soucaze) http://www.phpbb.fr/
-* @author    Seven ALive <N/A> (Robert Baker) http://sevenupdate.com/
-* @copyright 2005 phpBB Group
-* @license   http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License
-* @version   $Id: groups.php 9701 2009-06-28 12:13:11Z toonarmy $
 */
 
 /**
@@ -68,8 +52,8 @@ $lang = array_merge($lang, array(
 	'GROUP_AVATAR'					=> 'Group avatar',
 	'GROUP_AVATAR_EXPLAIN'			=> 'This image will be displayed in the Group Control Panel.',
 	'GROUP_CLOSED'					=> 'Closed',
-	'GROUP_COLOR'					=> 'Group color',
-	'GROUP_COLOR_EXPLAIN'			=> 'Defines the color members’ usernames will appear in, leave blank for user default.',
+	'GROUP_COLOR'					=> 'Group colour',
+	'GROUP_COLOR_EXPLAIN'			=> 'Defines the colour members’ usernames will appear in, leave blank for user default.',
 	'GROUP_CONFIRM_ADD_USER'		=> 'Are you sure that you want to add the user %1$s to the group?',
 	'GROUP_CONFIRM_ADD_USERS'		=> 'Are you sure that you want to add the users %1$s to the group?',
 	'GROUP_CREATED'					=> 'Group has been created successfully.',
@@ -80,7 +64,7 @@ $lang = array_merge($lang, array(
 	'GROUP_DEMOTE'					=> 'Demote group leader',
 	'GROUP_DESC'					=> 'Group description',
 	'GROUP_DETAILS'					=> 'Group details',
-	'GROUP_EDIT_EXPLAIN'			=> 'Here you can edit an existing group. You can change its name, description and type (open, closed, etc.). You can also set certain group wide options such as coloration, rank, etc. Changes made here override users’ current settings. Please note that group members can override group-avatar settings, unless you set appropriate user permissions.',
+	'GROUP_EDIT_EXPLAIN'			=> 'Here you can edit an existing group. You can change its name, description and type (open, closed, etc.). You can also set certain group wide options such as colouration, rank, etc. Changes made here override users’ current settings. Please note that group members can override group-avatar settings, unless you set appropriate user permissions.',
 	'GROUP_ERR_USERS_EXIST'			=> 'The specified users are already members of this group.',
 	'GROUP_FOUNDER_MANAGE'			=> 'Founder manage only',
 	'GROUP_FOUNDER_MANAGE_EXPLAIN'	=> 'Restrict management of this group to founders only. Users having group permissions are still able to see this group as well as this group’s members.',
@@ -102,8 +86,8 @@ $lang = array_merge($lang, array(
 	'GROUP_NAME_TAKEN'				=> 'The group name you entered is already in use, please select an alternative.',
 	'GROUP_OPEN'					=> 'Open',
 	'GROUP_PENDING'					=> 'Pending members',
-	'GROUP_MAX_RECIPIENTS'         => 'Maximum number of allowed recipients per private message',
-	'GROUP_MAX_RECIPIENTS_EXPLAIN'   => 'The maximum number of allowed recipients in a private message. If 0 is entered, the board-wide setting is used.',
+	'GROUP_MAX_RECIPIENTS'			=> 'Maximum number of allowed recipients per private message',
+	'GROUP_MAX_RECIPIENTS_EXPLAIN'	=> 'The maximum number of allowed recipients in a private message. If 0 is entered, the board-wide setting is used.',
 	'GROUP_OPTIONS_SAVE'			=> 'Group wide options',
 	'GROUP_PROMOTE'					=> 'Promote to group leader',
 	'GROUP_RANK'					=> 'Group rank',
@@ -116,7 +100,7 @@ $lang = array_merge($lang, array(
 	'GROUP_TYPE'					=> 'Group type',
 	'GROUP_TYPE_EXPLAIN'			=> 'This determines which users can join or view this group.',
 	'GROUP_UPDATED'					=> 'Group preferences updated successfully.',
-	
+
 	'GROUP_USERS_ADDED'				=> 'New users added to group successfully.',
 	'GROUP_USERS_EXIST'				=> 'The selected users are already members.',
 	'GROUP_USERS_REMOVE'			=> 'Users removed from group and new defaults set successfully.',
@@ -129,7 +113,7 @@ $lang = array_merge($lang, array(
 	'NO_PERMISSIONS'			=> 'Do not copy permissions',
 	'NO_USERS'					=> 'You haven’t entered any users.',
 	'NO_USERS_ADDED'			=> 'No users were added to the group.',
-	'NO_VALID_USERS'         => 'You haven’t entered any users eligible for that action.',
+	'NO_VALID_USERS'			=> 'You haven’t entered any users eligible for that action.',
 
 	'SPECIAL_GROUPS'			=> 'Pre-defined groups',
 	'SPECIAL_GROUPS_EXPLAIN'	=> 'Pre-defined groups are special groups, they cannot be deleted or directly modified. However you can still add users and alter basic settings.',

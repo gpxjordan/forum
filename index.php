@@ -119,7 +119,7 @@ if ( isset($config['announcement_enable']))
 	{
 		if (!function_exists('get_announcement_data'))
 		{
-			include_once($phpbb_root_path . 'includes/functions_announcements.' . $phpEx);
+			include($phpbb_root_path . 'includes/functions_announcements.' . $phpEx);
 		}
 		get_announcement_data();
 	}

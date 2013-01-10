@@ -123,14 +123,13 @@ switch ($mode)
 
 	case 'smilies':
 		$sql = '';
-		// generate_smilies('window', $forum_id);
-		if ( (int) request_var('announce', 0) == 1 )
+		if ( request_var('announce', 0) == ACP_ANNOUNCE_TRUE )
 		{
-		 generate_smilies('window', 0, 1);
+			generate_smilies('window', 0, ACP_ANNOUNCE_TRUE);
 		}
 		else
 		{
-		generate_smilies('window', $forum_id);
+			generate_smilies('window', $forum_id);
 		}
 	break;
 
@@ -1000,21 +999,22 @@ if ($submit || $preview || $refresh)
 		}
 	}
 
-	// Store message, sync counters
-	
-	// Blacklisted sites check
+	// START ABBS
 	$site_censor_data = $cache->obtain_site_blacklist();
 	if (sizeof($site_censor_data))
 	{
-		preg_match_all($site_censor_data, utf8_normalize_nfc(request_var('message', '', true)), $word);
+		preg_match_all($site_censor_data, utf8_normalize_nfc(request_var('message', '', true) . request_var('subject', '', true)), $word);
 		$remove_duplicate_item = array_unique($word[0]);
+
 		$blacklisted_sites = implode(',', $remove_duplicate_item);
 		if ($blacklisted_sites != '')
 		{
 			$error[] = sprintf($user->lang['CANNOT_POST_BLACKLISTED_SITE'], $blacklisted_sites);
 		}
 	}
+	// END ABBS
 
+	// Store message, sync counters
 	if (!sizeof($error) && $submit)
 	{
 		// Check if we want to de-globalize the topic... and ask for new forum

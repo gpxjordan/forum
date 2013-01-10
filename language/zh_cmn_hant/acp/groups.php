@@ -4,7 +4,7 @@
 * acp_groups [正體中文]
 *
 * @package language
-* @version $Id: groups.php 9701 2009-06-28 12:13:11Z toonarmy $
+* @version $Id$
 * @copyright (c) 2001 - 2007 phpBB TW Group (心靈捕手)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -95,9 +95,9 @@ $lang = array_merge($lang, array(
 	'GROUP_RECEIVE_PM_EXPLAIN'		=> '請注意！隱藏的會員群組不可以接收私人訊息，這裡的設定沒有用。',
 	'GROUP_REQUEST'					=> '申請',
 	'GROUP_SETTINGS_SAVE'			=> '會員群組範圍',
-	'GROUP_TYPE'					=> '會員群組類型',
 	'GROUP_SKIP_AUTH'				=> '免除群組組長的權限',
 	'GROUP_SKIP_AUTH_EXPLAIN'		=> '如果啟用，那麼群組組長不再繼承群組權限。',
+	'GROUP_TYPE'					=> '會員群組類型',
 	'GROUP_TYPE_EXPLAIN'			=> '這個設定決定了哪些會員可以加入或檢視這個會員群組。',
 	'GROUP_UPDATED'					=> '會員群組參數更新成功。',
 

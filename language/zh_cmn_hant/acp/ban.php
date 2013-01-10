@@ -4,7 +4,7 @@
 * acp_ban [正體中文]
 *
 * @package language
-* @version $Id: ban.php 9727 2009-07-07 13:33:53Z nickvergessen $
+* @version $Id$
 * @copyright (c) 2001 - 2007 phpBB TW Group (心靈捕手)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -53,7 +53,7 @@ $lang = array_merge($lang, array(
 
 	'EMAIL_BAN'					=> '封鎖一個或更多個 e-mail 位址',
 	'EMAIL_BAN_EXCLUDE_EXPLAIN'	=> '啟用這個功能由所有目前的封鎖中排除已輸入的 e-mail 位址。',
-	'EMAIL_BAN_EXPLAIN'			=> '要指定多個 e-mail 位址，請每一行輸入一個。可以使用 * 當作萬用字元，表示符合的部分位址，例如：<samp>*@hotmail.com</samp>、<samp>*@*.domain.tld</samp>、...等。',
+	'EMAIL_BAN_EXPLAIN'			=> '要指定多個 e-mail 位址，請每一行輸入一個。可以使用 * 當作萬用字元，表示符合的部分位址，例如：<samp>*@hotmail.com</samp>、<samp>*@*.domain.tld</samp>、…等。',
 	'EMAIL_NO_BANNED'			=> '沒有封鎖的 e-mail 位址',
 	'EMAIL_UNBAN'				=> '解除封鎖或解除排除的 e-mail 位址',
 	'EMAIL_UNBAN_EXPLAIN'		=> '您可以使用適當的滑鼠與鍵盤的結合，一次選擇多個 e-mail 位址，執行解除封鎖或解除排除的操作。排除的 e-mail 位址有特別背景標示。',
@@ -67,6 +67,9 @@ $lang = array_merge($lang, array(
 	'IP_UNBAN_EXPLAIN'			=> '您可以使用適當的滑鼠與鍵盤的結合，一次選擇多個 IP，執行解除封鎖或解除排除的操作。排除的 IP 有特別背景標示。',
 
 	'LENGTH_BAN_INVALID'		=> '日期格式必須是 <kbd>YYYY-MM-DD</kbd>。',
+
+	'OPTIONS_BANNED'			=> '已封鎖',
+	'OPTIONS_EXCLUDED'			=> '已排除',
 
 	'PERMANENT'		=> '永久的',
 

@@ -4,7 +4,7 @@
 * acp_database [正體中文]
 *
 * @package language
-* @version $Id: database.php 9765 2009-07-17 10:11:10Z bantu $
+* @version $Id$
 * @copyright (c) 2001 - 2007 phpBB TW Group (動機不明)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -57,17 +57,18 @@ $lang = array_merge($lang, array(
 	'FILE_WRITE_FAIL'	=> '無法將檔案寫入儲存資料夾。',
 	'FULL_BACKUP'		=> '完整',
 
-	'RESTORE_FAILURE'	=> '這個備份檔可能有錯誤',
-	'RESTORE_OPTIONS'	=> '還原選項',
-	'RESTORE_SUCCESS'	=> '這個資料庫已經還原成功。<br /><br />您的討論版已經恢復到備份前的狀態',
+	'RESTORE_FAILURE'		=> '這個備份檔可能有錯誤',
+	'RESTORE_OPTIONS'		=> '還原選項',
+	'RESTORE_SELECTED_BACKUP'	=> '您確定要還原所選擇的備份嗎？',
+	'RESTORE_SUCCESS'		=> '這個資料庫已經還原成功。<br /><br />您的討論版已經恢復到備份前的狀態',
 
-	'SELECT_ALL'		=> '全部選擇',
-	'SELECT_FILE'		=> '選擇一個檔案',
-	'START_BACKUP'		=> '開始備份',
-	'START_RESTORE'		=> '開始還原',
+	'SELECT_ALL'			=> '全部選擇',
+	'SELECT_FILE'			=> '選擇一個檔案',
+	'START_BACKUP'			=> '開始備份',
+	'START_RESTORE'			=> '開始還原',
 	'STORE_AND_DOWNLOAD'	=> '儲存並下載',
-	'STORE_LOCAL'		=> '儲存在本地端',
-	'STRUCTURE_ONLY'	=> '只有表單結構',
+	'STORE_LOCAL'			=> '儲存在本地端',
+	'STRUCTURE_ONLY'		=> '只有表單結構',
 
 	'TABLE_SELECT'		=> '選擇資料表',
 	'TABLE_SELECT_ERROR'=> '您必須選擇至少一個資料表',

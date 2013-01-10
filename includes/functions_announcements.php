@@ -2,8 +2,8 @@
 /**
 *
 * @package phpBB3
-* @version $Id: functions_announcements.php 216 2009-05-03 22:13:31Z lefty74 $
-* @copyright (c) 2008,2009 lefty74
+* @version $Id: functions_announcements.php 289 2011-08-14 12:50:15Z lefty74 $
+* @copyright (c) 2008,2009,2011 lefty74
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
 */
@@ -30,7 +30,6 @@ function group_select_options_selected($group_ids, $exclude_ids = false, $manage
 {
 	global $db, $auth, $user, $template;
 	global $phpbb_root_path, $phpEx, $config;
-	
 
 	$exclude_sql = ($exclude_ids !== false && sizeof($exclude_ids)) ? 'WHERE ' . $db->sql_in_set('group_id', array_map('intval', $exclude_ids), true) : '';
 	$sql_and = (!$config['coppa_enable']) ? (($exclude_sql) ? ' AND ' : ' WHERE ') . "group_name <> 'REGISTERED_COPPA'" : '';
@@ -43,12 +42,11 @@ function group_select_options_selected($group_ids, $exclude_ids = false, $manage
 		$sql_founder
 		ORDER BY group_type DESC, group_name ASC";
 	$result = $db->sql_query($sql);
-	
+
 	$s_group_options = '';
 	while ($row = $db->sql_fetchrow($result))
 	{
-			
-		$selected = (in_array($row['group_id'], $group_ids, true)) ? ' selected="selected"' : '';
+		$selected = (in_array($row['group_id'], $group_ids)) ? ' selected="selected"' : '';
 		$s_group_options .= '<option' . (($row['group_type'] == GROUP_SPECIAL) ? ' class="sep"' : '') . ' value="' . $row['group_id'] . '"' . $selected . '>' . (($row['group_type'] == GROUP_SPECIAL) ? $user->lang['G_' . $row['group_name']] : $row['group_name']) . '</option>';
 	}
 	$db->sql_freeresult($result);
@@ -73,32 +71,35 @@ function get_announcement_data()
 	{
 		// Generate birthday list if required ...
 		$now = getdate(time() + $user->timezone + $user->dst - date('Z'));
-		$sql = 'SELECT user_id, username, user_colour, user_birthday, user_avatar, user_avatar_type, user_avatar_width, user_avatar_height
-			FROM ' . USERS_TABLE . "
-			WHERE user_birthday LIKE '" . $db->sql_escape(sprintf('%2d-%2d-', $now['mday'], $now['mon'])) . "%'
-				AND user_type IN (" . USER_NORMAL . ', ' . USER_FOUNDER . ')';
+		$sql = 'SELECT u.user_id, u.username, u.user_colour, u.user_birthday, u.user_avatar, u.user_avatar_type, u.user_avatar_width, u.user_avatar_height
+			FROM ' . USERS_TABLE . ' u
+			LEFT JOIN ' . BANLIST_TABLE . " b ON (u.user_id = b.ban_userid)
+			WHERE (b.ban_id IS NULL
+				OR b.ban_exclude = 1)
+				AND u.user_birthday LIKE '" . $db->sql_escape(sprintf('%2d-%2d-', $now['mday'], $now['mon'])) . "%'
+				AND " . $db->sql_in_set('u.user_type', array(USER_NORMAL, USER_FOUNDER));
 		$result = $db->sql_query($sql);
 
 		while ($row = $db->sql_fetchrow($result))
 		{
 			//obtain the avatar and username for the birthday announcements
-			$max_bdavatar_size = $avatar_width = $avatar_height = '';
+			$max_bdavatar_size = $bdavatar_width = $bdavatar_height = '';
 			if ( !empty($row['user_avatar']) )
 			{
 				$max_bdavatar_size = $config['announcement_ava_max_size'];
-			
+
 				if ( $row['user_avatar_width'] >= $row['user_avatar_height'] )
 				{
-					$avatar_width = ( $row['user_avatar_width'] > $max_bdavatar_size ) ? $max_bdavatar_size : $row['user_avatar_width'] ;
-					$avatar_height = ( $avatar_width == $max_bdavatar_size ) ? round($max_bdavatar_size / $row['user_avatar_width'] * $row['user_avatar_height']) : $row['user_avatar_height'] ;
+					$bdavatar_width = ( $row['user_avatar_width'] > $max_bdavatar_size ) ? $max_bdavatar_size : $row['user_avatar_width'] ;
+					$bdavatar_height = ( $bdavatar_width == $max_bdavatar_size ) ? round($max_bdavatar_size / $row['user_avatar_width'] * $row['user_avatar_height']) : $row['user_avatar_height'] ;
 				}
 				else 
 				{
-					$avatar_height = ( $row['user_avatar_height'] > $max_bdavatar_size ) ? $max_bdavatar_size : $row['user_avatar_height'] ;
-					$avatar_width = ( $avatar_height == $max_bdavatar_size ) ? round($max_bdavatar_size / $row['user_avatar_height'] * $row['user_avatar_width']) : $row['user_avatar_width'] ;
+					$bdavatar_height = ( $row['user_avatar_height'] > $max_bdavatar_size ) ? $max_bdavatar_size : $row['user_avatar_height'] ;
+					$bdavatar_width = ( $bdavatar_height == $max_bdavatar_size ) ? round($max_bdavatar_size / $row['user_avatar_height'] * $row['user_avatar_width']) : $row['user_avatar_width'] ;
 				}
 			}
-			
+
 			if ( !function_exists('get_user_avatar') ) // only  checking for one of the functions as the other is in the same file
 			{
 				include($phpbb_root_path . 'includes/functions_display.' . $phpEx);
@@ -107,7 +108,7 @@ function get_announcement_data()
 			$announcement_birthday_list .= (($announcement_birthday_list != '') ? ', ' : '') . get_username_string('full', $row['user_id'], $row['username'], $row['user_colour']);
 
 			$template->assign_block_vars('bdannounce', array(
-			'ANNOUNCEMENT_AVATAR'	=> ($row['user_avatar']) ? get_user_avatar($row['user_avatar'], $row['user_avatar_type'], $avatar_width, $avatar_height, $row['username']) : '<img src="' . $phpbb_root_path . 'styles/' . $user->theme['imageset_path'] . '/theme/images/no_avatar.gif" height="' . $config['announcement_ava_max_size'] . '" width="' . $config['announcement_ava_max_size'] . '" title="" alt=""  />',
+			'ANNOUNCEMENT_AVATAR'	=> ($row['user_avatar']) ? get_user_avatar($row['user_avatar'], $row['user_avatar_type'], $bdavatar_width, $bdavatar_height, $row['username']) : '<img src="' . $phpbb_root_path . 'styles/' . $user->theme['imageset_path'] . '/theme/images/no_avatar.gif" height="' . $config['announcement_ava_max_size'] . '" width="' . $config['announcement_ava_max_size'] . '" title="" alt=""  />',
 			'ANNOUNCEMENT_USERNAME'	=> get_username_string('full', $row['user_id'], $row['username'], $row['user_colour'])));
 
 		}
@@ -127,9 +128,10 @@ function get_announcement_data()
 	$sql = 'SELECT *
 		FROM ' . USER_GROUP_TABLE . '
 		WHERE ' . $db->sql_in_set('group_id', $selected_groups) . '
-			AND user_id = ' . $user->data['user_id'];
+			AND user_pending = 0
+			AND user_id = ' . (int)$user->data['user_id'];
 	$db->sql_query($sql);
-	$result = $db->sql_query_limit($sql,1,0);
+	$result = $db->sql_query_limit($sql,1);
 	$is_in_group = $db->sql_fetchrow($result);
 	$db->sql_freeresult($result);
 
@@ -156,9 +158,9 @@ function get_announcement_data()
 	}
 
 	$announcement_birthday_img = '<img src="' . $phpbb_root_path . 'styles/' . $user->theme['imageset_path'] . '/imageset/birthday.png" title="' . $user->lang['CONGRATULATIONS'] . '" alt="' . $user->lang['CONGRATULATIONS'] . '" />';	
-	
+
 	$where_sql = $order = '';
-	
+
 	if ( $announcement['announcement_forum_id'] || $announcement['announcement_topic_id'] || $announcement['announcement_post_id'])
 	{
 		if ($announcement['announcement_forum_id'])
@@ -173,15 +175,13 @@ function get_announcement_data()
 		{
 			$where_sql = 'WHERE post_id = ' . (int) $announcement['announcement_post_id'];					
 		}
-		
-		
+
 		$announcement_text = announcement_post($where_sql, (string) $announcement['announcement_first_last_post'], (int) $announcement['announcement_gopost']);
 	}
 	else 
 	{
-		$announcement_text = generate_text_for_display($announcement['announcement_text'],$announcement['announcement_text_bbcode_uid'], $announcement['announcement_text_bbcode_bitfield'], $announcement['announcement_text_bbcode_options']);
+		$announcement_text = generate_text_for_display($announcement['announcement_text'],$announcement['announcement_text_uid'], $announcement['announcement_text_bitfield'], $announcement['announcement_text_options']);
 	}
-	
 
 // Assign index specific vars
 	$template->assign_vars(array(
@@ -189,10 +189,10 @@ function get_announcement_data()
 		'ANNOUNCEMENT_BIRTHDAYS' 		=> $announcement_birthday_list,
 		'ANNOUNCEMENT_BIRTHDAY_IMG'		=> $announcement_birthday_img,
 		'ANNOUNCEMENT_TITLE_GUESTS'		=> $announcement['announcement_title_guests'],
-		'ANNOUNCEMENT_TEXT_GUESTS'		=> generate_text_for_display($announcement['announcement_text_guests'],$announcement['announcement_text_guests_bbcode_uid'], $announcement['announcement_text_guests_bbcode_bitfield'], $announcement['announcement_text_guests_bbcode_options']),
-		'ANNOUNCEMENT_TITLE' 			=> $announcement['announcement_title'],
+		'ANNOUNCEMENT_TEXT_GUESTS'		=> generate_text_for_display($announcement['announcement_text_guests'],$announcement['announcement_text_guests_uid'], $announcement['announcement_text_guests_bit'], $announcement['announcement_text_guests_opt']),
+		'ANNOUNCEMENT_TITLE'			=> $announcement['announcement_title'],
 		'ANNOUNCEMENT_TITLE_GUESTS' 	=> $announcement['announcement_title_guests'],
-		'ANNOUNCEMENT_ENABLE' 			=> $config['announcement_enable'],
+		'ANNOUNCEMENT_ENABLE'			=> $config['announcement_enable'],
 		'ANNOUNCEMENT_ENABLE_GUESTS' 	=> $config['announcement_enable_guests'],
 		'ANNOUNCEMENT_ALIGN'			=> $config['announcement_align'],
 		'ANNOUNCEMENT_GUESTS_ALIGN'		=> $config['announcement_guests_align'],
@@ -200,14 +200,11 @@ function get_announcement_data()
 		'ANNOUNCEMENT_SHOW_BIRTHDAYS_ALWAYS'		=> $config['announcement_show_birthdays_always'],
 		'ANNOUNCEMENT_SHOW_BIRTHDAYS_AND_ANNOUNCE'	=> ($config['announcement_show_birthdays_and_announce']) ? true : false,
 
-		'ANNOUNCEMENT_SHOW' 			=> $announcement_show,
-		'ANNOUNCEMENT_SHOW_EVERYONE' 	=> $announcement_show_everyone_guests,
+		'ANNOUNCEMENT_SHOW'				=> $announcement_show,
+		'ANNOUNCEMENT_SHOW_EVERYONE'	=> $announcement_show_everyone_guests,
 		'ANNOUNCEMENT_SHOW_BIRTHDAY'	=> ( $announcement_birthday_list != '' && $config['announcement_show_birthdays'] ) ? true : false,
 		'ANNOUNCEMENT_BIRTHDAY_AVATAR'	=> ($config['announcement_birthday_avatar']) ? true : false,
-		
-
-
-));
+	));
 }
 
 /**
@@ -222,7 +219,7 @@ function preview_announcement($text)
 	generate_text_for_storage($text, $uid, $bitfield, $options, $allow_bbcode, $allow_urls, $allow_smilies);
 	//now we created it, lets show it
 	$text			= generate_text_for_display($text, $uid, $bitfield, $options);
-	
+
 	return $text;
 }
 
@@ -238,57 +235,58 @@ function announcement_post($where_sql, $order, $gotopost)
 	{
 		include($phpbb_root_path . 'includes/bbcode.' . $phpEx);
 	}
-	
+
 	$bbcode_bitfield = '';
 	$sql = 'SELECT *
 		FROM  ' . POSTS_TABLE . " 
 			$where_sql
 		ORDER BY post_id $order";	
-	$result = $db->sql_query_limit($sql, 1, 0);
+	$result = $db->sql_query_limit($sql,1);
 	$row = $db->sql_fetchrow($result);
 	$db->sql_freeresult($result);
-	
+
 	if ( $row['post_attachment'] )
 	{
-			$sql = 'SELECT *
-				FROM ' . ATTACHMENTS_TABLE . '
-				WHERE ' . $db->sql_in_set('post_msg_id', $row['post_id']) . '
-					AND in_message = 0
-				ORDER BY filetime DESC, post_msg_id ASC';
-			$result = $db->sql_query($sql);
-	
-			while ($row2 = $db->sql_fetchrow($result))
-			{
-				$attachments[$row2['post_msg_id']][] = $row2;
-			}
-			$db->sql_freeresult($result);
+		$sql = 'SELECT *
+			FROM ' . ATTACHMENTS_TABLE . '
+			WHERE ' . $db->sql_in_set('post_msg_id', $row['post_id']) . '
+				AND in_message = 0
+			ORDER BY filetime DESC, post_msg_id ASC';
+		$result = $db->sql_query($sql);
+
+		while ($row2 = $db->sql_fetchrow($result))
+		{
+			$attachments[$row2['post_msg_id']][] = $row2;
+		}
+		$db->sql_freeresult($result);
 	}
-	
+
 	// Parse the message and subject
 	$message = censor_text($row['post_text']);
 	// Define the global bbcode bitfield, will be used to load bbcodes
 	$bbcode_bitfield = $bbcode_bitfield | base64_decode($row['bbcode_bitfield']);
-	
+
 	// Instantiate BBCode if need be
 	if ($bbcode_bitfield !== '')
 	{
 		$bbcode = new bbcode(base64_encode($bbcode_bitfield));
 	}
-	
+
 	// Second parse bbcode here
 	if ($row['bbcode_bitfield'])
 	{
 		$bbcode->bbcode_second_pass($message, $row['bbcode_uid'], $row['bbcode_bitfield']);
 	}
-	
+
 	$message = bbcode_nl2br($message);
 	$message = smiley_text($message);
-	
+
 	if (!empty($attachments[$row['post_id']]))
 	{
 		parse_attachments($row['forum_id'], $message, $attachments[$row['post_id']], $update_count);
 	}
-		// Display not already displayed Attachments for this post, we already parsed them. ;)
+
+	// Display not already displayed Attachments for this post, we already parsed them. ;)
 	if (!empty($attachments[$row['post_id']]))
 	{
 		foreach ($attachments[$row['post_id']] as $attachment)
@@ -304,12 +302,9 @@ function announcement_post($where_sql, $order, $gotopost)
 		'S_HASATTACHMENTS'				=> (!empty($attachments[$row['post_id']])) ? true : false,
 		'U_ANNOUNCEMENT_GOTOPOST'		=> ($gotopost) ? append_sid("{$phpbb_root_path}viewtopic.$phpEx", 'p=' . $row['post_id']) . '#p' . $row['post_id'] : '',
 
-
-));	
+	));
 
 	return $message;
 }
-
-
 
 ?>

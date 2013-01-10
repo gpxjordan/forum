@@ -71,6 +71,8 @@ $lang = array_merge($lang, array(
 	'ALL_TIMES'						=> 'All times are %1$s %2$s',
 	'ALL_TOPICS'					=> 'All Topics',
 	'AND'							=> 'And',
+	'ANNOUNCEMENT_TITLE_GUESTS'		=> 'Guest Announcements local',
+	'ANNOUNCEMENT_TITLE'			=> 'Site Announcements local',
 	'ARE_WATCHING_FORUM'			=> 'You have subscribed to be notified of new posts in this forum.',
 	'ARE_WATCHING_TOPIC'			=> 'You have subscribed to be notified of new posts in this topic.',
 	'ASCENDING'						=> 'Ascending',
@@ -888,7 +890,13 @@ $lang = array_merge($lang, array(
 	// The default dateformat which will be used on new installs in this language
 	// Translators should change this if a the usual date format is different
 	'default_dateformat'	=> 'D M d, Y g:i a', // Mon Jan 01, 2007 1:37 pm
-
+// MOD : MSSTI RSS Feeds (V1.2.1) - Start
+	'YOUR_POSTS'			=> 'Your posts',
+	'RSS_FEEDS'				=> 'RSS Feeds',
+	'RSS_NEWS'				=> 'News',
+	'RSS_NEWPOST'			=> 'New posts',
+	'RSS_ATTACH'			=> 'Attachments',
+// MOD : MSSTI RSS Feeds (V1.2.1) - End
 ));
 
 ?>

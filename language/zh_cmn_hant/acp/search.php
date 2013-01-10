@@ -4,7 +4,7 @@
 * acp_search [正體中文]
 *
 * @package language
-* @version $Id: search.php 9438 2009-04-11 11:09:45Z acydburn $
+* @version $Id$
 * @copyright (c) 2001 - 2007 phpBB TW Group (心靈捕手)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -59,6 +59,8 @@ $lang = array_merge($lang, array(
 	'FULLTEXT_MYSQL_PCRE'					=> '使用 PCRE 支援非拉丁 UTF-8 字元:',
 	'FULLTEXT_MYSQL_MBSTRING_EXPLAIN'		=> '如果 PCRE 沒有 unicode 字元屬性，那麼後端搜尋會嘗試使用 mbstring 的正規表達機器。',
 	'FULLTEXT_MYSQL_PCRE_EXPLAIN'			=> '如果您需要搜尋非拉丁字元，這個後端搜尋需要使用 PCRE unicode 字元屬性，這只在 PHP 4.4、5.1 或更高版本中有效。',
+	'FULLTEXT_MYSQL_MIN_SEARCH_CHARS_EXPLAIN'	=> '至少要有這麼多字元的字詞被索引，以便搜尋。您或您的主機只能由改變 MySQL 的設定來改變它。',
+	'FULLTEXT_MYSQL_MAX_SEARCH_CHARS_EXPLAIN'	=> '沒有比這更多的字元之字詞被索引，以便搜尋。您或您的主機只能由改變 MySQL 的設定來改變它。',
 
 	'GENERAL_SEARCH_SETTINGS'				=> '一般搜尋設定',
 	'GO_TO_SEARCH_INDEX'					=> '前往搜尋頁面',
@@ -83,7 +85,7 @@ $lang = array_merge($lang, array(
 
 	'SEARCH_GUEST_INTERVAL'					=> '訪客搜尋間隔',
 	'SEARCH_GUEST_INTERVAL_EXPLAIN'			=> '在重複搜尋中訪客必須等待的間隔時間 (秒)。如果一個訪客在搜尋，那麼所有其他人必須等待直到搜尋間隔時間通過。',
-	'SEARCH_INDEX_CREATE_REDIRECT'			=> '所有 id 直到 %1$d 的文章都已經建立索引，這一階段處理了 %2$d 篇文章。<br />目前索引的比率接近每秒 %3$.1f 篇文章。<br />索引正在進行中...',
+	'SEARCH_INDEX_CREATE_REDIRECT'			=> '所有 id 直到 %1$d 的文章都已經建立索引，這一階段處理了 %2$d 篇文章。<br />目前索引的比率接近每秒 %3$.1f 篇文章。<br />索引正在進行中…',
 	'SEARCH_INDEX_DELETE_REDIRECT'			=> '所有 id 直到 %1$d 的文章都已經從搜尋索引中移除。<br />刪除正在進行中。。。',
 	'SEARCH_INDEX_CREATED'					=> '在資料庫中所有文章已經建立索引成功。',
 	'SEARCH_INDEX_REMOVED'					=> '這個後端的搜尋索引資料已經清除成功。',

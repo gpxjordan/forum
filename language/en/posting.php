@@ -1,29 +1,13 @@
 <?php
 /**
-* This file is part of U.S. English phpBB Localization.
-* Copyright (C) 2010 phpBB.fr
 *
-* This program is free software; you can redistribute it and/or modify
-* it under the terms of the GNU General Public License as published by
-* the Free Software Foundation; version 2 of the License.
+* posting [English]
 *
-* This program is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-* GNU General Public License for more details.
+* @package language
+* @version $Id$
+* @copyright (c) 2005 phpBB Group
+* @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
-* You should have received a copy of the GNU General Public License along
-* with this program; if not, write to the Free Software Foundation, Inc.,
-* 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-*
-* posting [U.S. English]
-*
-* @package   language
-* @author    Maël Soucaze <maelsoucaze@phpbb.fr> (Maël Soucaze) http://www.phpbb.fr/
-* @author    Seven ALive <N/A> (Robert Baker) http://sevenupdate.com/
-* @copyright 2005 phpBB Group
-* @license   http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License
-* @version   $Id: posting.php 9742 2009-07-09 10:34:40Z bantu $
 */
 
 /**
@@ -75,7 +59,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_O_HELP'				=> 'Ordered list: [list=]text[/list]',
 	'BBCODE_P_HELP'				=> 'Insert image: [img]http://image_url[/img]',
 	'BBCODE_Q_HELP'				=> 'Quote text: [quote]text[/quote]',
-	'BBCODE_S_HELP'				=> 'Font color: [color=red]text[/color]  Tip: you can also use color=#FF0000',
+	'BBCODE_S_HELP'				=> 'Font colour: [color=red]text[/color]  Tip: you can also use color=#FF0000',
 	'BBCODE_U_HELP'				=> 'Underline text: [u]text[/u]',
 	'BBCODE_W_HELP'				=> 'Insert URL: [url]http://url[/url] or [url=http://url]URL text[/url]',
 	'BBCODE_Y_HELP'				=> 'List: Add list element',
@@ -85,7 +69,9 @@ $lang = array_merge($lang, array(
 	'CANNOT_EDIT_POST_LOCKED'	=> 'This post has been locked. You can no longer edit that post.',
 	'CANNOT_EDIT_TIME'			=> 'You can no longer edit or delete that post.',
 	'CANNOT_POST_ANNOUNCE'		=> 'Sorry but you cannot post announcements.',
-	'CANNOT_POST_BLACKLISTED_SITE'		=> 'Sorry but you cannot post messages mentioning %s.',
+	// START ABBS
+	'CANNOT_POST_BLACKLISTED_SITE'	=> 'Sorry but you cannot post messages mentioning %s.',
+	// END ABBS
 	'CANNOT_POST_STICKY'		=> 'Sorry but you cannot post sticky topics.',
 	'CHANGE_TOPIC_TO'			=> 'Change topic type to',
 	'CLOSE_TAGS'				=> 'Close tags',
@@ -100,7 +86,7 @@ $lang = array_merge($lang, array(
 	'DISABLE_BBCODE'			=> 'Disable BBCode',
 	'DISABLE_MAGIC_URL'			=> 'Do not automatically parse URLs',
 	'DISABLE_SMILIES'			=> 'Disable smilies',
-	'DISALLOWED_CONTENT'      => 'The upload was rejected because the uploaded file was identified as a possible attack vector.',
+	'DISALLOWED_CONTENT'		=> 'The upload was rejected because the uploaded file was identified as a possible attack vector.',
 	'DISALLOWED_EXTENSION'		=> 'The extension %s is not allowed.',
 	'DRAFT_LOADED'				=> 'Draft loaded into posting area, you may want to finish your post now.<br />Your draft will be deleted after submitting this post.',
 	'DRAFT_LOADED_PM'			=> 'Draft loaded into message area, you may want to finish your private message now.<br />Your draft will be deleted after submitting this private message.',
@@ -115,8 +101,8 @@ $lang = array_merge($lang, array(
 	'FLASH_IS_OFF'				=> '[flash] is <em>OFF</em>',
 	'FLASH_IS_ON'				=> '[flash] is <em>ON</em>',
 	'FLOOD_ERROR'				=> 'You cannot make another post so soon after your last.',
-	'FONT_COLOR'				=> 'Font color',
-	'FONT_COLOR_HIDE'			=> 'Hide font color',
+	'FONT_COLOR'				=> 'Font colour',
+	'FONT_COLOR_HIDE'			=> 'Hide font colour',
 	'FONT_HUGE'					=> 'Huge',
 	'FONT_LARGE'				=> 'Large',
 	'FONT_NORMAL'				=> 'Normal',

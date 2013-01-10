@@ -61,6 +61,12 @@ function generate_smilies($mode, $forum_id, $acp_announce = false)
 		$template->set_filenames(array(
 			'body' => ( $acp_announce ) ? 'announcement_smilies.html' : 'posting_smilies.html')
 		);
+
+		$template->assign_var('PAGINATION',
+			generate_pagination(( $acp_announce ) ? append_sid("{$phpbb_root_path}posting.$phpEx", 'mode=smilies&announce='. ACP_ANNOUNCE_TRUE) : append_sid("{$phpbb_root_path}posting.$phpEx", 'mode=smilies&amp;f=' . $forum_id),
+				$smiley_count, $config['smilies_per_page'], $start, true)
+		);
+
 	}
 
 	$display_link = false;
@@ -126,7 +132,7 @@ function generate_smilies($mode, $forum_id, $acp_announce = false)
 	{
 		$template->assign_vars(array(
 			'S_SHOW_SMILEY_LINK' 	=> true,
-			'U_MORE_SMILIES' 		=> ( $acp_announce ) ? append_sid("{$phpbb_root_path}posting.$phpEx", 'mode=smilies&amp;announce=1') : append_sid("{$phpbb_root_path}posting.$phpEx", 'mode=smilies&amp;f=' . $forum_id))
+			'U_MORE_SMILIES'		=> ( $acp_announce ) ? append_sid("{$phpbb_root_path}posting.$phpEx", 'mode=smilies&amp;announce=' . ACP_ANNOUNCE_TRUE) : append_sid("{$phpbb_root_path}posting.$phpEx", 'mode=smilies&amp;f=' . $forum_id))
 		);
 	}
 
@@ -497,8 +503,8 @@ function upload_attachment($form_name, $forum_id, $local = false, $local_storage
 				$filedata['error'][] = $user->lang['ATTACH_DISK_FULL'];
 			}
 			else
-		{
-			$filedata['error'][] = $user->lang['ATTACH_QUOTA_REACHED'];
+			{
+				$filedata['error'][] = $user->lang['ATTACH_QUOTA_REACHED'];
 			}
 			$filedata['post_attach'] = false;
 

@@ -3,9 +3,9 @@
 *
 * @package phpBB3
 * @version $Id$
+* @log edit validate_url function to disable url validatation by appleboy 2010.06.28
 * @copyright (c) 2005 phpBB Group
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
-* @log edit validate_url function to disable url validatation by appleboy 2010.06.28
 *
 */
 
@@ -927,17 +927,17 @@ class bbcode_firstpass extends bbcode
 
 		return $retval;
 	}
-        /**
-        *  url encode
-        *
-        * @param string $string http url
-        */
-
+	
+	/**
+	* url encode
+	*
+	* @param string $string http url
+	*/
 	function encode_url($string) 
 	{
-	    $entities = array('%21', '%2A', '%27', '%28', '%29', '%3B', '%3A', '%40', '%26', '%3D', '%2B', '%24', '%2C', '%2F', '%3F', '%25', '%23', '%5B', '%5D');
-	    $replacements = array('!', '*', "'", "(", ")", ";", ":", "@", "&", "=", "+", "$", ",", "/", "?", "%", "#", "[", "]");
-	    return str_replace($entities, $replacements, urlencode($string));
+		$entities = array('%21', '%2A', '%27', '%28', '%29', '%3B', '%3A', '%40', '%26', '%3D', '%2B', '%24', '%2C', '%2F', '%3F', '%25', '%23', '%5B', '%5D');
+		$replacements = array('!', '*', "'", "(", ")", ";", ":", "@", "&", "=", "+", "$", ",", "/", "?", "%", "#", "[", "]");
+		return str_replace($entities, $replacements, urlencode($string));
 	}
 
 	/**
@@ -996,8 +996,10 @@ class bbcode_firstpass extends bbcode
 				$url = preg_replace('/(&amp;|\?)sid=[0-9a-f]{32}$/', '', $url);
 				$url = append_sid($url);
 			}
+/*
+			return ($var1) ? '[url=' . $this->bbcode_specialchars($url) . ':' . $this->bbcode_uid . ']' . $var2 . '[/url:' . $this->bbcode_uid . ']' : '[url:' . $this->bbcode_uid . ']' . $this->bbcode_specialchars($url) . '[/url:' . $this->bbcode_uid . ']';
+*/
 			// url decode by appleboy 2010.06.29
-
 			return ($var1) ? '[url=' . $this->bbcode_specialchars($url) . ':' . $this->bbcode_uid . ']' . $var2 . '[/url:' . $this->bbcode_uid . ']' : '[url:' . $this->bbcode_uid . ']' . urldecode($this->bbcode_specialchars($url)) . '[/url:' . $this->bbcode_uid . ']';
 		}
 

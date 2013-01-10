@@ -1,29 +1,13 @@
 <?php
 /**
-* This file is part of U.S. English phpBB Localization.
-* Copyright (C) 2010 phpBB.fr
 *
-* This program is free software; you can redistribute it and/or modify
-* it under the terms of the GNU General Public License as published by
-* the Free Software Foundation; version 2 of the License.
+* acp_styles [English]
 *
-* This program is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-* GNU General Public License for more details.
+* @package language
+* @version $Id$
+* @copyright (c) 2005 phpBB Group
+* @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
-* You should have received a copy of the GNU General Public License along
-* with this program; if not, write to the Free Software Foundation, Inc.,
-* 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-*
-* acp_styles [U.S. English]
-*
-* @package   language
-* @author    Maël Soucaze <maelsoucaze@phpbb.fr> (Maël Soucaze) http://www.phpbb.fr/
-* @author    Seven ALive <N/A> (Robert Baker) http://sevenupdate.com/
-* @copyright 2005 phpBB Group
-* @license   http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License
-* @version   $Id: styles.php 10074 2009-08-31 11:25:28Z acydburn $
 */
 
 /**
@@ -52,10 +36,10 @@ if (empty($lang) || !is_array($lang))
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
 $lang = array_merge($lang, array(
-	'ACP_IMAGESETS_EXPLAIN'	=> 'Imagesets comprize all the button, forum, folder, etc. and other non-style specific images used by the board. Here you can edit, export or delete existing imagesets and import or activate new sets.',
+	'ACP_IMAGESETS_EXPLAIN'	=> 'Imagesets comprise all the button, forum, folder, etc. and other non-style specific images used by the board. Here you can edit, export or delete existing imagesets and import or activate new sets.',
 	'ACP_STYLES_EXPLAIN'	=> 'Here you can manage the available styles on your board. A style consists of a template, theme and imageset. You may alter existing styles, delete, deactivate, reactivate, create or import new ones. You can also see what a style will look like using the preview function. The current default style is noted by the presence of an asterisk (*). Also listed is the total user count for each style, note that overriding user styles will not be reflected here.',
-	'ACP_TEMPLATES_EXPLAIN'	=> 'A template set comprizes all the markup used to generate the layout of your board. Here you can edit existing template sets, delete, export, import and preview sets. You can also modify the templating code used to generate BBCode.',
-	'ACP_THEMES_EXPLAIN'	=> 'From here you can create, install, edit, delete and export themes. A theme is the combination of colors and images that are applied to your templates to define the basic look of your board. The range of options open to you depends on the configuration of your server and phpBB installation, see the manual for further details. Please note that when creating new themes the use of an existing theme as a basis is optional.',
+	'ACP_TEMPLATES_EXPLAIN'	=> 'A template set comprises all the markup used to generate the layout of your board. Here you can edit existing template sets, delete, export, import and preview sets. You can also modify the templating code used to generate BBCode.',
+	'ACP_THEMES_EXPLAIN'	=> 'From here you can create, install, edit, delete and export themes. A theme is the combination of colours and images that are applied to your templates to define the basic look of your board. The range of options open to you depends on the configuration of your server and phpBB installation, see the manual for further details. Please note that when creating new themes the use of an existing theme as a basis is optional.',
 	'ADD_IMAGESET'			=> 'Create imageset',
 	'ADD_IMAGESET_EXPLAIN'	=> 'Here you can create a new imageset. Depending on your server configuration and file permissions you may have additional options here. For example you may be able to base this imageset on an existing one. You may also be able to upload or import (from the store directory) a imageset archive. If you upload or import an archive the imageset name can be optionally taken from the archive name (to do this leave the imageset name blank).',
 	'ADD_STYLE'				=> 'Create style',
@@ -68,7 +52,7 @@ $lang = array_merge($lang, array(
 	'AUTOMATIC_EXPLAIN'		=> 'Leave blank to attempt automatic detection.',
 
 	'BACKGROUND'			=> 'Background',
-	'BACKGROUND_COLOUR'		=> 'Background color',
+	'BACKGROUND_COLOUR'		=> 'Background colour',
 	'BACKGROUND_IMAGE'		=> 'Background image',
 	'BACKGROUND_REPEAT'		=> 'Background repeat',
 	'BOLD'					=> 'Bold',
@@ -117,14 +101,14 @@ $lang = array_merge($lang, array(
 	'EDIT_TEMPLATE_EXPLAIN'				=> 'Here you can edit your template set directly. Please remember that these edits are permanent and cannot be undone once submitted. If PHP can write to the template files in your styles directory any changes here will be written directly to those files. If PHP cannot write to those files they will be copied into the database and all changes will only be reflected there. Please take care when editing your template set, remember to close all replacement variable terms {XXXX} and conditional statements.',
 	'EDIT_TEMPLATE_STORED_DB'			=> 'The template file was unwritable so the template set is now stored in the database containing the modified file.',
 	'EDIT_THEME'						=> 'Edit theme',
-	'EDIT_THEME_EXPLAIN'				=> 'Here you can edit the selected theme, changing colors, images, etc.',
+	'EDIT_THEME_EXPLAIN'				=> 'Here you can edit the selected theme, changing colours, images, etc.',
 	'EDIT_THEME_STORED_DB'				=> 'The stylesheet file was unwritable so the stylesheet is now stored in the database containing your modification.',
 	'EDIT_THEME_STORE_PARSED'			=> 'The theme requires that its stylesheet is parsed. This is only possible if it’s stored in the database.',
-	'EDITOR_DISABLED'               => 'The template editor is disabled.',
+	'EDITOR_DISABLED'					=> 'The template editor is disabled.',
 	'EXPORT'							=> 'Export',
 
 	'FOREGROUND'			=> 'Foreground',
-	'FONT_COLOUR'			=> 'Font color',
+	'FONT_COLOUR'			=> 'Font colour',
 	'FONT_FACE'				=> 'Font face',
 	'FONT_FACE_EXPLAIN'		=> 'You can specify multiple fonts separated by commas. If a user doesn’t have the first font installed the first other working font will be chosen.',
 	'FONT_SIZE'				=> 'Font size',
@@ -159,7 +143,7 @@ $lang = array_merge($lang, array(
 	'IMAGESET_UPDATED'			=> 'Imageset updated successfully.',
 	'ITALIC'					=> 'Italic',
 
-	'IMG_CAT_BUTTONS'		=> 'Localized buttons',
+	'IMG_CAT_BUTTONS'		=> 'Localised buttons',
 	'IMG_CAT_CUSTOM'		=> 'Custom images',
 	'IMG_CAT_FOLDERS'		=> 'Topic icons',
 	'IMG_CAT_FORUMS'		=> 'Forum icons',
@@ -288,7 +272,7 @@ $lang = array_merge($lang, array(
 	'INCLUDE_IMAGESET'			=> 'Include imageset',
 	'INCLUDE_TEMPLATE'			=> 'Include template',
 	'INCLUDE_THEME'				=> 'Include theme',
-	'INHERITING_FROM'         => 'Inherits from',
+	'INHERITING_FROM'			=> 'Inherits from',
 	'INSTALL_IMAGESET'			=> 'Install imageset',
 	'INSTALL_IMAGESET_EXPLAIN'	=> 'Here you can install your selected imageset. You can edit certain details if you wish or use the installation defaults.',
 	'INSTALL_STYLE'				=> 'Install style',
@@ -307,9 +291,8 @@ $lang = array_merge($lang, array(
 	'KEEP_THEME'				=> 'Keep “%s” theme',
 
 	'LINE_SPACING'				=> 'Line spacing',
-	'LOCALISED_IMAGES'			=> 'Localized',
-	'LOCATION_DISABLED_EXPLAIN'   => 'This setting is inherited and cannot be changed.',
-
+	'LOCALISED_IMAGES'			=> 'Localised',
+	'LOCATION_DISABLED_EXPLAIN'	=> 'This setting is inherited and cannot be changed.',
 
 	'NO_CLASS'					=> 'Cannot find class in stylesheet.',
 	'NO_IMAGESET'				=> 'Cannot find imageset on filesystem.',
@@ -391,7 +374,7 @@ $lang = array_merge($lang, array(
 	'TEMPLATE_CACHE_CLEARED'	=> 'Template cache cleared successfully.',
 	'TEMPLATE_CACHE_EMPTY'		=> 'There are no cached templates.',
 	'TEMPLATE_DELETED'			=> 'Template set deleted successfully.',
-	'TEMPLATE_DELETE_DEPENDENT'   => 'The template set cannot be deleted as there are one or more other template sets inheriting from it:',
+	'TEMPLATE_DELETE_DEPENDENT'	=> 'The template set cannot be deleted as there are one or more other template sets inheriting from it:',
 	'TEMPLATE_DELETED_FS'		=> 'Template set removed from database but some files may remain on the filesystem.',
 	'TEMPLATE_DETAILS_UPDATED'	=> 'Template details successfully updated.',
 	'TEMPLATE_EDITOR'			=> 'Raw HTML template editor',
@@ -410,7 +393,7 @@ $lang = array_merge($lang, array(
 	'TEMPLATE_EXPORTED'			=> 'Templates exported successfully and stored in %s.',
 	'TEMPLATE_FILE'				=> 'Template file',
 	'TEMPLATE_FILE_UPDATED'		=> 'Template file updated successfully.',
-	'TEMPLATE_INHERITS'         => 'This template sets inherits from %s and thus cannot have a different storage setting than its super template.',
+	'TEMPLATE_INHERITS'			=> 'This template sets inherits from %s and thus cannot have a different storage setting than its super template.',
 	'TEMPLATE_LOCATION'			=> 'Store templates in',
 	'TEMPLATE_LOCATION_EXPLAIN'	=> 'Images are always stored on the filesystem.',
 	'TEMPLATE_NAME'				=> 'Template name',

@@ -573,7 +573,7 @@ inherit_from = {INHERIT_FROM}
 			case 'imageset':
 				$sql_from = STYLES_IMAGESET_TABLE;
 			break;
-			
+
 			default:
 				trigger_error($user->lang['NO_MODE'] . adm_back_link($this->u_action), E_USER_WARNING);
 		}
@@ -636,8 +636,8 @@ inherit_from = {INHERIT_FROM}
 
 				'NAME'					=> $row[$mode . '_name'],
 				'STYLE_COUNT'			=> ($mode == 'style' && isset($style_count[$row['style_id']])) ? $style_count[$row['style_id']] : 0,
-
 				'S_INACTIVE'			=> ($mode == 'style' && !$row['style_active']) ? true : false,
+
 				)
 			);
 		}

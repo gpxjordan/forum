@@ -1,29 +1,13 @@
 <?php
 /**
-* This file is part of U.S. English phpBB Localization.
-* Copyright (C) 2010 phpBB.fr
 *
-* This program is free software; you can redistribute it and/or modify
-* it under the terms of the GNU General Public License as published by
-* the Free Software Foundation; version 2 of the License.
+* mcp [English]
 *
-* This program is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-* GNU General Public License for more details.
+* @package language
+* @version $Id$
+* @copyright (c) 2005 phpBB Group
+* @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
-* You should have received a copy of the GNU General Public License along
-* with this program; if not, write to the Free Software Foundation, Inc.,
-* 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-*
-* mcp [U.S. English]
-*
-* @package   language
-* @author    Maël Soucaze <maelsoucaze@phpbb.fr> (Maël Soucaze) http://www.phpbb.fr/
-* @author    Seven ALive <N/A> (Robert Baker) http://sevenupdate.com/
-* @copyright 2005 phpBB Group
-* @license   http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License
-* @version   $Id: mcp.php 10455 2010-01-26 14:06:00Z nickvergessen $
 */
 
 /**
@@ -334,7 +318,7 @@ $lang = array_merge($lang, array(
 	'SORT_DATE'							=> 'Date',
 	'SORT_IP'							=> 'IP address',
 	'SORT_WARNINGS'						=> 'Warnings',
-	'SPLIT_AFTER'                  => 'Split topic from selected post onwards',
+	'SPLIT_AFTER'						=> 'Split topic from selected post onwards',
 	'SPLIT_FORUM'						=> 'Forum for new topic',
 	'SPLIT_POSTS'						=> 'Split selected posts',
 	'SPLIT_SUBJECT'						=> 'New topic title',
@@ -352,7 +336,7 @@ $lang = array_merge($lang, array(
 	'TOPICS_FORKED_SUCCESS'		=> 'The selected topics have been copied successfully.',
 	'TOPICS_LOCKED_SUCCESS'		=> 'The selected topics have been locked.',
 	'TOPICS_MOVED_SUCCESS'		=> 'The selected topics have been moved successfully.',
-	'TOPICS_RESYNC_SUCCESS'		=> 'The selected topics have been resynchronized.',
+	'TOPICS_RESYNC_SUCCESS'		=> 'The selected topics have been resynchronised.',
 	'TOPICS_TYPE_CHANGED'		=> 'Topic types changed successfully.',
 	'TOPICS_UNLOCKED_SUCCESS'	=> 'The selected topics have been unlocked.',
 	'TOPIC_APPROVED_SUCCESS'	=> 'The selected topic has been approved.',
@@ -362,7 +346,7 @@ $lang = array_merge($lang, array(
 	'TOPIC_LOCKED_SUCCESS'		=> 'The selected topic has been locked.',
 	'TOPIC_MOVED_SUCCESS'		=> 'The selected topic has been moved successfully.',
 	'TOPIC_NOT_EXIST'			=> 'The topic you selected does not exist.',
-	'TOPIC_RESYNC_SUCCESS'		=> 'The selected topic has been resynchronized.',
+	'TOPIC_RESYNC_SUCCESS'		=> 'The selected topic has been resynchronised.',
 	'TOPIC_SPLIT_SUCCESS'		=> 'The selected topic has been split successfully.',
 	'TOPIC_TIME'				=> 'Topic time',
 	'TOPIC_TYPE_CHANGED'		=> 'Topic type changed successfully.',
@@ -390,7 +374,7 @@ $lang = array_merge($lang, array(
 
 	'VIEW_DETAILS'			=> 'View details',
 	'VIEW_PM'				=> 'View private message',
-	'VIEW_POST'            => 'View post',
+	'VIEW_POST'				=> 'View post',
 
 	'WARNED_USERS'			=> 'Warned users',
 	'WARNED_USERS_EXPLAIN'	=> 'This is a list of users with unexpired warnings issued to them.',

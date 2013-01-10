@@ -111,13 +111,11 @@ class bbcode
 						}
 
 						$message = preg_replace($preg['search'], $preg['replace'], $message);
-						
 						/* 
 						 * 2010.06.10 add search nofollow module by appleboy 
 						 */
 						$replace = ($bbcode_is_sig === true) ? 'rel="external nofollow"' : '';
 						$message = preg_replace("/\{NOFOLLOW\}/i", $replace, $message);
-						
 						$preg = array('search' => array(), 'replace' => array());
 					}
 				}

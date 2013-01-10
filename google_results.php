@@ -13,7 +13,7 @@ $mode = request_var('mode', '');
 
 // Lets build a page ...
 
-page_header('討論區搜索');
+page_header('搜尋討論區');
 
 $template->set_filenames(array(
 	'body' => 'google_results.html')

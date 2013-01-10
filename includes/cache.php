@@ -68,22 +68,19 @@ class cache extends acm
 	}
 
 	/**
-	* Obtain list of naughty words and build preg style replacement arrays for use by the
-	* calling script
-	*/
-
-	/**
-	 * Obtain list of blacklisted sites and build preg style for use by the calling script
+	* Obtain list of blacklisted sites and build preg style for use by the calling script
 	*/
 	function obtain_site_blacklist()
 	{
-		global $db;
+		global $db, $user;
+
+		$user->add_lang('acp/posting');
 
 		if (($all_site_blacklist = $this->get('_site_blacklist')) === false)
 		{
 			$sql = 'SELECT word, replacement
 				FROM ' . WORDS_TABLE ."
-				WHERE replacement = 'blacklisted_site'";
+				WHERE replacement = '" . $db->sql_escape($user->lang['BLOCK_CODE']) . "'";
 			$result = $db->sql_query($sql);
 
 			$site_blacklist = array();
@@ -98,9 +95,13 @@ class cache extends acm
 			$this->put('_site_blacklist', $all_site_blacklist);
 		}
 
-	return $all_site_blacklist;
+		return $all_site_blacklist;
 	}
 
+	/**
+	* Obtain list of naughty words and build preg style replacement arrays for use by the
+	* calling script
+	*/
 	function obtain_word_list()
 	{
 		global $db;

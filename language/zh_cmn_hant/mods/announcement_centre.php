@@ -37,10 +37,10 @@ if (empty($lang) || !is_array($lang))
 
 // Announcement  settings
 $lang = array_merge($lang, array(
-	'ACP_ANNOUNCEMENT_TITLE'					=> 'ACP 公告中心',
-	'ACP_ANNOUNCEMENT_TITLE_EXPLAIN'			=> '在這裡，您可以編輯論壇公告。您可以選擇誰才可以看到這些公告；另外，您也可以給訪客顯示不一樣的公告。',
+	'ACP_ANNOUNCEMENT_TITLE'				=> 'ACP 公告中心',
+	'ACP_ANNOUNCEMENT_TITLE_EXPLAIN'		=> '在這裡，您可以編輯論壇公告。您可以選擇誰才可以看到這些公告；另外，您也可以給訪客顯示不一樣的公告。',
 	'ANNOUNCEMENTS_CONFIG'					=> '設定公告',
-	
+
 	'ANNOUNCEMENT_ENABLE'					=> '顯示論壇公告',
 	'ANNOUNCEMENT_ALIGN'					=> '網站公告對齊的位置',
 	'ANNOUNCEMENT_ALIGN_EXPLAIN'			=> '指出您想如何對齊網站公告的位置。',
@@ -86,13 +86,13 @@ $lang = array_merge($lang, array(
 	'COPY_TO_ANNOUNCEMENT'					=> '複製到論壇公告',
 	'COPY_TO_GUEST_ANNOUNCEMENT'			=> '複製到訪客公告',
 
-	'ANNOUNCEMENT_SHOW_BIRTHDAYS_AND_ANNOUNCE' 			=> '同時顯示會員生日以及論壇公告內容',
+	'ANNOUNCEMENT_SHOW_BIRTHDAYS_AND_ANNOUNCE'			=> '同時顯示會員生日以及論壇公告內容',
 	'ANNOUNCEMENT_SHOW_BIRTHDAYS_AND_ANNOUNCE_EXPLAIN' 	=> '如果選擇「是」，將同時顯示生日以及論壇公告。',
 
 	'ANNOUNCEMENT_AVA_MAX_SIZE'				=> '頭像尺寸最大限制',
 	'ANNOUNCEMENT_AVA_MAX_SIZE_EXPLAIN'		=> '輸入欲顯示於公告中心的的頭像尺寸。',
 	
-	'ANNOUNCEMENT_SHOW_BIRTHDAYS_ALWAYS' 				=> '即使顯示論壇公告已設定為「否」，還是會顯示生日公告',
+	'ANNOUNCEMENT_SHOW_BIRTHDAYS_ALWAYS'				=> '即使顯示論壇公告已設定為「否」，還是會顯示生日公告',
 	'ANNOUNCEMENT_SHOW_BIRTHDAYS_ALWAYS_EXPLAIN' 		=> '如果設定為「是」將會開啟生日公告，即使顯示論壇公告已設定為「否」。當顯示論壇公告為「是」，這個選項將會無效。',
 
 	'ANNOUNCEMENT_FORUM_ID'			=> '版面 ID',
@@ -109,33 +109,33 @@ $lang = array_merge($lang, array(
 	
 	//Installation vars
 	// Installation file stuff, not needed anymore after installation is complete
-	'AC_TABLE_CREATED'		=> 	'公告中心資料表以及設定欄位已經建立。',
-	'AC_MODULE_ADDED'		=> 	'公告中心模組已經增加。',
-	'AC_CONFIGS_CREATED'	=> 	'公告中心設定欄位已經建立。',
-	'AC_VERSION_UPDATED'	=> 	'公告中心版本已經更新。',
-	'AC_INSTALL_COMPLETE'	=> 	'<strong>公告中心安裝已完成。請刪除 /install/ 資料夾！</strong>',
-	'AC_INSTALL_RETURN'		=> 	'<br /><br /><br />按 %s此%s 返回論壇首頁。',
-	'AC_INSTALL_REDIRECT'	=> 	'請稍後！您將導向於完成安裝。',
-	'AC_UNINSTALL_REDIRECT'	=> 	'請稍後！您將導向於完成刪除。',
+	'AC_TABLE_CREATED'		=> '公告中心資料表以及設定欄位已經建立。',
+	'AC_TABLE_UPDATED'		=> '公告中心資料表欄位已更新。',
+	'AC_MODULE_ADDED'		=> '公告中心模組已經增加。',
+	'AC_CONFIGS_CREATED'	=> '公告中心設定欄位已經建立。',
+	'AC_VERSION_UPDATED'	=> '公告中心版本已經更新。',
+	'AC_INSTALL_COMPLETE'	=> '<strong>公告中心安裝已完成。請刪除 /install/ 資料夾！</strong>',
+	'AC_INSTALL_RETURN'		=> '<br /><br /><br />按 %s此%s 返回論壇首頁。',
+	'AC_INSTALL_REDIRECT'	=> '請稍後！您將導向於完成安裝。',
+	'AC_UNINSTALL_REDIRECT'	=> '請稍後！您將導向於完成刪除。',
 
-	'AC_PREV_TABLE_DELETE'	=>	'公告中心資料表已經刪除。<br />',
-	'AC_MODULE_READDED'		=> 	'公告中心模組已經再增加。',
+	'AC_PREV_TABLE_DELETE'	=> '公告中心資料表已經刪除。<br />',
+	'AC_MODULE_READDED'		=> '公告中心模組已經再增加。',
 
-	'AC_TABLE_CONFIG_DELETE'	=> 	'公告中心資料表以及設定欄位已經刪除。<br />',
-	'AC_MODULE_DELETED'			=> 	'公告中心模組已經刪除。<br />',
-	'AC_DELETE_COMPLETE'		=> 	'<strong>公告中心安裝已刪除完成。請刪除 /install/ 資料夾！</strong>',
-	'AC_BACKUP_WARN'			=> 	'執行前，請確認您已經備份您的資料庫！',
-	'AC_INSTALL_DESC'			=> 	'這安裝檔案將建立資料庫資料表/欄位，以及增加適當的模組。<br />請點選底下合適的行為：',
-	'AC_UPGRADE_DESC'			=> 	'這安裝檔案將升級/刪除資料庫資料表/欄位，以及增加/移除適當的模組。<br />請點選底下合適的行為：',
+	'AC_TABLE_CONFIG_DELETE'	=> '公告中心資料表以及設定欄位已經刪除。<br />',
+	'AC_MODULE_DELETED'			=> '公告中心模組已經刪除。<br />',
+	'AC_DELETE_COMPLETE'		=> '<strong>公告中心安裝已刪除完成。請刪除 /install/ 資料夾！</strong>',
+	'AC_BACKUP_WARN'			=> '執行前，請確認您已經備份您的資料庫！',
+	'AC_INSTALL_DESC'			=> '這安裝檔案將建立資料庫資料表/欄位，以及增加適當的模組。<br />請點選底下合適的行為：',
+	'AC_UPGRADE_DESC'			=> '這安裝檔案將升級/刪除資料庫資料表/欄位，以及增加/移除適當的模組。<br />請點選底下合適的行為：',
 	
-	'AC_NEW_INSTALL'		=> 	'新的安裝',
-	'AC_UPGRADE'			=> 	'升級到 %s',
-	'AC_UP_TO_DATE'			=> 	'目前安裝在您系統的版本是 %s，它是最新的版本。',
-	'AC_UNINSTALL'			=> 	'反安裝',
-	'AC_PERM_CREATED'		=> 	'公告中心權限已經建立。',
+	'AC_NEW_INSTALL'		=> '新的安裝',
+	'AC_UPGRADE'			=> '升級到 %s',
+	'AC_UP_TO_DATE'			=> '目前安裝在您系統的版本是 %s，它是最新的版本。',
+	'AC_UNINSTALL'			=> '反安裝',
+	'AC_PERM_CREATED'		=> '公告中心權限已經建立。',
 
-																			
-	'AC_DESCRIPTION' 		=>	'增加公告區塊到論壇首頁。',
+	'AC_DESCRIPTION' 		=> '增加公告區塊到論壇首頁。',
 ));
 
 ?>

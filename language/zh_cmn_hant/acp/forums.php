@@ -4,7 +4,7 @@
 * acp_forums [正體中文]
 *
 * @package language
-* @version $Id: forums.php 10531 2010-02-23 23:50:36Z naderman $
+* @version $Id$
 * @copyright (c) 2001 - 2007 phpBB TW Group (心靈捕手)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -72,7 +72,7 @@ $lang = array_merge($lang, array(
 	'ENABLE_TOPIC_ICONS'			=> '能夠使用主題圖示',
 
 	'FORUM_ADMIN'						=> '版面管理',
-	'FORUM_ADMIN_EXPLAIN'				=> '在 phpBB3 中沒有分區，所有都是以版面為基礎。每個版面可以擁有無限數量的子版面，並且您可以設定哪些能否發文。(例如：是否像是舊的分區)。在這裡，您能增加、編輯、刪除、鎖定、解鎖各個版面，並設定一些額外的控制。如果您版面的文章和主題統計失真，您可以重新統計一下。<strong>您需要為新建的版面複製或設定適當的權限才得以顯示。</strong>',
+	'FORUM_ADMIN_EXPLAIN'				=> '在 phpBB3 中的所有事物都是以版面為基礎。一個分區只是一個版面的特殊類型。每個版面可以擁有無限數量的子版面，並且您可以設定哪些能否發文。(例如：是否像是舊的分區)。在這裡，您能增加、編輯、刪除、鎖定、解鎖各個版面，並設定一些額外的控制。如果您版面的文章和主題統計失真，您可以重新統計一下。<strong>您需要為新建的版面複製或設定適當的權限才得以顯示。</strong>',
 	'FORUM_AUTO_PRUNE'					=> '能夠使用自動刪除',
 	'FORUM_AUTO_PRUNE_EXPLAIN'			=> '刪除版面的主題，在下面設定頻率/時間參數。',
 	'FORUM_CREATED'						=> '版面建立成功。',
@@ -120,16 +120,16 @@ $lang = array_merge($lang, array(
 
 	'GENERAL_FORUM_SETTINGS'	=> '一般版面設定',
 
-	'LINK'					=> '連結',
-	'LIST_INDEX'			=> '在父版面中顯示子版面列表',
+	'LINK'						=> '連結',
+	'LIST_INDEX'				=> '在父版面中顯示子版面列表',
 	'LIST_INDEX_EXPLAIN'		=> '在首頁顯示此版面，以及如果父版面「顯示子版面列表」的選項啟用的話，那麼它會在其他的父版面被當作是一個連結。',
 	'LIST_SUBFORUMS'			=> '顯示子版面列表',
 	'LIST_SUBFORUMS_EXPLAIN'	=> '在首頁顯示此版面的子版面，以及如果它們的「在父版面中顯示子版面列表」的選項啟用的話，那麼它會在其他的地方被當作是一個連結。',
-	'LOCKED'				=> '鎖定',
+	'LOCKED'					=> '鎖定',
 
 	'MOVE_POSTS_NO_POSTABLE_FORUM'	=> '您選中移動的目標版面不可發表文章。請選擇其他的版面。',
-	'MOVE_POSTS_TO'		=> '移動文章到',
-	'MOVE_SUBFORUMS_TO'	=> '移動子版面到',
+	'MOVE_POSTS_TO'					=> '移動文章到',
+	'MOVE_SUBFORUMS_TO'				=> '移動子版面到',
 
 	'NO_DESTINATION_FORUM'			=> '您沒有指定移動的目的版面',
 	'NO_FORUM_ACTION'				=> '沒有在目的版面中定義動作',

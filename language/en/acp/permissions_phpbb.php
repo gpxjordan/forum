@@ -1,29 +1,11 @@
 <?php
 /**
-* This file is part of U.S. English phpBB Localization.
-* Copyright (C) 2010 phpBB.fr
+* acp_permissions_phpbb (phpBB Permission Set) [English]
 *
-* This program is free software; you can redistribute it and/or modify
-* it under the terms of the GNU General Public License as published by
-* the Free Software Foundation; version 2 of the License.
-*
-* This program is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-* GNU General Public License for more details.
-*
-* You should have received a copy of the GNU General Public License along
-* with this program; if not, write to the Free Software Foundation, Inc.,
-* 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-*
-* acp_permissions_phpbb (phpBB Permission Set) [U.S. English]
-*
-* @package   language
-* @author    Maël Soucaze <maelsoucaze@phpbb.fr> (Maël Soucaze) http://www.phpbb.fr/
-* @author    Seven ALive <N/A> (Robert Baker) http://sevenupdate.com/
-* @copyright 2005 phpBB Group
-* @license   http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License
-* @version   $Id: permissions_phpbb.php 9686 2009-06-26 11:52:54Z rxu $
+* @package language
+* @version $Id$
+* @copyright (c) 2005 phpBB Group
+* @license http://opensource.org/licenses/gpl-license.php GNU Public License
 */
 
 /**
@@ -129,8 +111,8 @@ $lang = array_merge($lang, array(
 	'acl_u_sig'			=> array('lang' => 'Can use signature', 'cat' => 'post'),
 
 	'acl_u_sendpm'		=> array('lang' => 'Can send private messages', 'cat' => 'pm'),
-	'acl_u_masspm'      => array('lang' => 'Can send messages to multiple users', 'cat' => 'pm'),
-  'acl_u_masspm_group'=> array('lang' => 'Can send messages to groups', 'cat' => 'pm'),
+	'acl_u_masspm'		=> array('lang' => 'Can send messages to multiple users', 'cat' => 'pm'),
+	'acl_u_masspm_group'=> array('lang' => 'Can send messages to groups', 'cat' => 'pm'),
 	'acl_u_readpm'		=> array('lang' => 'Can read private messages', 'cat' => 'pm'),
 	'acl_u_pm_edit'		=> array('lang' => 'Can edit own private messages', 'cat' => 'pm'),
 	'acl_u_pm_delete'	=> array('lang' => 'Can remove private messages from own folder', 'cat' => 'pm'),

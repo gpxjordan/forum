@@ -4,7 +4,7 @@
 * acp_common [正體中文]
 *
 * @package language
-* @version $Id: common.php 10458 2010-01-26 15:26:07Z jelly_doughnut $
+* @version $Id$
 * @copyright (c) 2001 - 2007 phpBB TW Group (動機不明, 心靈捕手)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -80,7 +80,7 @@ $lang = array_merge($lang, array(
 	'ACP_DISALLOW'				=> '不允許',
 	'ACP_DISALLOW_USERNAMES'	=> '不允許的會員名稱',
 
-	'ACP_EMAIL_SETTINGS'		=> 'E-mail 設定',
+	'ACP_EMAIL_SETTINGS'		=> 'e-mail 設定',
 	'ACP_EXTENSION_GROUPS'		=> '管理副檔名群組',
 
 	'ACP_FORUM_BASED_PERMISSIONS'	=> '版面基本權限',
@@ -126,7 +126,7 @@ $lang = array_merge($lang, array(
 	'ACP_MODULE_MANAGEMENT'		=> '模組管理',
 	'ACP_MOD_LOGS'				=> '版主記錄',
 	'ACP_MOD_ROLES'				=> '版主角色',
-	
+
 	'ACP_NO_ITEMS'				=> '還沒有細目。',
 
 	'ACP_ORPHAN_ATTACHMENTS'	=> '幽靈的附加檔案',
@@ -190,7 +190,7 @@ $lang = array_merge($lang, array(
 	'ACP_USER_SIG'					=> '簽名檔',
 	'ACP_USER_WARNINGS'				=> '警告',
 
-	'ACP_VC_SETTINGS'					=> 'CAPTCHA 模組設定',
+	'ACP_VC_SETTINGS'					=> '廣告機器人的反制',
 	'ACP_VC_CAPTCHA_DISPLAY'			=> 'CAPTCHA 圖片預覽',
 	'ACP_VERSION_CHECK'					=> '檢查更新',
 	'ACP_VIEW_ADMIN_PERMISSIONS'		=> '檢視管理員權限',
@@ -255,7 +255,7 @@ $lang = array_merge($lang, array(
 	'MOVE_UP'				=> '往上移動',
 
 	'NOTIFY'				=> '通知',
-	'NO_ADMIN'				=> '您沒有權限可以進入管理員控制台。',
+	'NO_ADMIN'				=> '您沒有權限可以管理這個討論區。',
 	'NO_EMAILS_DEFINED'		=> '沒有找到有效的 e-mail 位址。',
 	'NO_PASSWORD_SUPPLIED'	=> '要進入管理員控制台，您需要輸入您的密碼。',	
 
@@ -267,7 +267,6 @@ $lang = array_merge($lang, array(
 	'PARSE_URLS'						=> '可用超連結',
 	'PERMISSIONS_TRANSFERRED'			=> '權限轉移',
 	'PERMISSIONS_TRANSFERRED_EXPLAIN'	=> '您目前擁有來自 %1$s 的權限。您可以使用該會員的權限瀏覽討論區但是無法進入管理員控制台因為管理員的權限無法被轉移。您隨時都可以 <a href="%2$s"><strong>恢復您的權限設定</strong></a>。',
-
 	'PROCEED_TO_ACP'					=> '%s進入 ACP%s',
 
 	'REMIND'							=> '提醒',
@@ -281,6 +280,7 @@ $lang = array_merge($lang, array(
 	'SETTING_TOO_BIG'		=> '您所提供的值「%1$s」太高。允許最大的值是 %2$d。',
 	'SETTING_TOO_LONG'		=> '您所提供的值「%1$s」太長。允許最大的長度是 %2$d。',
 	'SETTING_TOO_SHORT'		=> '您所提供的值「%1$s」太短。允許最小的長度是 %2$d。',
+
 	'SHOW_ALL_OPERATIONS'	=> '顯示所有的操作',
 
 	'UCP'					=> '會員控制台 (UCP)',
@@ -316,7 +316,7 @@ $lang = array_merge($lang, array(
 
 // Index page
 $lang = array_merge($lang, array(
- 	'ADMIN_INTRO'            => '感謝您使用 phpBB 討論版系統。這個介面將提供給您有關本討論區的一個統計全覽。位於介面左手邊的連結允許您控制討論區的各個主要功能，每一頁都將教導您如何使用這些工具。',
+ 	'ADMIN_INTRO'				=> '感謝您使用 phpBB 討論版系統。這個介面將提供給您有關本討論區的一個統計全覽。位於介面左手邊的連結允許您控制討論區的各個主要功能，每一頁都將教導您如何使用這些工具。',
  	'ADMIN_LOG'					=> '管理員動作記錄',
 	'ADMIN_LOG_INDEX_EXPLAIN'	=> '這裡提供管理員執行的最後五個動作全覽。您可以從適當的選單項目或下面的「檢視管理員記錄」連結檢視完整記錄。',
 	'AVATAR_DIR_SIZE'			=> '頭像資料夾大小',
@@ -326,6 +326,16 @@ $lang = array_merge($lang, array(
 
 	'DATABASE_SERVER_INFO'	=> '資料庫伺服器',
 	'DATABASE_SIZE'			=> '資料庫大小',
+
+	// 與 mbstring 相關的環境設定之檢查
+	'ERROR_MBSTRING_FUNC_OVERLOAD'					=> '函數重載的設定不當',
+	'ERROR_MBSTRING_FUNC_OVERLOAD_EXPLAIN'			=> '<var>mbstring.func_overload</var> 必須設定為 0 或 4。您可以在 <samp>PHP 資訊</samp> 頁檢查目前的設定值。',
+	'ERROR_MBSTRING_ENCODING_TRANSLATION'			=> '透明的字元編碼之設定不當',
+	'ERROR_MBSTRING_ENCODING_TRANSLATION_EXPLAIN'	=> '<var>mbstring.encoding_translation</var> 必須設定為 0。您可以在 <samp>PHP 資訊</samp> 頁檢查目前的設定值。',
+	'ERROR_MBSTRING_HTTP_INPUT'						=> 'HTTP 輸入的字元轉換之設定不當',
+	'ERROR_MBSTRING_HTTP_INPUT_EXPLAIN'				=> '<var>mbstring.http_input</var> 必須設定為 <samp>pass</samp>. 您可以在 <samp>PHP 資訊</samp> 頁檢查目前的設定值。',
+	'ERROR_MBSTRING_HTTP_OUTPUT'					=> 'HTTP 輸出的字元轉換之設定不當',
+	'ERROR_MBSTRING_HTTP_OUTPUT_EXPLAIN'			=> '<var>mbstring.http_output</var> 必須設定為 <samp>pass</samp>. 您可以在 <samp>PHP 資訊</samp> 頁檢查目前的設定值。',
 
 	'FILES_PER_DAY'		=> '每天的附加檔案',
 	'FORUM_STATS'		=> '討論區統計',
@@ -374,14 +384,14 @@ $lang = array_merge($lang, array(
 	'UPLOAD_DIR_SIZE'	=> '附加檔案的大小',
 	'USERS_PER_DAY'		=> '每天的註冊會員',
 
-	'VALUE'					=> '值',
+	'VALUE'						=> '值',
 	'VERSIONCHECK_FAIL'			=> '無法取得最新版本的資訊。',
 	'VERSIONCHECK_FORCE_UPDATE'	=> '重新檢查版本',
-	'VIEW_ADMIN_LOG'		=> '檢視管理員記錄',
-	'VIEW_INACTIVE_USERS'	=> '檢視未啟用的會員',
+	'VIEW_ADMIN_LOG'			=> '檢視管理員記錄',
+	'VIEW_INACTIVE_USERS'		=> '檢視未啟用的會員',
 
 	'WELCOME_PHPBB'			=> '歡迎光臨 phpBB',
-	'WRITABLE_CONFIG'		=> '您目前的組態設定檔 (config.php) 是可以寫入的. 我們強烈建議您改變權限為 640 或至少是 644 (例如：<a href="http://en.wikipedia.org/wiki/Chmod" rel="external">chmod</a> 640 config.php)。',
+	'WRITABLE_CONFIG'		=> '您目前的組態設定檔 (config.php) 是可以寫入的。我們強烈建議您改變權限為 640 或至少是 644 (例如：<a href="http://en.wikipedia.org/wiki/Chmod" rel="external">chmod</a> 640 config.php)。',
 ));
 
 // Inactive Users
@@ -395,7 +405,7 @@ $lang = array_merge($lang, array(
 	'INACTIVE_REASON_UNKNOWN'		=> '不知道',
 	'INACTIVE_USERS'				=> '未啟用的會員',
 	'INACTIVE_USERS_EXPLAIN'		=> '這是已經註冊但是尚未啟用帳號的會員列表。如果您希望的話，那麼您可以啟用、刪除或提醒 (發送 e-mail) 這些會員。',
-	'INACTIVE_USERS_EXPLAIN_INDEX'	=> '這是最近十個已經註冊但是尚未啟用帳號的會員列表。您可以從適當的選單項目或下面的「檢視未啟用的會員」連結檢視完整列表，從那裡您可以啟用、刪除或提醒 (發送 e-mail) 這些會員。',
+	'INACTIVE_USERS_EXPLAIN_INDEX'	=> '這是最近十個已經註冊但是尚未啟用帳號的會員列表。帳號是無效的，可能是因為會員註冊後需要啟用，而這些帳號尚未啟用，或者是因為這些帳號已被停用。您可以從適當的選單項目或下面的「檢視未啟用的會員」連結檢視完整列表，從那裡您可以啟用、刪除或提醒 (發送 e-mail) 這些會員。',
 
 	'NO_INACTIVE_USERS'	=> '沒有未啟用的會員',
 
@@ -503,7 +513,7 @@ $lang = array_merge($lang, array(
 	'LOG_CONFIG_SERVER'			=> '<strong>已更改伺服器設定</strong>',
 	'LOG_CONFIG_SETTINGS'		=> '<strong>已更改討論區設定</strong>',
 	'LOG_CONFIG_SIGNATURE'		=> '<strong>已更改簽名檔設定</strong>',
-	'LOG_CONFIG_VISUAL'			=> '<strong>已更改確認代碼設定</strong>',
+	'LOG_CONFIG_VISUAL'			=> '<strong>已更改反廣告機器人的設定</strong>',
 
 	'LOG_APPROVE_TOPIC'			=> '<strong>已核准主題</strong><br />» %s',
 	'LOG_BUMP_TOPIC'			=> '<strong>已推文主題</strong><br />» %s',
@@ -544,7 +554,7 @@ $lang = array_merge($lang, array(
 	'LOG_DOWNLOAD_REMOVE_IP'	=> '<strong>已移除 IP/主機名稱 從下載列表</strong><br />» %s',
 
 	'LOG_ERROR_JABBER'		=> '<strong>Jabber 錯誤</strong><br />» %s',
-	'LOG_ERROR_EMAIL'		=> '<strong>E-mail 錯誤</strong><br />» %s',
+	'LOG_ERROR_EMAIL'		=> '<strong>e-mail 錯誤</strong><br />» %s',
 
 	'LOG_FORUM_ADD'							=> '<strong>已建立新的版面</strong><br />» %s',
 	'LOG_FORUM_COPIED_PERMISSIONS'			=> '<strong>已複製版面權限</strong> 自 %1$s<br />» %2$s',
@@ -737,6 +747,15 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_ADD'			=> '<strong>已增加字詞過濾</strong><br />» %s',
 	'LOG_WORD_DELETE'		=> '<strong>已刪除字詞過濾</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>已編輯字詞過濾</strong><br />» %s',
+// MOD : MSSTI RSS Feeds (V1.2.1) - Start
+	'ACP_RSS'					=> 'RSS 管理',
+	'ACP_RSS_FEEDS'				=> 'RSS',
+	'LOG_CONFIG_RSS_FEEDS'		=> '<strong>RSS 摘要組態</strong>',
+// MOD : MSSTI RSS Feeds (V1.2.1) - End
+));
+
+$lang = array_merge($lang, array(
+	'LOG_ANNOUNCEMENT_UPDATED'			=> '<strong>已更新公告</strong>',
 ));
 
 ?>

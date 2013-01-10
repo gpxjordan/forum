@@ -1,29 +1,13 @@
 <?php
 /**
-* This file is part of U.S. English phpBB Localization.
-* Copyright (C) 2010 phpBB.fr
 *
-* This program is free software; you can redistribute it and/or modify
-* it under the terms of the GNU General Public License as published by
-* the Free Software Foundation; version 2 of the License.
+* ucp [English]
 *
-* This program is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-* GNU General Public License for more details.
+* @package language
+* @version $Id$
+* @copyright (c) 2005 phpBB Group
+* @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
-* You should have received a copy of the GNU General Public License along
-* with this program; if not, write to the Free Software Foundation, Inc.,
-* 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-*
-* ucp [U.S. English]
-*
-* @package   language
-* @author    Maël Soucaze <maelsoucaze@phpbb.fr> (Maël Soucaze) http://www.phpbb.fr/
-* @author    Seven ALive <N/A> (Robert Baker) http://sevenupdate.com/
-* @copyright 2005 phpBB Group
-* @license   http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License
-* @version   $Id: ucp.php 10329 2009-12-13 14:03:45Z Kellanved $
 */
 
 /**
@@ -55,16 +39,16 @@ if (empty($lang) || !is_array($lang))
 $lang = array_merge($lang, array(
 	'TERMS_OF_USE_CONTENT'	=> 'By accessing “%1$s” (hereinafter “we”, “us”, “our”, “%1$s”, “%2$s”), you agree to be legally bound by the following terms. If you do not agree to be legally bound by all of the following terms then please do not access and/or use “%1$s”. We may change these at any time and we’ll do our utmost in informing you, though it would be prudent to review this regularly yourself as your continued usage of “%1$s” after changes mean you agree to be legally bound by these terms as they are updated and/or amended.<br />
 	<br />
-	Our forums are powered by phpBB (hereinafter “they”, “them”, “their”, “phpBB software”, “www.phpbb.com”, “phpBB Group”, “phpBB Teams”) which is a bulletin board solution released under the “<a href="http://opensource.org/licenses/gpl-license.php">General Public License</a>” (hereinafter “GPL”) and can be downloaded from <a href="http://www.phpbb.com/">www.phpbb.com</a>. The phpBB software only facilitates internet based discussions, the phpBB Group is not responsible for what we allow and/or disallow as permissible content and/or conduct. For further information about phpBB, please see: <a href="http://www.phpbb.com/">http://www.phpbb.com/</a>.<br />
+	Our forums are powered by phpBB (hereinafter “they”, “them”, “their”, “phpBB software”, “www.phpbb.com”, “phpBB Group”, “phpBB Teams”) which is a bulletin board solution released under the “<a href="http://opensource.org/licenses/gpl-license.php">General Public License</a>” (hereinafter “GPL”) and can be downloaded from <a href="http://www.phpbb.com/">www.phpbb.com</a>. The phpBB software only facilitates internet based discussions, the phpBB Group are not responsible for what we allow and/or disallow as permissible content and/or conduct. For further information about phpBB, please see: <a href="http://www.phpbb.com/">http://www.phpbb.com/</a>.<br />
 	<br />
-	You agree not to post any abusive, obscene, vulgar, slanderous, hateful, threatening, sexually-orientated or any other material that may violate any laws be it of your country, the country where “%1$s” is hosted or International Law. Doing so may lead to you being immediately and permanently banned, with notification of your Internet Service Provider if deemed required by us. The IP address of all posts are recorded to aid in enforcing these conditions. You agree that “%1$s” has the right to remove, edit, move or close any topic at any time should we see fit. As a user you agree to any information you have entered to being stored in a database. While this information will not be disclosed to any third party without your consent, neither “%1$s” nor phpBB shall be held responsible for any hacking attempt that may lead to the data being compromised.
+	You agree not to post any abusive, obscene, vulgar, slanderous, hateful, threatening, sexually-orientated or any other material that may violate any laws be it of your country, the country where “%1$s” is hosted or International Law. Doing so may lead to you being immediately and permanently banned, with notification of your Internet Service Provider if deemed required by us. The IP address of all posts are recorded to aid in enforcing these conditions. You agree that “%1$s” have the right to remove, edit, move or close any topic at any time should we see fit. As a user you agree to any information you have entered to being stored in a database. While this information will not be disclosed to any third party without your consent, neither “%1$s” nor phpBB shall be held responsible for any hacking attempt that may lead to the data being compromised.
 	',
 
 	'PRIVACY_POLICY'		=> 'This policy explains in detail how “%1$s” along with its affiliated companies (hereinafter “we”, “us”, “our”, “%1$s”, “%2$s”) and phpBB (hereinafter “they”, “them”, “their”, “phpBB software”, “www.phpbb.com”, “phpBB Group”, “phpBB Teams”) use any information collected during any session of usage by you (hereinafter “your information”).<br />
 	<br />
-	Your information is collected via two ways. Firstly, browsing “%1$s” will cause the phpBB software to create a number of cookies, which are small text files that are downloaded on to your computer’s web browser temporary files. The first two cookies just contain a user identifier (hereinafter “user-id”) and an anonymous session identifier (hereinafter “session-id”), automatically assigned to you by the phpBB software. A third cookie will be created once you have browsed topics within “%1$s” and is used to store which topics have been read, thereby improving your user experience.<br />
+	Your information is collected via two ways. Firstly, by browsing “%1$s” will cause the phpBB software to create a number of cookies, which are small text files that are downloaded on to your computer’s web browser temporary files. The first two cookies just contain a user identifier (hereinafter “user-id”) and an anonymous session identifier (hereinafter “session-id”), automatically assigned to you by the phpBB software. A third cookie will be created once you have browsed topics within “%1$s” and is used to store which topics have been read, thereby improving your user experience.<br />
 	<br />
-	We may also create cookies external to the phpBB software while browsing “%1$s”, though these are outside the scope of this document which is intended to only cover the pages created by the phpBB software. The second way in which we collect your information is by what you submit to us. This can be, and is not limited to: posting as an anonymous user (hereinafter “anonymous posts”), registering on “%1$s” (hereinafter “your account”) and posts submitted by you after registration and while logged in (hereinafter “your posts”).<br />
+	We may also create cookies external to the phpBB software whilst browsing “%1$s”, though these are outside the scope of this document which is intended to only cover the pages created by the phpBB software. The second way in which we collect your information is by what you submit to us. This can be, and is not limited to: posting as an anonymous user (hereinafter “anonymous posts”), registering on “%1$s” (hereinafter “your account”) and posts submitted by you after registration and whilst logged in (hereinafter “your posts”).<br />
 	<br />
 	Your account will at a bare minimum contain a uniquely identifiable name (hereinafter “your user name”), a personal password used for logging into your account (hereinafter “your password”) and a personal, valid e-mail address (hereinafter “your e-mail”). Your information for your account at “%1$s” is protected by data-protection laws applicable in the country that hosts us. Any information beyond your user name, your password, and your e-mail address required by “%1$s” during the registration process is either mandatory or optional, at the discretion of “%1$s”. In all cases, you have the option of what information in your account is publicly displayed. Furthermore, within your account, you have the option to opt-in or opt-out of automatically generated e-mails from the phpBB software.<br />
 	<br />
@@ -271,7 +255,7 @@ $lang = array_merge($lang, array(
 	'MARKED_MESSAGE'				=> 'Marked message',
 	'MAX_FOLDER_REACHED'			=> 'Maximum number of allowed user defined folders reached.',
 	'MESSAGE_BY_AUTHOR'				=> 'by',
-	'MESSAGE_COLOURS'				=> 'Message colors',
+	'MESSAGE_COLOURS'				=> 'Message colours',
 	'MESSAGE_DELETED'				=> 'Message successfully deleted.',
 	'MESSAGE_HISTORY'				=> 'Message history',
 	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'This message has been removed by its author before it was delivered.',
@@ -315,16 +299,16 @@ $lang = array_merge($lang, array(
 	'NO_AUTHOR'						=> 'No author defined for this message',
 	'NO_AVATAR_CATEGORY'			=> 'None',
 
-	'NO_AUTH_DELETE_MESSAGE'		=> 'You are not authorized to delete private messages.',
-	'NO_AUTH_EDIT_MESSAGE'			=> 'You are not authorized to edit private messages.',
-	'NO_AUTH_FORWARD_MESSAGE'		=> 'You are not authorized to forward private messages.',
-	'NO_AUTH_GROUP_MESSAGE'			=> 'You are not authorized to send private messages to groups.',
-	'NO_AUTH_PASSWORD_REMINDER'		=> 'You are not authorized to request a new password.',
-	'NO_AUTH_READ_HOLD_MESSAGE'		=> 'You are not authorized to read private messages that are on hold.',
-	'NO_AUTH_READ_MESSAGE'			=> 'You are not authorized to read private messages.',
+	'NO_AUTH_DELETE_MESSAGE'		=> 'You are not authorised to delete private messages.',
+	'NO_AUTH_EDIT_MESSAGE'			=> 'You are not authorised to edit private messages.',
+	'NO_AUTH_FORWARD_MESSAGE'		=> 'You are not authorised to forward private messages.',
+	'NO_AUTH_GROUP_MESSAGE'			=> 'You are not authorised to send private messages to groups.',
+	'NO_AUTH_PASSWORD_REMINDER'		=> 'You are not authorised to request a new password.',
+	'NO_AUTH_READ_HOLD_MESSAGE'		=> 'You are not authorised to read private messages that are on hold.',
+	'NO_AUTH_READ_MESSAGE'			=> 'You are not authorised to read private messages.',
 	'NO_AUTH_READ_REMOVED_MESSAGE'	=> 'You are not able to read this message because it was removed by the author.',
-	'NO_AUTH_SEND_MESSAGE'			=> 'You are not authorized to send private messages.',
-	'NO_AUTH_SIGNATURE'				=> 'You are not authorized to define a signature.',
+	'NO_AUTH_SEND_MESSAGE'			=> 'You are not authorised to send private messages.',
+	'NO_AUTH_SIGNATURE'				=> 'You are not authorised to define a signature.',
 
 	'NO_BCC_RECIPIENT'			=> 'None',
 	'NO_BOOKMARKS'				=> 'You have no bookmarks.',
@@ -347,7 +331,7 @@ $lang = array_merge($lang, array(
 	'NO_SAVED_DRAFTS'			=> 'No drafts saved.',
 	'NO_TO_RECIPIENT'			=> 'None',
 	'NO_WATCHED_FORUMS'			=> 'You are not subscribed to any forums.',
-	'NO_WATCHED_SELECTED'      => 'You have not selected any subscribed topics or forums.',
+	'NO_WATCHED_SELECTED'		=> 'You have not selected any subscribed topics or forums.',
 	'NO_WATCHED_TOPICS'			=> 'You are not subscribed to any topics.',
 
 	'PASS_TYPE_ALPHA_EXPLAIN'	=> 'Password must be between %1$d and %2$d characters long, must contain letters in mixed case and must contain numbers.',
@@ -427,7 +411,7 @@ $lang = array_merge($lang, array(
 
 	'TIMEZONE'					=> 'Timezone',
 	'TO'						=> 'To',
-	'TOO_MANY_RECIPIENTS'      => 'You tried to send a private message to too many recipients.',
+	'TOO_MANY_RECIPIENTS'		=> 'You tried to send a private message to too many recipients.',
 	'TOO_MANY_REGISTERS'		=> 'You have exceeded the maximum number of registration attempts for this session. Please try again later.',
 
 	'UCP'						=> 'User Control Panel',
@@ -563,7 +547,7 @@ $lang = array_merge($lang, array(
 	),
 
 
-	'GROUPS_EXPLAIN'	=> 'Usergroups enable board admins to better administer users. By default you will be placed in a specific group, this is your default group. This group defines how you may appear to other users, for example your username coloration, avatar, rank, etc. Depending on whether the administrator allows it you may be allowed to change your default group. You may also be placed in or allowed to join other groups. Some groups may give you additional permissions to view content or increase your capabilities in other areas.',
+	'GROUPS_EXPLAIN'	=> 'Usergroups enable board admins to better administer users. By default you will be placed in a specific group, this is your default group. This group defines how you may appear to other users, for example your username colouration, avatar, rank, etc. Depending on whether the administrator allows it you may be allowed to change your default group. You may also be placed in or allowed to join other groups. Some groups may give you additional permissions to view content or increase your capabilities in other areas.',
 	'GROUP_LEADER'		=> 'Leaderships',
 	'GROUP_MEMBER'		=> 'Memberships',
 	'GROUP_PENDING'		=> 'Pending memberships',

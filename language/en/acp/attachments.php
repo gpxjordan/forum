@@ -1,29 +1,13 @@
 <?php
 /**
-* This file is part of U.S. English phpBB Localization.
-* Copyright (C) 2010 phpBB.fr
 *
-* This program is free software; you can redistribute it and/or modify
-* it under the terms of the GNU General Public License as published by
-* the Free Software Foundation; version 2 of the License.
+* acp_attachments [English]
 *
-* This program is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-* GNU General Public License for more details.
+* @package language
+* @version $Id$
+* @copyright (c) 2005 phpBB Group
+* @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
-* You should have received a copy of the GNU General Public License along
-* with this program; if not, write to the Free Software Foundation, Inc.,
-* 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-*
-* acp_attachments [U.S. English]
-*
-* @package   language
-* @author    Maël Soucaze <maelsoucaze@phpbb.fr> (Maël Soucaze) http://www.phpbb.fr/
-* @author    Seven ALive <N/A> (Robert Baker) http://sevenupdate.com/
-* @copyright 2005 phpBB Group
-* @license   http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License
-* @version   $Id: attachments.php 8946 2008-09-26 18:32:05Z toonarmy $
 */
 
 /**
@@ -75,7 +59,7 @@ $lang = array_merge($lang, array(
 	'ATTACH_MAX_FILESIZE'				=> 'Maximum file size',
 	'ATTACH_MAX_FILESIZE_EXPLAIN'		=> 'Maximum size of each file. If this value is 0, the uploadable filesize is only limited by your PHP configuration.',
 	'ATTACH_MAX_PM_FILESIZE'			=> 'Maximum file size messaging',
-	'ATTACH_MAX_PM_FILESIZE_EXPLAIN'   => 'Maximum size of each file, with 0 being unlimited, attached to a private message.',
+	'ATTACH_MAX_PM_FILESIZE_EXPLAIN'	=> 'Maximum size of each file, with 0 being unlimited, attached to a private message.',
 	'ATTACH_ORPHAN_URL'					=> 'Orphan attachments',
 	'ATTACH_POST_ID'					=> 'Post ID',
 	'ATTACH_QUOTA'						=> 'Total attachment quota',
@@ -87,8 +71,8 @@ $lang = array_merge($lang, array(
 	'CAT_QUICKTIME_FILES'		=> 'Quicktime media files',
 	'CAT_RM_FILES'				=> 'RealMedia media files',
 	'CAT_WM_FILES'				=> 'Windows Media media files',
-	'CHECK_CONTENT'            => 'Check attachment files',
-	'CHECK_CONTENT_EXPLAIN'      => 'Some browsers can be tricked to assume an incorrect mimetype for uploaded files. This option ensures that such files likely to cause this are rejected.',
+	'CHECK_CONTENT'				=> 'Check attachment files',
+	'CHECK_CONTENT_EXPLAIN'		=> 'Some browsers can be tricked to assume an incorrect mimetype for uploaded files. This option ensures that such files likely to cause this are rejected.',
 	'CREATE_GROUP'				=> 'Create new group',
 	'CREATE_THUMBNAIL'			=> 'Create thumbnail',
 	'CREATE_THUMBNAIL_EXPLAIN'	=> 'Create a thumbnail in all possible situations.',
@@ -127,12 +111,12 @@ $lang = array_merge($lang, array(
 	'GROUP_NAME'			=> 'Group name',
 
 	'IMAGE_LINK_SIZE'			=> 'Image link dimensions',
-	'IMAGE_LINK_SIZE_EXPLAIN'	=> 'Display image attachment as an inline text link if image is larger than this. To disable this behavior, set the values to 0px by 0px.',
+	'IMAGE_LINK_SIZE_EXPLAIN'	=> 'Display image attachment as an inline text link if image is larger than this. To disable this behaviour, set the values to 0px by 0px.',
 	'IMAGICK_PATH'				=> 'Imagemagick path',
 	'IMAGICK_PATH_EXPLAIN'		=> 'Full path to the imagemagick convert application, e.g. <samp>/usr/bin/</samp>.',
 
-	'MAX_ATTACHMENTS'            => 'Maximum number of attachments per post',
-	'MAX_ATTACHMENTS_PM'         => 'Maximum number of attachments per private message',
+	'MAX_ATTACHMENTS'				=> 'Maximum number of attachments per post',
+	'MAX_ATTACHMENTS_PM'			=> 'Maximum number of attachments per private message',
 	'MAX_EXTGROUP_FILESIZE'			=> 'Maximum file size',
 	'MAX_IMAGE_SIZE'				=> 'Maximum image dimensions',
 	'MAX_IMAGE_SIZE_EXPLAIN'		=> 'Maximum size of image attachments. Set both values to 0px by 0px to disable dimension checking.',
@@ -164,7 +148,7 @@ $lang = array_merge($lang, array(
 
 	'SEARCH_IMAGICK'				=> 'Search for Imagemagick',
 	'SECURE_ALLOW_DENY'				=> 'Allow/Deny list',
-	'SECURE_ALLOW_DENY_EXPLAIN'		=> 'Change the default behavior when secure downloads are enabled of the Allow/Deny list to that of a <strong>whitelist</strong> (Allow) or a <strong>blacklist</strong> (Deny).',
+	'SECURE_ALLOW_DENY_EXPLAIN'		=> 'Change the default behaviour when secure downloads are enabled of the Allow/Deny list to that of a <strong>whitelist</strong> (Allow) or a <strong>blacklist</strong> (Deny).',
 	'SECURE_DOWNLOADS'				=> 'Enable secure downloads',
 	'SECURE_DOWNLOADS_EXPLAIN'		=> 'With this option enabled, downloads are limited to IP’s/hostnames you define.',
 	'SECURE_DOWNLOAD_NOTICE'		=> 'Secure Downloads are not enabled. The settings below will be applied after enabling secure downloads.',

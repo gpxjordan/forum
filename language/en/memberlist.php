@@ -1,29 +1,13 @@
 <?php
 /**
-* This file is part of U.S. English phpBB Localization.
-* Copyright (C) 2010 phpBB.fr
 *
-* This program is free software; you can redistribute it and/or modify
-* it under the terms of the GNU General Public License as published by
-* the Free Software Foundation; version 2 of the License.
+* memberlist [English]
 *
-* This program is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-* GNU General Public License for more details.
+* @package language
+* @version $Id$
+* @copyright (c) 2005 phpBB Group
+* @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
-* You should have received a copy of the GNU General Public License along
-* with this program; if not, write to the Free Software Foundation, Inc.,
-* 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-*
-* memberlist [U.S. English]
-*
-* @package   language
-* @author    Maël Soucaze <maelsoucaze@phpbb.fr> (Maël Soucaze) http://www.phpbb.fr/
-* @author    Seven ALive <N/A> (Robert Baker) http://sevenupdate.com/
-* @copyright 2005 phpBB Group
-* @license   http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License
-* @version   $Id: memberlist.php 9933 2009-08-06 09:12:21Z marshalrusty $
 */
 
 /**
@@ -119,7 +103,7 @@ $lang = array_merge($lang, array(
 	'MORE_THAN'				=> 'More than',
 
 	'NO_EMAIL'				=> 'You are not permitted to send e-mail to this user.',
-	'NO_VIEW_USERS'			=> 'You are not authorized to view the member list or profiles.',
+	'NO_VIEW_USERS'			=> 'You are not authorised to view the member list or profiles.',
 
 	'ORDER'					=> 'Order',
 	'OTHER'					=> 'Other',

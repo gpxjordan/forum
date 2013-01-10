@@ -1,29 +1,13 @@
 <?php
 /**
-* This file is part of U.S. English phpBB Localization.
-* Copyright (C) 2010 phpBB.fr
 *
-* This program is free software; you can redistribute it and/or modify
-* it under the terms of the GNU General Public License as published by
-* the Free Software Foundation; version 2 of the License.
+* viewtopic [English]
 *
-* This program is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-* GNU General Public License for more details.
+* @package language
+* @version $Id$
+* @copyright (c) 2005 phpBB Group
+* @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
-* You should have received a copy of the GNU General Public License along
-* with this program; if not, write to the Free Software Foundation, Inc.,
-* 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-*
-* viewtopic [U.S. English]
-*
-* @package   language
-* @author    Maël Soucaze <maelsoucaze@phpbb.fr> (Maël Soucaze) http://www.phpbb.fr/
-* @author    Seven ALive <N/A> (Robert Baker) http://sevenupdate.com/
-* @copyright 2005 phpBB Group
-* @license   http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License
-* @version   $Id: viewtopic.php 9972 2009-08-14 08:42:46Z Kellanved $
 */
 
 /**
@@ -56,7 +40,7 @@ $lang = array_merge($lang, array(
 	'ATTACHMENT_FUNCTIONALITY_DISABLED'	=> 'The attachments feature has been disabled.',
 
 	'BOOKMARK_ADDED'		=> 'Bookmarked topic successfully.',
-	'BOOKMARK_ERR'         => 'Bookmarking the topic failed. Please try again.',
+	'BOOKMARK_ERR'			=> 'Bookmarking the topic failed. Please try again.',
 	'BOOKMARK_REMOVED'		=> 'Removed bookmarked topic successfully.',
 	'BOOKMARK_TOPIC'		=> 'Bookmark topic',
 	'BOOKMARK_TOPIC_REMOVE'	=> 'Remove from bookmarks',
@@ -77,8 +61,8 @@ $lang = array_merge($lang, array(
 	'FILE_NOT_FOUND_404'	=> 'The file <strong>%s</strong> does not exist.',
 	'FORK_TOPIC'			=> 'Copy topic',
 	'FULL_EDITOR'			=> 'Full Editor',
-
-	'LINKAGE_FORBIDDEN'		=> 'You are not authorized to view, download or link from/to this site.',
+	
+	'LINKAGE_FORBIDDEN'		=> 'You are not authorised to view, download or link from/to this site.',
 	'LOGIN_NOTIFY_TOPIC'	=> 'You have been notified about this topic, please login to view it.',
 	'LOGIN_VIEWTOPIC'		=> 'The board requires you to be registered and logged in to view this topic.',
 

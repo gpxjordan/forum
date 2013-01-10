@@ -13,24 +13,24 @@
 */
 if (!defined('IN_PHPBB'))
 {
-   exit;
+	exit;
 }
 
 if (empty($lang) || !is_array($lang))
 {
-   $lang = array();
+	$lang = array();
 }
 
 // Adding new category
-$lang['permission_cat']['announcement_centre']   = 'ACP 公告中心';
+$lang['permission_cat']['announcement_centre']	= 'ACP 公告中心';
 
 // Adding the permissions
 $lang = array_merge($lang, array(
-   // Moderator perms
-   'acl_m_announcement_centre'      => array('lang' => '版主能更改論壇公告', 'cat' => 'announcement_centre'),
+	// Moderator perms
+	'acl_m_announcement_centre'		=> array('lang' => '版主能更改論壇公告', 'cat' => 'announcement_centre'),
 
 	// Admin perms
-   'acl_a_announcement_centre'      => array('lang' => '管理員能更改/設定論壇公告', 'cat' => 'announcement_centre'),
+	'acl_a_announcement_centre'		=> array('lang' => '管理員能更改/設定論壇公告', 'cat' => 'announcement_centre'),
 ));
 
 ?>

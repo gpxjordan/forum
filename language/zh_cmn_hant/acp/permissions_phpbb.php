@@ -3,7 +3,7 @@
 * acp_permissions_phpbb (phpBB Permission Set) [正體中文]
 *
 * @package language
-* @version $Id: permissions_phpbb.php 9686 2009-06-26 11:52:54Z rxu $
+* @version $Id$
 * @copyright (c) 2001 - 2007 phpBB TW Group (心靈捕手)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 */
@@ -112,7 +112,7 @@ $lang = array_merge($lang, array(
 
 	'acl_u_sendpm'		=> array('lang' => '可以發送私人訊息', 'cat' => 'pm'),
 	'acl_u_masspm'		=> array('lang' => '可以發送私人訊息給多位會員', 'cat' => 'pm'),
-	'acl_u_masspm_group'=> array('lang' => '可以發送私人訊息給群組', 'cat' => 'pm'),
+	'acl_u_masspm_group'=> array('lang' => '可以發送私人訊息給群組', 'cat' => 'pm'),
 	'acl_u_readpm'		=> array('lang' => '可以閱讀私人訊息', 'cat' => 'pm'),
 	'acl_u_pm_edit'		=> array('lang' => '可以編輯自己的私人訊息', 'cat' => 'pm'),
 	'acl_u_pm_delete'	=> array('lang' => '可以移除自己的私人訊息', 'cat' => 'pm'),
@@ -153,8 +153,8 @@ $lang = array_merge($lang, array(
 	'acl_f_sigs'		=> array('lang' => '可以使用簽名檔', 'cat' => 'content'),
 	'acl_f_bbcode'		=> array('lang' => '可以在文章中使用 BBCode', 'cat' => 'content'),
 	'acl_f_smilies'		=> array('lang' => '可以在文章中使用表情符號', 'cat' => 'content'),
-	'acl_f_img'			=> array('lang' => '可以在文章中使用 [img] BBCode', 'cat' => 'content'),
-	'acl_f_flash'		=> array('lang' => '可以在文章中使用 [flash] BBCode', 'cat' => 'content'),
+	'acl_f_img'			=> array('lang' => '可以在文章中使用 [img] BBCode 標籤', 'cat' => 'content'),
+	'acl_f_flash'		=> array('lang' => '可以在文章中使用 [flash] BBCode 標籤', 'cat' => 'content'),
 
 	'acl_f_edit'		=> array('lang' => '可以編輯自己的文章', 'cat' => 'actions'),
 	'acl_f_delete'		=> array('lang' => '可以刪除自己的文章', 'cat' => 'actions'),

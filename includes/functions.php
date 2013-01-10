@@ -4438,6 +4438,9 @@ function page_header($page_title = '', $display_online_list = true, $item_id = 0
 	}
 	else
 	{
+/*
+		$u_login_logout = append_sid("{$phpbb_root_path}ucp.$phpEx", 'mode=login');
+*/
 		$redirect_url = ltrim($_SERVER['REQUEST_URI'], '/');
 		$u_login_logout = append_sid("{$phpbb_root_path}ucp.$phpEx", 'mode=login&amp;redirect=' . urlencode($redirect_url));
 		$l_login_logout = $user->lang['LOGIN'];
@@ -4539,13 +4542,13 @@ function page_header($page_title = '', $display_online_list = true, $item_id = 0
 	// Which timezone?
 	$tz = ($user->data['user_id'] != ANONYMOUS) ? strval(doubleval($user->data['user_timezone'])) : strval(doubleval($config['board_timezone']));
 
-	if( isset($config['announcement_enable']) && isset($config['announcement_show_birthdays_always']))
+	if (isset($config['announcement_enable']) && isset($config['announcement_show_birthdays_always']))
 	{
 		if ( !$config['announcement_show_index'] && ($config['announcement_enable'] || $config['announcement_show_birthdays_always']) )
 		{
 			if (!function_exists('get_announcement_data'))
 			{
-				include_once($phpbb_root_path . 'includes/functions_announcements.' . $phpEx);
+				include($phpbb_root_path . 'includes/functions_announcements.' . $phpEx);
 			}
 			get_announcement_data();
 		}
@@ -4572,9 +4575,6 @@ function page_header($page_title = '', $display_online_list = true, $item_id = 0
 			$s_search_hidden_fields[$url_param[0]] = $url_param[1];
 		}
 	}
-
-	// The following assigns all _common_ variables that may be used at any point in a template.
-
 // MOD : MSSTI RSS Feeds (V1.2.1) - Start
 	// Safety check
 	if ( $config['rss_enable'] = ( isset($config['rss_enable']) ? $config['rss_enable'] : false) )
@@ -4585,7 +4585,7 @@ function page_header($page_title = '', $display_online_list = true, $item_id = 0
 		$rss_excluded_forums_ary = rss_filters();
 	}
 // MOD : MSSTI RSS Feeds (V1.2.1) - End
-
+	// The following assigns all _common_ variables that may be used at any point in a template.
 	$template->assign_vars(array(
 		'SITENAME'						=> $config['sitename'],
 		'SITE_DESCRIPTION'				=> $config['site_desc'],
@@ -4691,6 +4691,18 @@ function page_header($page_title = '', $display_online_list = true, $item_id = 0
 		'T_STYLESHEET_LINK'		=> (!$user->theme['theme_storedb']) ? "{$web_path}styles/" . rawurlencode($user->theme['theme_path']) . '/theme/stylesheet.css' : append_sid("{$phpbb_root_path}style.$phpEx", 'id=' . $user->theme['style_id'] . '&amp;lang=' . $user->lang_name),
 		'T_STYLESHEET_NAME'		=> $user->theme['theme_name'],
 
+		'T_THEME_NAME'			=> rawurlencode($user->theme['theme_path']),
+		'T_TEMPLATE_NAME'		=> rawurlencode($user->theme['template_path']),
+		'T_SUPER_TEMPLATE_NAME'	=> rawurlencode((isset($user->theme['template_inherit_path']) && $user->theme['template_inherit_path']) ? $user->theme['template_inherit_path'] : $user->theme['template_path']),
+		'T_IMAGESET_NAME'		=> rawurlencode($user->theme['imageset_path']),
+		'T_IMAGESET_LANG_NAME'	=> $user->data['user_lang'],
+		'T_IMAGES'				=> 'images',
+		'T_SMILIES'				=> $config['smilies_path'],
+		'T_AVATAR'				=> $config['avatar_path'],
+		'T_AVATAR_GALLERY'		=> $config['avatar_gallery_path'],
+		'T_ICONS'				=> $config['icons_path'],
+		'T_RANKS'				=> $config['ranks_path'],
+		'T_UPLOAD'				=> $config['upload_path'],
 // MOD : MSSTI RSS Feeds (V1.2.1) - Start
 		'S_FEEDS'				=> ( $config['rss_enable'] ) ? true : false,
 		'U_RSS'					=> ( $config['rss_enable'] ) ? $u_rss : '',
@@ -4704,20 +4716,6 @@ function page_header($page_title = '', $display_online_list = true, $item_id = 0
 		'U_FEEDS_FORUM'			=> ( $config['rss_enable'] && $config['rss_forum'] && $f_rss && !in_array( $f_rss, $rss_excluded_forums_ary )) ? $u_rss . '?f=' . $f_rss : '',
 		'U_FEEDS_THREAD'		=> ( $config['rss_enable'] && $config['rss_thread'] && $t_rss && !in_array( $f_rss, $rss_excluded_forums_ary )) ? $u_rss . '?f=' . $f_rss . '&amp;t=' . $t_rss : '',
 // MOD : MSSTI RSS Feeds (V1.2.1) - End
-
-		'T_THEME_NAME'			=> rawurlencode($user->theme['theme_path']),
-		'T_TEMPLATE_NAME'		=> rawurlencode($user->theme['template_path']),
-		'T_SUPER_TEMPLATE_NAME'	=> rawurlencode((isset($user->theme['template_inherit_path']) && $user->theme['template_inherit_path']) ? $user->theme['template_inherit_path'] : $user->theme['template_path']),
-		'T_IMAGESET_NAME'		=> rawurlencode($user->theme['imageset_path']),
-		'T_IMAGESET_LANG_NAME'	=> $user->data['user_lang'],
-		'T_IMAGES'				=> 'images',
-		'T_SMILIES'				=> $config['smilies_path'],
-		'T_AVATAR'				=> $config['avatar_path'],
-		'T_AVATAR_GALLERY'		=> $config['avatar_gallery_path'],
-		'T_ICONS'				=> $config['icons_path'],
-		'T_RANKS'				=> $config['ranks_path'],
-		'T_UPLOAD'				=> $config['upload_path'],
-
 		'SITE_LOGO_IMG'			=> $user->img('site_logo'),
 
 		'A_COOKIE_SETTINGS'		=> addslashes('; path=' . $config['cookie_path'] . ((!$config['cookie_domain'] || $config['cookie_domain'] == 'localhost' || $config['cookie_domain'] == '127.0.0.1') ? '' : '; domain=' . $config['cookie_domain']) . ((!$config['cookie_secure']) ? '' : '; secure')),

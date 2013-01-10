@@ -4,7 +4,7 @@
 * acp_prune [正體中文]
 *
 * @package language
-* @version $Id: prune.php 9933 2009-08-06 09:12:21Z marshalrusty $
+* @version $Id$
 * @copyright (c) 2001 - 2007 phpBB TW Group (心靈捕手)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
@@ -37,7 +37,7 @@ if (empty($lang) || !is_array($lang))
 
 // User pruning
 $lang = array_merge($lang, array(
-	'ACP_PRUNE_USERS_EXPLAIN'	=> '在這裡，您可以將您討論區的會員刪除或停用。帳號可以由多種的規則加以過濾；由文章數量、最近活動情形、...等。這些規則都可以自由組合，例如：您可以選擇刪除在 2002-01-01 之前文章數量少於 10 篇的會員。另外，您可以直接將會員名稱輸入欄位 (每一個會員名稱輸入一行) 中，任何已設定的規則都將被忽略。請小心使用此功能！一旦會員被刪除後將無法再回復。',
+	'ACP_PRUNE_USERS_EXPLAIN'	=> '在這裡，您可以將您討論區的會員刪除或停用。帳號可以由多種的規則加以過濾；由文章數量、最近活動情形、…等。這些規則都可以自由組合，例如：您可以選擇刪除在 2002-01-01 之前文章數量少於 10 篇的會員。另外，您可以直接將會員名稱輸入欄位 (每一個會員名稱輸入一行) 中，任何已設定的規則都將被忽略。請小心使用此功能！一旦會員被刪除後將無法再回復。',
 
 	'DEACTIVATE_DELETE'			=> '停用或刪除',
 	'DEACTIVATE_DELETE_EXPLAIN'	=> '請選擇是要停用會員或是整個刪除之。請注意！已刪除的會員無法回復！',

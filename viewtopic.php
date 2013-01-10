@@ -3,10 +3,10 @@
 *
 * @package phpBB3
 * @version $Id$
+* @log 2010-06-11 add max_sig_post_count_limit condition to disabled Signature spam by appleboy
 * @copyright (c) 2005 phpBB Group
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
-* @log 2010-06-11 add max_sig_post_count_limit condition to disabled Signature spam by appleboy
 */
 
 /**
@@ -1068,7 +1068,7 @@ while ($row = $db->sql_fetchrow($result))
 		'enable_sig'		=> $row['enable_sig'],
 		'friend'			=> $row['friend'],
 		'foe'				=> $row['foe'],
-		'user_agent'			=> $row['user_agent'],
+		'user_agent'		=> $row['user_agent'],
 	);
 
 	// Define the global bbcode bitfield, will be used to load bbcodes
@@ -1128,6 +1128,9 @@ while ($row = $db->sql_fetchrow($result))
 			$user_sig = '';
 
 			// We add the signature to every posters entry because enable_sig is post dependant
+/*
+			if ($row['user_sig'] && $config['allow_sig'] && $user->optionget('viewsigs'))
+*/
 			// add max_sig_post_count_limit limit 2010-06-11 by appleoby
 			if (($row['user_sig'] && $config['allow_sig'] && $user->optionget('viewsigs') && $row['user_posts'] >= $config['max_sig_post_count_limit']) || $row['group_id'] == '16970' || (isset($user->data['session_admin']) && $user->data['session_admin']))
 			{
@@ -1372,6 +1375,9 @@ for ($i = 0, $end = sizeof($post_list); $i < $end; ++$i)
 
 		if ($user_cache[$poster_id]['sig_bbcode_bitfield'])
 		{
+/*
+			$bbcode->bbcode_second_pass($user_cache[$poster_id]['sig'], $user_cache[$poster_id]['sig_bbcode_uid'], $user_cache[$poster_id]['sig_bbcode_bitfield']);
+*/
 			// 2010.06.10 add search nofollow module by appleboy
 			$check = ($config['allow_sig_nofollow']) ? true : false;
 			$bbcode->bbcode_second_pass($user_cache[$poster_id]['sig'], $user_cache[$poster_id]['sig_bbcode_uid'], $user_cache[$poster_id]['sig_bbcode_bitfield'], $check);

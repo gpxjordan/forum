@@ -1,29 +1,13 @@
 <?php
 /**
-* This file is part of U.S. English phpBB Localization.
-* Copyright (C) 2010 phpBB.fr
 *
-* This program is free software; you can redistribute it and/or modify
-* it under the terms of the GNU General Public License as published by
-* the Free Software Foundation; version 2 of the License.
+* acp_users [English]
 *
-* This program is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-* GNU General Public License for more details.
+* @package language
+* @version $Id$
+* @copyright (c) 2005 phpBB Group
+* @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
-* You should have received a copy of the GNU General Public License along
-* with this program; if not, write to the Free Software Foundation, Inc.,
-* 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-*
-* acp_users [U.S. English]
-*
-* @package   language
-* @author    Maël Soucaze <maelsoucaze@phpbb.fr> (Maël Soucaze) http://www.phpbb.fr/
-* @author    Seven ALive <N/A> (Robert Baker) http://sevenupdate.com/
-* @copyright 2005 phpBB Group
-* @license   http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License
-* @version   $Id: users.php 9767 2009-07-17 11:27:50Z toonarmy $
 */
 
 /**
@@ -123,7 +107,7 @@ $lang = array_merge($lang, array(
 	'USER_ADMIN_DEL_OUTBOX'			=> 'Empty PM outbox',
 	'USER_ADMIN_DEL_POSTS'			=> 'Delete all posts',
 	'USER_ADMIN_DEL_SIG'			=> 'Delete signature',
-	'USER_ADMIN_EXPLAIN'			=> 'Here you can change your users’ information and certain specific options.',
+	'USER_ADMIN_EXPLAIN'			=> 'Here you can change your users information and certain specific options.',
 	'USER_ADMIN_FORCE'				=> 'Force reactivation',
 	'USER_ADMIN_LEAVE_NR'			=> 'Remove from Newly Registered',
 	'USER_ADMIN_MOVE_POSTS'			=> 'Move all posts',

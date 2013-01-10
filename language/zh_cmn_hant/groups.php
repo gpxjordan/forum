@@ -1,12 +1,12 @@
 <?php
-/** 
+/**
 *
 * groups [正體中文]
 *
 * @package language
-* @version $Id: groups.php 8479 2008-03-29 00:22:48Z naderman $
+* @version $Id$
 * @copyright (c) 2001 - 2007 phpBB TW Group (心靈捕手)
-* @license http://opensource.org/licenses/gpl-license.php GNU Public License 
+* @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
 */
 
@@ -31,19 +31,19 @@ if (empty($lang) || !is_array($lang))
 // 'Page %s of %s' you can (and should) write 'Page %1$s of %2$s', this allows
 // translators to re-order the output of data while ensuring it remains correct
 //
-// You do not need this where single placeholders are used, e.g.'Message %d' is fine
+// You do not need this where single placeholders are used, e.g. 'Message %d' is fine
 // equally where a string contains only two placeholders which are used to wrap text
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
 $lang = array_merge($lang, array(
-	'ALREADY_DEFAULT_GROUP'	=> '這個群組已經是您的預設會員群組。',
-	'ALREADY_IN_GROUP'		=> '您已經是這個會員群組的組員了。',
+	'ALREADY_DEFAULT_GROUP'		=> '這個群組已經是您的預設會員群組。',
+	'ALREADY_IN_GROUP'			=> '您已經是這個會員群組的組員了。',
 	'ALREADY_IN_GROUP_PENDING'	=> '您已經申請加入指定的群組了。',
 
 	'CANNOT_JOIN_GROUP'			=> '您不能加入這個群組。您只能加入自由與開放的群組。',
 	'CANNOT_RESIGN_GROUP'		=> '您不能退出這個群組。您只能退出自由與開放的群組。',
-	'CHANGED_DEFAULT_GROUP'	=> '成功更改預設會員群組。',
-	
+	'CHANGED_DEFAULT_GROUP'		=> '成功更改預設會員群組。',
+
 	'GROUP_AVATAR'						=> '群組頭像', 
 	'GROUP_CHANGE_DEFAULT'				=> '您確定您要將自己的預設會員群組改成「%s」嗎？',
 	'GROUP_CLOSED'						=> '封閉的',

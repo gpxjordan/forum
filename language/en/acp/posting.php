@@ -1,29 +1,13 @@
 <?php
 /**
-* This file is part of U.S. English phpBB Localization.
-* Copyright (C) 2010 phpBB.fr
 *
-* This program is free software; you can redistribute it and/or modify
-* it under the terms of the GNU General Public License as published by
-* the Free Software Foundation; version 2 of the License.
+* acp_posting [English]
 *
-* This program is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-* GNU General Public License for more details.
+* @package language
+* @version $Id$
+* @copyright (c) 2005 phpBB Group
+* @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
-* You should have received a copy of the GNU General Public License along
-* with this program; if not, write to the Free Software Foundation, Inc.,
-* 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-*
-* acp_posting [U.S. English]
-*
-* @package   language
-* @author    Maël Soucaze <maelsoucaze@phpbb.fr> (Maël Soucaze) http://www.phpbb.fr/
-* @author    Seven ALive <N/A> (Robert Baker) http://sevenupdate.com/
-* @copyright 2005 phpBB Group
-* @license   http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License
-* @version   $Id: posting.php 10516 2010-02-21 11:33:29Z Kellanved $
 */
 
 /**
@@ -66,7 +50,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_HELPLINE'			=> 'Help line',
 	'BBCODE_HELPLINE_EXPLAIN'	=> 'This field contains the mouse over text of the BBCode.',
 	'BBCODE_HELPLINE_TEXT'		=> 'Help line text',
-	'BBCODE_HELPLINE_TOO_LONG'   => 'The help line you entered is too long.',
+	'BBCODE_HELPLINE_TOO_LONG'	=> 'The help line you entered is too long.',
 
 	'BBCODE_INVALID_TAG_NAME'	=> 'The BBCode tag name that you selected already exists.',
 	'BBCODE_INVALID'			=> 'Your BBCode is constructed in an invalid form.',
@@ -100,7 +84,7 @@ $lang = array_merge($lang, array(
 		'EMAIL'			=> 'A valid e-mail address',
 		'URL'			=> 'A valid URL using any protocol (http, ftp, etc… cannot be used for javascript exploits). If none is given, “http://” is prefixed to the string.',
 		'LOCAL_URL'		=> 'A local URL. The URL must be relative to the topic page and cannot contain a server name or protocol.',
-		'COLOR'			=> 'A HTML color, can be either in the numeric form <samp>#FF1234</samp> or a <a href="http://www.w3.org/TR/CSS21/syndata.html#value-def-color">CSS color keyword</a> such as <samp>fuchsia</samp> or <samp>InactiveBorder</samp>'
+		'COLOR'			=> 'A HTML colour, can be either in the numeric form <samp>#FF1234</samp> or a <a href="http://www.w3.org/TR/CSS21/syndata.html#value-def-color">CSS colour keyword</a> such as <samp>fuchsia</samp> or <samp>InactiveBorder</samp>'
 	)
 ));
 
@@ -217,11 +201,13 @@ $lang = array_merge($lang, array(
 	'NO_WORD'	=> 'No word selected for editing.',
 
 	'REPLACEMENT'	=> 'Replacement',
-	
+
+	// START ABBS
 	'BLOCK_WORD'	=> 'Block word',
 	'BLOCK'		=> 'Block',
 	'BLOCK_CODE'	=> 'blacklisted_site',
 	'SEND_CONFIRM'	=> 'Now submit the form',
+	// END ABBS
 
 	'UPDATE_WORD'	=> 'Update word censor',
 
@@ -273,12 +259,12 @@ $lang = array_merge($lang, array(
 $lang = array_merge($lang, array(
 	'ACP_REASONS_EXPLAIN'	=> 'Here you can manage the reasons used in reports and denial messages when disapproving posts. There is one default reason (marked with a *) you are not able to remove, this reason is normally used for custom messages if no reason fits.',
 	'ADD_NEW_REASON'		=> 'Add new reason',
-	'AVAILABLE_TITLES'		=> 'Available localized reason titles',
+	'AVAILABLE_TITLES'		=> 'Available localised reason titles',
 
-	'IS_NOT_TRANSLATED'			=> 'Reason has <strong>not</strong> been localized.',
-	'IS_NOT_TRANSLATED_EXPLAIN'	=> 'Reason has <strong>not</strong> been localized. If you want to provide the localized form, specify the correct key from the language files report reasons section.',
-	'IS_TRANSLATED'				=> 'Reason has been localized.',
-	'IS_TRANSLATED_EXPLAIN'		=> 'Reason has been localized. If the title you enter here is specified within the language files report reasons section, the localized form of the title and description will be used.',
+	'IS_NOT_TRANSLATED'			=> 'Reason has <strong>not</strong> been localised.',
+	'IS_NOT_TRANSLATED_EXPLAIN'	=> 'Reason has <strong>not</strong> been localised. If you want to provide the localised form, specify the correct key from the language files report reasons section.',
+	'IS_TRANSLATED'				=> 'Reason has been localised.',
+	'IS_TRANSLATED_EXPLAIN'		=> 'Reason has been localised. If the title you enter here is specified within the language files report reasons section, the localised form of the title and description will be used.',
 
 	'NO_REASON'					=> 'Reason could not be found.',
 	'NO_REASON_INFO'			=> 'You have to specify a title and a description for this reason.',
@@ -290,7 +276,7 @@ $lang = array_merge($lang, array(
 	'REASON_DESCRIPTION'		=> 'Reason description',
 	'REASON_DESC_TRANSLATED'	=> 'Displayed reason description',
 	'REASON_EDIT'				=> 'Edit report/denial reason',
-	'REASON_EDIT_EXPLAIN'		=> 'Here you are able to add or edit a reason. If the reason is translated the localized version is used instead of the description entered here.',
+	'REASON_EDIT_EXPLAIN'		=> 'Here you are able to add or edit a reason. If the reason is translated the localised version is used instead of the description entered here.',
 	'REASON_REMOVED'			=> 'Report/denial reason successfully removed.',
 	'REASON_TITLE'				=> 'Reason title',
 	'REASON_TITLE_TRANSLATED'	=> 'Displayed reason title',
